@@ -14,6 +14,10 @@ config/name="Brackeys-Game-Jam-2025.2"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="Brackeys-Game-Jam-2025.2"
+
 [rendering]
 
 renderer/rendering_method="mobile"
