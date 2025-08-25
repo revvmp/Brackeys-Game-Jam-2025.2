@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdkt2fgsqb1ef"]
+
+[ext_resource type="Texture2D" uid="uid://dd4bd3brvtlog" path="res://assets/cartoon_coins.webp" id="1_ya2o2"]
+
+[node name="MoneyDisplay" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_top = -67.0
+offset_right = 40.0
+offset_bottom = -44.6667
+scale = Vector2(6, 6)
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-100, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ya2o2")

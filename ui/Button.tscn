@@ -18,7 +18,6 @@ texture = ExtResource("1_8x6f0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 position = Vector2(-1.77428e-05, -0.64935)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ikl6s")
 
 [node name="Label" type="Label" parent="."]
@@ -27,6 +26,7 @@ offset_top = -10.6667
 offset_right = 34.0
 offset_bottom = 12.3333
 text = "BUTTON"
+horizontal_alignment = 1
 
 [connection signal="input_event" from="Sprite2D/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]

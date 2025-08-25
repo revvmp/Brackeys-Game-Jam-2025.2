@@ -1,8 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://dba4ev785opbx"]
+[gd_scene load_steps=5 format=3 uid="uid://dba4ev785opbx"]
 
-[ext_resource type="PackedScene" uid="uid://c7rxu3e3caavw" path="res://ui/Button.tscn" id="1_pcyt4"]
+[ext_resource type="PackedScene" uid="uid://8io03t55bn7u" path="res://main_menu/main_menu_nodes/PlayButton.tscn" id="1_pcyt4"]
+[ext_resource type="PackedScene" uid="uid://nias6m4n0dsb" path="res://main_menu/main_menu_nodes/ShopButton.tscn" id="2_ff7fd"]
+[ext_resource type="PackedScene" uid="uid://bmsmeqkbwb6gg" path="res://main_menu/main_menu_nodes/HelpButton.tscn" id="3_yt4ty"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="4_yt4ty"]
 
 [node name="MainMenu" type="Node2D"]
 
-[node name="PlayButton" parent="." instance=ExtResource("1_pcyt4")]
-position = Vector2(640, 420)
+[node name="MainMenuButtons" type="Node" parent="."]
+
+[node name="PlayButton" parent="MainMenuButtons" instance=ExtResource("1_pcyt4")]
+position = Vector2(640, 480)
+
+[node name="ShopButton" parent="MainMenuButtons" instance=ExtResource("2_ff7fd")]
+position = Vector2(640, 580)
+
+[node name="HelpButton" parent="MainMenuButtons" instance=ExtResource("3_yt4ty")]
+position = Vector2(640, 680)
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("4_yt4ty")]
+position = Vector2(640, 270)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="GameTitle" type="Label" parent="Node"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -332.0
+offset_right = -211.0
+offset_bottom = -309.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+text = "Devil's Deal"
+horizontal_alignment = 1
+uppercase = true
