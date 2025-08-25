@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Brackeys-Game-Jam-2025.2"
+config/name="Devil's Deal"
 run/main_scene="uid://dba4ev785opbx"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://brfi8ahs5lipo"
 
 [display]
 
