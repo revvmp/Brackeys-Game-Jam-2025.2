@@ -6,7 +6,8 @@
 [node name="BauCuaCaCop" type="Node2D"]
 
 [node name="GameTitle" type="Label" parent="."]
-offset_right = 40.0
+offset_left = 7.0
+offset_right = 139.0
 offset_bottom = 22.3333
 scale = Vector2(4, 4)
 text = "Bau Cua Ca Cop"
@@ -16,5 +17,5 @@ uppercase = true
 position = Vector2(640, 420)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("2_8v87c")]
-position = Vector2(80, 116)
+position = Vector2(84, 116)
 scale = Vector2(0.35, 0.35)

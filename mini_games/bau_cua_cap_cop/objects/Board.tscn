@@ -11,9 +11,21 @@ script = ExtResource("1_1afds")
 scale = Vector2(0.441, 0.371994)
 texture = ExtResource("1_gc4jt")
 
-[node name="BoardSlot" parent="." instance=ExtResource("3_q3i0d")]
+[node name="DeerSLot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(-279, -96)
 scale = Vector2(1.02713, 0.840237)
 
-[node name="BoardSlot2" parent="." instance=ExtResource("3_q3i0d")]
+[node name="GourdSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(0, -96)
+
+[node name="ChickenSlot" parent="." instance=ExtResource("3_q3i0d")]
+position = Vector2(286, -96)
+
+[node name="FishSlot" parent="." instance=ExtResource("3_q3i0d")]
+position = Vector2(-284, 141)
+
+[node name="CrabSlot" parent="." instance=ExtResource("3_q3i0d")]
+position = Vector2(-1, 141)
+
+[node name="ShrimpSlot" parent="." instance=ExtResource("3_q3i0d")]
+position = Vector2(283, 142)
