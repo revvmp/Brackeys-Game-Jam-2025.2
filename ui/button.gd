@@ -27,3 +27,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		# Check if the left mouse button was released
 		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			sprite.modulate = hover_color
+			on_mouse_pressed()
+			
+func on_mouse_pressed():
+	print("pressed")
