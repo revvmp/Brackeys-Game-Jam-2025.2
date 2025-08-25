@@ -1,7 +1,4 @@
 extends "res://ui/button.gd"
 
-func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	super(_viewport, event, _shape_idx)
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-			print("Open Help Menu")
+func on_mouse_pressed():
+	get_tree().change_scene_to_file("res://main_menu/help_menu/HelpMenu.tscn")
