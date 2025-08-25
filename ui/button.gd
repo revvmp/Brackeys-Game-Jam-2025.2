@@ -18,13 +18,12 @@ func _on_area_2d_mouse_exited() -> void:
 	sprite.modulate = default_color
 
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	# Check if the event is a mouse button press
 	if event is InputEventMouseButton:
 		# Check if the left mouse button was pressed
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			sprite.modulate = pressed_color
-			print("button was clicked")
 		# Check if the left mouse button was released
 		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			sprite.modulate = hover_color

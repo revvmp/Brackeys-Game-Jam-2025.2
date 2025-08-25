@@ -1,16 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dba4ev785opbx"]
+[gd_scene load_steps=7 format=3 uid="uid://dba4ev785opbx"]
 
 [ext_resource type="PackedScene" uid="uid://8io03t55bn7u" path="res://main_menu/main_menu_nodes/PlayButton.tscn" id="1_pcyt4"]
+[ext_resource type="Script" uid="uid://f1jvnmrjuwdp" path="res://main_menu/main_menu.gd" id="1_tdf48"]
 [ext_resource type="PackedScene" uid="uid://nias6m4n0dsb" path="res://main_menu/main_menu_nodes/ShopButton.tscn" id="2_ff7fd"]
+[ext_resource type="Script" uid="uid://cehxtcafuvsgt" path="res://main_menu/main_menu_nodes/play_button.gd" id="3_k80ej"]
 [ext_resource type="PackedScene" uid="uid://bmsmeqkbwb6gg" path="res://main_menu/main_menu_nodes/HelpButton.tscn" id="3_yt4ty"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="4_yt4ty"]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_tdf48")
 
 [node name="MainMenuButtons" type="Node" parent="."]
 
 [node name="PlayButton" parent="MainMenuButtons" instance=ExtResource("1_pcyt4")]
 position = Vector2(640, 480)
+script = ExtResource("3_k80ej")
 
 [node name="ShopButton" parent="MainMenuButtons" instance=ExtResource("2_ff7fd")]
 position = Vector2(640, 580)
