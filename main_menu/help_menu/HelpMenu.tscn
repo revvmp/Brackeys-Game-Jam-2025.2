@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs1hfuyedd55o"]
+[gd_scene load_steps=3 format=3 uid="uid://bs1hfuyedd55o"]
 
+[ext_resource type="Script" uid="uid://cdf735130o107" path="res://main_menu/help_menu/help_menu.gd" id="1_bf6oc"]
 [ext_resource type="PackedScene" uid="uid://b02jo0cs22hi0" path="res://main_menu/help_menu/ExitButton.tscn" id="1_dwop5"]
 
 [node name="HelpMenu" type="Node2D"]
+script = ExtResource("1_bf6oc")
 
 [node name="Information" type="Label" parent="."]
 anchors_preset = 8
@@ -23,3 +25,5 @@ vertical_alignment = 1
 
 [node name="ExitButton" parent="." instance=ExtResource("1_dwop5")]
 position = Vector2(640, 640)
+
+[connection signal="exit_pressed" from="ExitButton" to="." method="_on_exit_button_exit_pressed"]

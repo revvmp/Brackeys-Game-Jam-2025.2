@@ -1,4 +1,6 @@
 extends "res://ui/button.gd"
 
+signal help_pressed
+
 func on_mouse_pressed():
-	get_tree().change_scene_to_file("res://main_menu/help_menu/HelpMenu.tscn")
+	emit_signal("help_pressed")
