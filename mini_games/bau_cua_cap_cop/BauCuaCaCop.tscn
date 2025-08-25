@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtw5jmb27tqei"]
+[gd_scene load_steps=4 format=3 uid="uid://dtw5jmb27tqei"]
 
 [ext_resource type="PackedScene" uid="uid://drwxs4k2eesso" path="res://mini_games/bau_cua_cap_cop/objects/Board.tscn" id="1_3vh24"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="2_8v87c"]
+[ext_resource type="PackedScene" uid="uid://0s2bpo3yt4l5" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopDice.tscn" id="3_8mrat"]
 
 [node name="BauCuaCaCop" type="Node2D"]
 
@@ -14,8 +15,11 @@ text = "Bau Cua Ca Cop"
 uppercase = true
 
 [node name="Board" parent="." instance=ExtResource("1_3vh24")]
-position = Vector2(640, 420)
+position = Vector2(454, 434)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("2_8v87c")]
 position = Vector2(84, 116)
 scale = Vector2(0.35, 0.35)
+
+[node name="BauCuaCaCopDice" parent="." instance=ExtResource("3_8mrat")]
+position = Vector2(1085, 231)

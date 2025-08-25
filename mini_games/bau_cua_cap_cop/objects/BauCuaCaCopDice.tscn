@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://0s2bpo3yt4l5"]
+
+[ext_resource type="Script" uid="uid://klc21s5yxsj0" path="res://mini_games/bau_cua_cap_cop/objects/bau_cua_ca_cop_dice.gd" id="1_8r0b4"]
+[ext_resource type="Texture2D" uid="uid://dvlc6owkkvvag" path="res://assets/bau_cua_ca_cop/chicken_icon.png" id="1_b5vlu"]
+[ext_resource type="Texture2D" uid="uid://der23mfdcin2i" path="res://assets/bau_cua_ca_cop/crab_icon.png" id="2_8r0b4"]
+[ext_resource type="Texture2D" uid="uid://cetkrhxx2pf04" path="res://assets/bau_cua_ca_cop/deer_icon.png" id="3_fyl8e"]
+[ext_resource type="Texture2D" uid="uid://1e81gte4ghe1" path="res://assets/bau_cua_ca_cop/fish_icon.png" id="4_80f15"]
+[ext_resource type="Texture2D" uid="uid://bltxhai1sitoa" path="res://assets/bau_cua_ca_cop/gourd_icon.png" id="5_trir3"]
+[ext_resource type="Texture2D" uid="uid://dlagidpbb0vs3" path="res://assets/bau_cua_ca_cop/shrimp_icon.png" id="6_cmdan"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_481ww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b5vlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8r0b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fyl8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_80f15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_trir3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cmdan")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[node name="BauCuaCaCopDice" type="Node2D"]
+script = ExtResource("1_8r0b4")
+
+[node name="DiceOne" type="AnimatedSprite2D" parent="."]
+position = Vector2(-77, 0)
+sprite_frames = SubResource("SpriteFrames_481ww")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.853243
+
+[node name="DiceTwo" type="AnimatedSprite2D" parent="."]
+position = Vector2(78, 0)
+sprite_frames = SubResource("SpriteFrames_481ww")
+animation = &"idle"
+autoplay = "idle"
