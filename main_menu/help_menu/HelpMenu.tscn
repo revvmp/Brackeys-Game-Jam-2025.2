@@ -4,5 +4,22 @@
 
 [node name="HelpMenu" type="Node2D"]
 
-[node name="Button" parent="." instance=ExtResource("1_dwop5")]
+[node name="Information" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 341.0
+offset_top = 63.0
+offset_right = 495.0
+offset_bottom = 85.3333
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "PLACEHOLDER TEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" parent="." instance=ExtResource("1_dwop5")]
 position = Vector2(640, 640)
