@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdkt2fgsqb1ef"]
+[gd_scene load_steps=3 format=3 uid="uid://cdkt2fgsqb1ef"]
 
+[ext_resource type="Script" uid="uid://oajf2rtegblj" path="res://main_menu/main_menu_nodes/money_display.gd" id="1_jnlm2"]
 [ext_resource type="Texture2D" uid="uid://dd4bd3brvtlog" path="res://assets/cartoon_coins.webp" id="1_ya2o2"]
 
 [node name="MoneyDisplay" type="Node2D"]
+script = ExtResource("1_jnlm2")
 
 [node name="Label" type="Label" parent="."]
 offset_top = -67.0
