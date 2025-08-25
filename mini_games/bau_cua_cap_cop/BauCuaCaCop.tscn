@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtw5jmb27tqei"]
+
+[ext_resource type="PackedScene" uid="uid://drwxs4k2eesso" path="res://mini_games/bau_cua_cap_cop/objects/Board.tscn" id="1_3vh24"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="2_8v87c"]
+
+[node name="BauCuaCaCop" type="Node2D"]
+
+[node name="GameTitle" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 22.3333
+scale = Vector2(4, 4)
+text = "Bau Cua Ca Cop"
+uppercase = true
+
+[node name="Board" parent="." instance=ExtResource("1_3vh24")]
+position = Vector2(640, 420)
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("2_8v87c")]
+position = Vector2(80, 116)
+scale = Vector2(0.35, 0.35)

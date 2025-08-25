@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://g2f63l1f37gc"]
+
+[ext_resource type="Script" uid="uid://c6gpc4k8rojds" path="res://mini_games/bau_cua_cap_cop/objects/board_slot.gd" id="1_oboyy"]
+
+[node name="BoardSlot" type="Node2D"]
+script = ExtResource("1_oboyy")
+
+[node name="MoneyAmount" type="LineEdit" parent="."]
+offset_left = -81.0
+offset_top = -16.0
+offset_right = 81.0
+offset_bottom = 16.0
+placeholder_text = "0"
+alignment = 1
+virtual_keyboard_type = 2
+middle_mouse_paste_enabled = false

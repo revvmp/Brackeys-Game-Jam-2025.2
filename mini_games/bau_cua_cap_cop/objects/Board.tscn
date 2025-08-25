@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://drwxs4k2eesso"]
+
+[ext_resource type="Script" uid="uid://cvp7ppaumjd7x" path="res://mini_games/bau_cua_cap_cop/objects/board.gd" id="1_1afds"]
+[ext_resource type="Texture2D" uid="uid://b14xhbtk0of44" path="res://assets/bau_cua_ca_cop/baucuacacopboard.png" id="1_gc4jt"]
+[ext_resource type="PackedScene" uid="uid://g2f63l1f37gc" path="res://mini_games/bau_cua_cap_cop/objects/BoardSlot.tscn" id="3_q3i0d"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_1afds")
+
+[node name="BoardImage" type="Sprite2D" parent="."]
+scale = Vector2(0.441, 0.371994)
+texture = ExtResource("1_gc4jt")
+
+[node name="BoardSlot" parent="." instance=ExtResource("3_q3i0d")]
+position = Vector2(-279, -96)
+
+[node name="BoardSlot2" parent="." instance=ExtResource("3_q3i0d")]
+position = Vector2(0, -96)
