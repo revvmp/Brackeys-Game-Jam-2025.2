@@ -1,0 +1,3 @@
+# main_menu
+Stores all the scenes and nodes for "main menu" related objects/scenes.
+Settings, Shops, Credits, etc...
