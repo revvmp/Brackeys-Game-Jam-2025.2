@@ -1,4 +1,4 @@
-# Brackeys-Game-Jam-2025.2
+# Devil's Deal
 Game Submission for Brackeys Game Jam 2025.2 by Team Relativity
 
 # Theme
