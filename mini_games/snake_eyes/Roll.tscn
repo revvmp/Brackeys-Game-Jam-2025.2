@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://53yhdre5wemc"]
 
 [ext_resource type="PackedScene" uid="uid://c7rxu3e3caavw" path="res://ui/Button.tscn" id="1_8qg8t"]
-[ext_resource type="Script" uid="uid://8bk0kknxbkhy" path="res://mini_games/dice_game/roll.gd" id="2_1dx83"]
+[ext_resource type="Script" uid="uid://8bk0kknxbkhy" path="res://mini_games/snake_eyes/roll.gd" id="2_1dx83"]
 
 [node name="Button" instance=ExtResource("1_8qg8t")]
 script = ExtResource("2_1dx83")

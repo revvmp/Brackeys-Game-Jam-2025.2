@@ -25,6 +25,12 @@ func add_money(amount: int):
 	
 func subtract_money(amount: int):
 	update_money(Global.money - amount)
+	
+func multiply_money(amount: int):
+	update_money(Global.money * amount)
+	
+func divide_money(amount: int):
+	update_money(Global.money / amount)
 
 func _ready():
 	label.text = format_number_with_commas(Global.money)

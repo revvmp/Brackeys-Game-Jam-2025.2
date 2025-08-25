@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dqh08rg8bdu36" path="res://assets/dice/dice-six-faces-four.png" id="4_jy64q"]
 [ext_resource type="Texture2D" uid="uid://drerlpy511lip" path="res://assets/dice/dice-six-faces-five.png" id="5_3e7vn"]
 [ext_resource type="Texture2D" uid="uid://cy2a1ddhbtejp" path="res://assets/dice/dice-six-faces-six.png" id="6_bjw8u"]
-[ext_resource type="Script" uid="uid://c3pxyh6evfy78" path="res://mini_games/dice_game/dice.gd" id="7_jmc7w"]
+[ext_resource type="Script" uid="uid://c3pxyh6evfy78" path="res://mini_games/snake_eyes/dice.gd" id="7_jmc7w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fwudy"]
 animations = [{
@@ -66,10 +66,10 @@ script = ExtResource("7_jmc7w")
 position = Vector2(137.512, 226.386)
 scale = Vector2(0.252, 0.252)
 sprite_frames = SubResource("SpriteFrames_fwudy")
-animation = &"2"
+animation = &"6"
 
 [node name="Dice2" type="AnimatedSprite2D" parent="."]
 position = Vector2(559.512, 226.386)
 scale = Vector2(0.252, 0.252)
 sprite_frames = SubResource("SpriteFrames_fwudy")
-animation = &"1"
+animation = &"6"

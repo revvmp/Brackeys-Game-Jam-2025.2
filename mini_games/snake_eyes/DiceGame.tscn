@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu53mr7jop5l5"]
+
+[ext_resource type="Script" uid="uid://rkctf10ti0g2" path="res://mini_games/snake_eyes/dice_game.gd" id="1_rsba8"]
+[ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/table.png" id="2_gdh0p"]
+[ext_resource type="PackedScene" uid="uid://bokxys77740c3" path="res://mini_games/snake_eyes/Dice.tscn" id="3_iwtdq"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_moon8"]
+[ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="9_12iu1"]
+
+[node name="DiceGame" type="Node2D"]
+script = ExtResource("1_rsba8")
+
+[node name="Button" parent="." instance=ExtResource("9_12iu1")]
+position = Vector2(616.5, 512.345)
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(544.5, 261.345)
+scale = Vector2(15.47, 10.4469)
+texture = ExtResource("2_gdh0p")
+
+[node name="Dice" parent="." instance=ExtResource("3_iwtdq")]
+position = Vector2(278.5, 65.345)
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("5_moon8")]
+position = Vector2(245, 579)
+scale = Vector2(0.36, 0.36)
+
+[node name="SnakeEyes" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 22.3333
+
+[connection signal="roll_dice" from="Button" to="." method="_on_button_roll_dice"]
+[connection signal="dice_game_lost" from="Dice" to="." method="_on_dice_dice_game_lost"]
+[connection signal="snake_eyes" from="Dice" to="." method="_on_dice_snake_eyes"]
