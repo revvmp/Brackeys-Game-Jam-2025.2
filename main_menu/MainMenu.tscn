@@ -1,14 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://dba4ev785opbx"]
+[gd_scene load_steps=10 format=3 uid="uid://dba4ev785opbx"]
 
 [ext_resource type="PackedScene" uid="uid://8io03t55bn7u" path="res://main_menu/main_menu_nodes/PlayButton.tscn" id="1_pcyt4"]
 [ext_resource type="Script" uid="uid://f1jvnmrjuwdp" path="res://main_menu/main_menu.gd" id="1_tdf48"]
 [ext_resource type="PackedScene" uid="uid://nias6m4n0dsb" path="res://main_menu/main_menu_nodes/ShopButton.tscn" id="2_ff7fd"]
+[ext_resource type="Script" uid="uid://waks8mdos6f" path="res://data/Global.gd" id="2_s4tua"]
 [ext_resource type="Script" uid="uid://cehxtcafuvsgt" path="res://main_menu/main_menu_nodes/play_button.gd" id="3_k80ej"]
 [ext_resource type="PackedScene" uid="uid://bmsmeqkbwb6gg" path="res://main_menu/main_menu_nodes/HelpButton.tscn" id="3_yt4ty"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="4_yt4ty"]
+[ext_resource type="Script" uid="uid://c0v5jwe8behry" path="res://main_menu/main_menu_nodes/shop_button.gd" id="6_cp0gc"]
+[ext_resource type="Script" uid="uid://buj86hkhq0ghj" path="res://main_menu/main_menu_nodes/help_button.gd" id="8_uku3a"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_tdf48")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("2_s4tua")
 
 [node name="MainMenuButtons" type="Node" parent="."]
 
@@ -18,9 +24,11 @@ script = ExtResource("3_k80ej")
 
 [node name="ShopButton" parent="MainMenuButtons" instance=ExtResource("2_ff7fd")]
 position = Vector2(640, 580)
+script = ExtResource("6_cp0gc")
 
 [node name="HelpButton" parent="MainMenuButtons" instance=ExtResource("3_yt4ty")]
 position = Vector2(640, 680)
+script = ExtResource("8_uku3a")
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("4_yt4ty")]
 position = Vector2(640, 270)
