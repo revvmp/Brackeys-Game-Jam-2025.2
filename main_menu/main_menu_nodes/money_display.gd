@@ -19,6 +19,12 @@ func format_number_with_commas(number: int) -> String:
 func update_money(new_money: int):
 	Global.money = new_money
 	label.text = format_number_with_commas(new_money)
+	
+func add_money(amount: int):
+	update_money(Global.money + amount)
+	
+func subtract_money(amount: int):
+	update_money(Global.money - amount)
 
 func _ready():
 	label.text = format_number_with_commas(Global.money)
