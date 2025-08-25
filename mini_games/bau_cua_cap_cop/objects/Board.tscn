@@ -13,6 +13,7 @@ texture = ExtResource("1_gc4jt")
 
 [node name="BoardSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(-279, -96)
+scale = Vector2(1.02713, 0.840237)
 
 [node name="BoardSlot2" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(0, -96)
