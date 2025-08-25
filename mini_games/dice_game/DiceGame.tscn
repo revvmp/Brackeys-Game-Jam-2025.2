@@ -18,3 +18,5 @@ texture = ExtResource("2_gdh0p")
 
 [node name="Dice" parent="." instance=ExtResource("3_iwtdq")]
 position = Vector2(278.5, 65.345)
+
+[connection signal="roll_dice" from="Button" to="." method="_on_button_roll_dice"]
