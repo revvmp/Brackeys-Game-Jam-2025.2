@@ -1,87 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://cu53mr7jop5l5"]
+[gd_scene load_steps=5 format=3 uid="uid://cu53mr7jop5l5"]
 
-[ext_resource type="Script" path="res://mini_games/dice_game.gd" id="1_cnsld"]
+[ext_resource type="Script" uid="uid://rkctf10ti0g2" path="res://mini_games/dice_game/dice_game.gd" id="1_rsba8"]
 [ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/table.png" id="2_gdh0p"]
-[ext_resource type="Texture2D" uid="uid://7wih3oxtw4oh" path="res://assets/dice/dice-six-faces-one.png" id="3_06mah"]
-[ext_resource type="Texture2D" uid="uid://bbwcqg2y0400v" path="res://assets/dice/dice-six-faces-two.png" id="4_in4v4"]
-[ext_resource type="Texture2D" uid="uid://i35rs6kj8ig6" path="res://assets/dice/dice-six-faces-three.png" id="5_cgtrx"]
-[ext_resource type="Texture2D" uid="uid://dqh08rg8bdu36" path="res://assets/dice/dice-six-faces-four.png" id="6_nj6ba"]
-[ext_resource type="Texture2D" uid="uid://drerlpy511lip" path="res://assets/dice/dice-six-faces-five.png" id="7_h0ueb"]
-[ext_resource type="Texture2D" uid="uid://cy2a1ddhbtejp" path="res://assets/dice/dice-six-faces-six.png" id="8_urkcx"]
+[ext_resource type="PackedScene" uid="uid://bokxys77740c3" path="res://mini_games/dice_game/Dice.tscn" id="3_iwtdq"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/dice_game/Roll.tscn" id="9_12iu1"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_afwfo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_06mah")
-}],
-"loop": true,
-"name": &"1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_in4v4")
-}],
-"loop": true,
-"name": &"2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_cgtrx")
-}],
-"loop": true,
-"name": &"3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_nj6ba")
-}],
-"loop": true,
-"name": &"4",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_h0ueb")
-}],
-"loop": true,
-"name": &"5",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_urkcx")
-}],
-"loop": true,
-"name": &"6",
-"speed": 5.0
-}]
-
 [node name="DiceGame" type="Node2D"]
-script = ExtResource("1_cnsld")
+script = ExtResource("1_rsba8")
+
+[node name="Button" parent="." instance=ExtResource("9_12iu1")]
+position = Vector2(616.5, 512.345)
 
 [node name="Table" type="Sprite2D" parent="."]
-position = Vector2(266, 196)
+position = Vector2(544.5, 261.345)
 scale = Vector2(15.47, 10.4469)
 texture = ExtResource("2_gdh0p")
 
-[node name="Dice" type="AnimatedSprite2D" parent="."]
-position = Vector2(137.512, 226.386)
-scale = Vector2(0.252, 0.252)
-sprite_frames = SubResource("SpriteFrames_afwfo")
-animation = &"2"
-
-[node name="Dice2" type="AnimatedSprite2D" parent="."]
-position = Vector2(559.512, 226.386)
-scale = Vector2(0.252, 0.252)
-sprite_frames = SubResource("SpriteFrames_afwfo")
-animation = &"1"
-
-[node name="Button" parent="." instance=ExtResource("9_12iu1")]
-position = Vector2(338, 447)
-
-[node name="Timer" type="Timer" parent="."]
+[node name="Dice" parent="." instance=ExtResource("3_iwtdq")]
+position = Vector2(278.5, 65.345)
