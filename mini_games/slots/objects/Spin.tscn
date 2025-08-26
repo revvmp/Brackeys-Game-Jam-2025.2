@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0kj4rm7vj1m8"]
+
+[ext_resource type="PackedScene" uid="uid://c7rxu3e3caavw" path="res://ui/Button.tscn" id="1_6v72v"]
+[ext_resource type="Script" uid="uid://8bk0kknxbkhy" path="res://mini_games/snake_eyes/roll.gd" id="2_awb8l"]
+
+[node name="Button" instance=ExtResource("1_6v72v")]
+script = ExtResource("2_awb8l")
+
+[node name="Label" parent="." index="1"]
+text = "SPIN"
