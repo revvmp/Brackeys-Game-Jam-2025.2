@@ -25,14 +25,14 @@ position = Vector2(454, 434)
 position = Vector2(84, 116)
 scale = Vector2(0.35, 0.35)
 
-[node name="RollButton2" parent="." instance=ExtResource("4_eaobg")]
-position = Vector2(1085, 342)
+[node name="RollButton" parent="." instance=ExtResource("4_eaobg")]
+position = Vector2(1085, 465)
 
 [node name="BauCuaCaCopDice" parent="." instance=ExtResource("3_8mrat")]
 position = Vector2(1085, 231)
 
 [node name="FadingText" parent="." instance=ExtResource("6_xydmx")]
-position = Vector2(952, 399)
+position = Vector2(952, 519)
 
 [connection signal="dice_roll_result" from="BauCuaCaCopDice" to="." method="_on_bau_cua_ca_cop_dice_dice_roll_result"]
 [connection signal="dice_roll_result" from="BauCuaCaCopDice" to="Board" method="_on_bau_cua_ca_cop_dice_dice_roll_result"]

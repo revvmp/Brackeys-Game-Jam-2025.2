@@ -49,3 +49,10 @@ position = Vector2(78, 0)
 sprite_frames = SubResource("SpriteFrames_481ww")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="DiceThree" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 126)
+sprite_frames = SubResource("SpriteFrames_481ww")
+animation = &"idle"
+autoplay = "idle"
+frame = 3
