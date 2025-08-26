@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cu53mr7jop5l5"]
+[gd_scene load_steps=7 format=3 uid="uid://cu53mr7jop5l5"]
 
 [ext_resource type="Script" uid="uid://rkctf10ti0g2" path="res://mini_games/snake_eyes/dice_game.gd" id="1_rsba8"]
 [ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/dice/table.png" id="2_gdh0p"]
 [ext_resource type="PackedScene" uid="uid://bokxys77740c3" path="res://mini_games/snake_eyes/Dice.tscn" id="3_iwtdq"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_moon8"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_ja832"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="9_12iu1"]
 
 [node name="DiceGame" type="Node2D"]
@@ -23,6 +24,9 @@ position = Vector2(278.5, 65.345)
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_moon8")]
 position = Vector2(245, 579)
 scale = Vector2(0.36, 0.36)
+
+[node name="FadingText" parent="." instance=ExtResource("6_ja832")]
+position = Vector2(483, 569)
 
 [node name="SnakeEyes" type="Label" parent="."]
 offset_right = 40.0
