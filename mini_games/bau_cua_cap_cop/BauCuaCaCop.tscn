@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtw5jmb27tqei"]
+[gd_scene load_steps=6 format=3 uid="uid://dtw5jmb27tqei"]
 
 [ext_resource type="PackedScene" uid="uid://drwxs4k2eesso" path="res://mini_games/bau_cua_cap_cop/objects/Board.tscn" id="1_3vh24"]
 [ext_resource type="Script" uid="uid://cmx84b41beco0" path="res://mini_games/bau_cua_cap_cop/bau_cua_ca_cop.gd" id="1_lg8dq"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="2_8v87c"]
 [ext_resource type="PackedScene" uid="uid://0s2bpo3yt4l5" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopDice.tscn" id="3_8mrat"]
+[ext_resource type="PackedScene" uid="uid://ciw5y7vn8jq1c" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopRollButton.tscn" id="4_eaobg"]
 
 [node name="BauCuaCaCop" type="Node2D"]
 script = ExtResource("1_lg8dq")
@@ -25,6 +26,9 @@ scale = Vector2(0.35, 0.35)
 
 [node name="BauCuaCaCopDice" parent="." instance=ExtResource("3_8mrat")]
 position = Vector2(1085, 231)
+
+[node name="RollButton" parent="." instance=ExtResource("4_eaobg")]
+position = Vector2(1085, 342)
 
 [connection signal="dice_roll_result" from="BauCuaCaCopDice" to="." method="_on_bau_cua_ca_cop_dice_dice_roll_result"]
 [connection signal="dice_roll_result" from="BauCuaCaCopDice" to="Board" method="_on_bau_cua_ca_cop_dice_dice_roll_result"]
