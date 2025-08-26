@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtw5jmb27tqei"]
+[gd_scene load_steps=5 format=3 uid="uid://dtw5jmb27tqei"]
 
 [ext_resource type="PackedScene" uid="uid://drwxs4k2eesso" path="res://mini_games/bau_cua_cap_cop/objects/Board.tscn" id="1_3vh24"]
+[ext_resource type="Script" uid="uid://cmx84b41beco0" path="res://mini_games/bau_cua_cap_cop/bau_cua_ca_cop.gd" id="1_lg8dq"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="2_8v87c"]
 [ext_resource type="PackedScene" uid="uid://0s2bpo3yt4l5" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopDice.tscn" id="3_8mrat"]
 
 [node name="BauCuaCaCop" type="Node2D"]
+script = ExtResource("1_lg8dq")
 
 [node name="GameTitle" type="Label" parent="."]
 offset_left = 7.0
@@ -23,3 +25,6 @@ scale = Vector2(0.35, 0.35)
 
 [node name="BauCuaCaCopDice" parent="." instance=ExtResource("3_8mrat")]
 position = Vector2(1085, 231)
+
+[connection signal="dice_roll_result" from="BauCuaCaCopDice" to="." method="_on_bau_cua_ca_cop_dice_dice_roll_result"]
+[connection signal="dice_roll_result" from="BauCuaCaCopDice" to="Board" method="_on_bau_cua_ca_cop_dice_dice_roll_result"]

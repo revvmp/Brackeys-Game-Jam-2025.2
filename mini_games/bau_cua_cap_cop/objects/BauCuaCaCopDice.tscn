@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://0s2bpo3yt4l5"]
+[gd_scene load_steps=10 format=3 uid="uid://0s2bpo3yt4l5"]
 
 [ext_resource type="Script" uid="uid://klc21s5yxsj0" path="res://mini_games/bau_cua_cap_cop/objects/bau_cua_ca_cop_dice.gd" id="1_8r0b4"]
 [ext_resource type="Texture2D" uid="uid://dvlc6owkkvvag" path="res://assets/bau_cua_ca_cop/chicken_icon.png" id="1_b5vlu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://1e81gte4ghe1" path="res://assets/bau_cua_ca_cop/fish_icon.png" id="4_80f15"]
 [ext_resource type="Texture2D" uid="uid://bltxhai1sitoa" path="res://assets/bau_cua_ca_cop/gourd_icon.png" id="5_trir3"]
 [ext_resource type="Texture2D" uid="uid://dlagidpbb0vs3" path="res://assets/bau_cua_ca_cop/shrimp_icon.png" id="6_cmdan"]
+[ext_resource type="PackedScene" uid="uid://ciw5y7vn8jq1c" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopRollButton.tscn" id="8_fyl8e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_481ww"]
 animations = [{
@@ -43,10 +44,12 @@ sprite_frames = SubResource("SpriteFrames_481ww")
 animation = &"idle"
 autoplay = "idle"
 frame = 2
-frame_progress = 0.853243
 
 [node name="DiceTwo" type="AnimatedSprite2D" parent="."]
 position = Vector2(78, 0)
 sprite_frames = SubResource("SpriteFrames_481ww")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="RollButton" parent="." instance=ExtResource("8_fyl8e")]
+position = Vector2(0, 111)
