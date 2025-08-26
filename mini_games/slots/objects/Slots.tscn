@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bepytmp8abntt" path="res://mini_games/slots/objects/slots.gd" id="1_15lyl"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="2_rt478"]
-[ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/table.png" id="3_yyiqj"]
+[ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/dice/table.png" id="3_yyiqj"]
 [ext_resource type="PackedScene" uid="uid://b8fary14ruxi0" path="res://mini_games/slots/objects/Dice.tscn" id="4_41u8x"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_2auvx"]
 

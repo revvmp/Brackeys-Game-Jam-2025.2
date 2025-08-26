@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c5xaqqcqhl4a1"]
 
-[ext_resource type="Script" path="res://ui/fading_text.gd" id="1_7haqx"]
+[ext_resource type="Script" uid="uid://cguga11yj78vv" path="res://ui/fading_text.gd" id="1_7haqx"]
 
 [node name="FadingText" type="Node2D"]
 script = ExtResource("1_7haqx")
