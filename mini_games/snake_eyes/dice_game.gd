@@ -7,7 +7,6 @@ extends Node2D
 func _on_button_roll_dice() -> void:
 	dice.roll()
 
-
 func _on_dice_snake_eyes() -> void:
 	money.multiply_money(10)
 	

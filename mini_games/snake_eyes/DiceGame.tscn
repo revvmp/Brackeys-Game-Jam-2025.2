@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cu53mr7jop5l5"]
 
 [ext_resource type="Script" uid="uid://rkctf10ti0g2" path="res://mini_games/snake_eyes/dice_game.gd" id="1_rsba8"]
-[ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/table.png" id="2_gdh0p"]
+[ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/dice/table.png" id="2_gdh0p"]
 [ext_resource type="PackedScene" uid="uid://bokxys77740c3" path="res://mini_games/snake_eyes/Dice.tscn" id="3_iwtdq"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_moon8"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="9_12iu1"]
@@ -30,4 +30,6 @@ offset_bottom = 22.3333
 
 [connection signal="roll_dice" from="Button" to="." method="_on_button_roll_dice"]
 [connection signal="dice_game_lost" from="Dice" to="." method="_on_dice_dice_game_lost"]
+[connection signal="dice_game_lost" from="Dice" to="Button" method="_on_dice_dice_game_lost"]
 [connection signal="snake_eyes" from="Dice" to="." method="_on_dice_snake_eyes"]
+[connection signal="snake_eyes" from="Dice" to="Button" method="_on_dice_snake_eyes"]

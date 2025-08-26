@@ -11,7 +11,7 @@ script = ExtResource("1_1afds")
 scale = Vector2(0.441, 0.371994)
 texture = ExtResource("1_gc4jt")
 
-[node name="DeerSLot" parent="." instance=ExtResource("3_q3i0d")]
+[node name="DeerSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(-279, -96)
 scale = Vector2(1.02713, 0.840237)
 

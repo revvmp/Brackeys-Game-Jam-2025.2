@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7s0yfmvyas0m"]
+
+[ext_resource type="Script" uid="uid://cguga11yj78vv" path="res://ui/fading_text.gd" id="1_7haqx"]
+
+[node name="FadingText" type="Node2D"]
+script = ExtResource("1_7haqx")
+
+[node name="Text" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 180.0
+offset_bottom = 22.3333
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+text = "Message Here"
+horizontal_alignment = 1
+autowrap_mode = 2
