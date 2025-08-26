@@ -13,6 +13,9 @@ signal dice_game_lost
 @onready var dice1 = $Dice
 @onready var dice2 = $Dice2
 
+func _ready() -> void:
+	randomize()
+	
 func roll():
 	for i in range (25):
 		await get_tree().create_timer(time).timeout
