@@ -12,7 +12,6 @@ signal dice_game_lost
 
 @onready var dice1 = $Dice
 @onready var dice2 = $Dice2
-@onready var text = $"../FadingText"
 
 
 func _ready() -> void:
@@ -38,7 +37,7 @@ func roll():
 	print("roll complete")
 	if num1 == num2:
 		emit_signal("snake_eyes")
-		text.display_text("Snake Eyes!", Color.SKY_BLUE)
+		#text.display_text("Snake Eyes!", Color.SKY_BLUE)
 	else:
 		emit_signal("dice_game_lost")
-		text.display_text("Game Lost.", Color.RED)
+		#text.display_text("Game Lost.", Color.RED)

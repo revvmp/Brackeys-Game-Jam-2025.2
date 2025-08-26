@@ -1,6 +1,6 @@
 extends "res://ui/button.gd"
 
-var rolling = false
+var rolling = true
 signal roll_dice
 
 
