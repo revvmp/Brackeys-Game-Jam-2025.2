@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4lcggg83wu2g"]
+
+[ext_resource type="PackedScene" uid="uid://c7rxu3e3caavw" path="res://ui/Button.tscn" id="1_4uw7b"]
+[ext_resource type="Script" uid="uid://mg1wbl6de5du" path="res://mini_games/rock_paper_scissors/objects/scissors_button.gd" id="2_k81sl"]
+
+[node name="Button" instance=ExtResource("1_4uw7b")]
+script = ExtResource("2_k81sl")
+
+[node name="Label" parent="." index="1"]
+text = "SCISSORS"

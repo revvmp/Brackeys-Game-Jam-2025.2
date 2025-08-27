@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://v3c67wawre31"]
+
+[ext_resource type="Script" uid="uid://bj0nk1pnb3s5k" path="res://mini_games/rock_paper_scissors/rock_paper_scissors.gd" id="1_8s7em"]
+[ext_resource type="PackedScene" uid="uid://dr0eunixbfpe3" path="res://mini_games/rock_paper_scissors/objects/RockButton.tscn" id="2_opgkj"]
+[ext_resource type="PackedScene" uid="uid://dfarehbanyyki" path="res://mini_games/rock_paper_scissors/objects/PaperButton.tscn" id="3_8s7em"]
+[ext_resource type="PackedScene" uid="uid://d4lcggg83wu2g" path="res://mini_games/rock_paper_scissors/objects/ScissorsButton.tscn" id="4_swftx"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_1rmuh"]
+[ext_resource type="PackedScene" uid="uid://cnbe8o3eqqh8" path="res://mini_games/rock_paper_scissors/objects/RockPaperScissorsOptions.tscn" id="5_opgkj"]
+
+[node name="RockPaperScissors" type="Node2D"]
+script = ExtResource("1_8s7em")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 593.0
+offset_top = 276.0
+offset_right = 633.0
+offset_bottom = 298.333
+
+[node name="Rock" parent="." instance=ExtResource("2_opgkj")]
+position = Vector2(213, 646)
+
+[node name="Paper" parent="." instance=ExtResource("3_8s7em")]
+position = Vector2(625, 644)
+
+[node name="Scissors" parent="." instance=ExtResource("4_swftx")]
+position = Vector2(1072, 657)
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("5_1rmuh")]
+position = Vector2(266, 147)
+
+[node name="RockPaperScissorsOptions" parent="." instance=ExtResource("5_opgkj")]
+position = Vector2(65, 11)
+
+[connection signal="rock_button" from="Rock" to="." method="_on_rock_rock_button"]
+[connection signal="paper_button" from="Paper" to="." method="_on_paper_paper_button"]
+[connection signal="scissors_button" from="Scissors" to="." method="_on_scissors_scissors_button"]
+[connection signal="opponent_choice_made" from="RockPaperScissorsOptions" to="." method="_on_rock_paper_scissors_options_opponent_choice_made"]
