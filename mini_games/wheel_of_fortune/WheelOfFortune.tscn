@@ -30,7 +30,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(945, 488)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_ok0ah")]
-position = Vector2(169, 592)
+position = Vector2(205, 81.0001)
 scale = Vector2(0.445, 0.445)
 
 [connection signal="spin_wheel" from="Button" to="." method="_on_button_spin_wheel"]

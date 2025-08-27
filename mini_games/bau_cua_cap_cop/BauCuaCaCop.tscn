@@ -22,7 +22,7 @@ uppercase = true
 position = Vector2(454, 434)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("2_8v87c")]
-position = Vector2(84, 116)
+position = Vector2(157, 128)
 scale = Vector2(0.35, 0.35)
 
 [node name="RollButton" parent="." instance=ExtResource("4_eaobg")]

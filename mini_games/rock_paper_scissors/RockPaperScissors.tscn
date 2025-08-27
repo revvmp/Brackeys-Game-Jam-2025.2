@@ -26,7 +26,8 @@ position = Vector2(625, 644)
 position = Vector2(1072, 657)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_1rmuh")]
-position = Vector2(266, 147)
+position = Vector2(236, 96)
+scale = Vector2(0.5, 0.5)
 
 [node name="RockPaperScissorsOptions" parent="." instance=ExtResource("5_opgkj")]
 position = Vector2(65, 11)
