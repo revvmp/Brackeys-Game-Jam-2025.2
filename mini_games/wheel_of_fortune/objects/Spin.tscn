@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d017xigr6b6a"]
+
+[ext_resource type="PackedScene" uid="uid://c7rxu3e3caavw" path="res://ui/Button.tscn" id="1_cev0j"]
+[ext_resource type="Script" uid="uid://b8u1l0bn0i3tf" path="res://mini_games/wheel_of_fortune/objects/spin.gd" id="2_qgcds"]
+
+[node name="Button" instance=ExtResource("1_cev0j")]
+script = ExtResource("2_qgcds")
+
+[node name="Label" parent="." index="1"]
+text = "SPIN"

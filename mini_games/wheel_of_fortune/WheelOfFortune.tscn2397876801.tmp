@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq8sfknhn15np"]
+
+[ext_resource type="PackedScene" uid="uid://dr525wp2cyeww" path="res://mini_games/wheel_of_fortune/objects/Wheel.tscn" id="1_ketdt"]
+[ext_resource type="PackedScene" uid="uid://d017xigr6b6a" path="res://mini_games/wheel_of_fortune/objects/Spin.tscn" id="2_1nyoe"]
+[ext_resource type="PackedScene" uid="uid://blamgf6ryactj" path="res://mini_games/wheel_of_fortune/objects/MoneyAmount.tscn" id="3_1nyoe"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="4_i7lo4"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_ok0ah"]
+
+[node name="WheelOfFortune" type="Node2D"]
+
+[node name="Wheel" parent="." instance=ExtResource("1_ketdt")]
+
+[node name="Button" parent="." instance=ExtResource("2_1nyoe")]
+position = Vector2(976, 165)
+
+[node name="MoneyAmount" parent="." instance=ExtResource("3_1nyoe")]
+anchors_preset = 10
+anchor_bottom = 0.0
+offset_left = 930.0
+offset_top = 82.0
+offset_right = 930.0
+offset_bottom = 82.0
+grow_vertical = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="FadingText" parent="." instance=ExtResource("4_i7lo4")]
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("5_ok0ah")]
+position = Vector2(249, 550)
+
+[connection signal="spin_wheel" from="Button" to="Wheel" method="_on_button_spin_wheel"]

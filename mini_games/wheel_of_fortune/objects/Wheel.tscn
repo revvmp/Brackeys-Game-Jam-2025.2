@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr525wp2cyeww"]
+
+[ext_resource type="Texture2D" uid="uid://darsui2oge1ca" path="res://assets/wheel_of_fortune/spin_wheel_background.png" id="1_gdjed"]
+[ext_resource type="Script" uid="uid://b4uny85w73tsq" path="res://mini_games/wheel_of_fortune/objects/wheel.gd" id="1_rg133"]
+[ext_resource type="Texture2D" uid="uid://0mw8kcqbdnvf" path="res://assets/wheel_of_fortune/wheel.png" id="2_altuo"]
+[ext_resource type="Texture2D" uid="uid://duc12avgok7g" path="res://assets/wheel_of_fortune/arrow.png" id="3_altuo"]
+
+[node name="Wheel" type="Node2D"]
+script = ExtResource("1_rg133")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(462, 121.335)
+scale = Vector2(0.733333, 0.726667)
+texture = ExtResource("1_gdjed")
+
+[node name="MainWheel" type="Sprite2D" parent="."]
+position = Vector2(464, 122.335)
+scale = Vector2(0.987097, 0.980645)
+texture = ExtResource("2_altuo")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(464, -181.665)
+scale = Vector2(0.133466, 0.133466)
+texture = ExtResource("3_altuo")
