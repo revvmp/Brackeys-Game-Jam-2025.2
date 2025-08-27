@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvlc6owkkvvag"
-path="res://.godot/imported/chicken_icon.png-e087f13cc700036798a21c194dc2a48a.ctex"
+uid="uid://b01dclktk06h1"
+path="res://.godot/imported/GameJam_fish.png-6dfa0b01184dab14b5ee7b66d9ea3f1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bau_cua_ca_cop/chicken_icon.png"
-dest_files=["res://.godot/imported/chicken_icon.png-e087f13cc700036798a21c194dc2a48a.ctex"]
+source_file="res://assets/bau_cua_ca_cop/GameJam_fish.png"
+dest_files=["res://.godot/imported/GameJam_fish.png-6dfa0b01184dab14b5ee7b66d9ea3f1d.ctex"]
 
 [params]
 

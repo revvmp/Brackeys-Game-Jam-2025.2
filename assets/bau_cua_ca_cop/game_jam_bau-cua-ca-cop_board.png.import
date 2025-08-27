@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cetkrhxx2pf04"
-path="res://.godot/imported/deer_icon.png-20d6ba33eeb89cd23472e34f48fab675.ctex"
+uid="uid://dqf7x1ua0wccx"
+path="res://.godot/imported/game_jam_bau-cua-ca-cop_board.png-cfba6308436b9fb085fe3ea2c7295989.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bau_cua_ca_cop/deer_icon.png"
-dest_files=["res://.godot/imported/deer_icon.png-20d6ba33eeb89cd23472e34f48fab675.ctex"]
+source_file="res://assets/bau_cua_ca_cop/game_jam_bau-cua-ca-cop_board.png"
+dest_files=["res://.godot/imported/game_jam_bau-cua-ca-cop_board.png-cfba6308436b9fb085fe3ea2c7295989.ctex"]
 
 [params]
 

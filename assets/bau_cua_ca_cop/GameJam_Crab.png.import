@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlagidpbb0vs3"
-path="res://.godot/imported/shrimp_icon.png-d9f51abab94fa17f3f1bfdf3bf036afb.ctex"
+uid="uid://swxx8a1jba53"
+path="res://.godot/imported/GameJam_Crab.png-6e1339eb70fa7451ff4a939ba03e8262.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bau_cua_ca_cop/shrimp_icon.png"
-dest_files=["res://.godot/imported/shrimp_icon.png-d9f51abab94fa17f3f1bfdf3bf036afb.ctex"]
+source_file="res://assets/bau_cua_ca_cop/GameJam_Crab.png"
+dest_files=["res://.godot/imported/GameJam_Crab.png-6e1339eb70fa7451ff4a939ba03e8262.ctex"]
 
 [params]
 

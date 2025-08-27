@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bltxhai1sitoa"
-path="res://.godot/imported/gourd_icon.png-7b285b656aa4a15238f6ece87b2c977a.ctex"
+uid="uid://cdiq38r4hnwvr"
+path="res://.godot/imported/GameJam_Shrimp.png-75a35d68412aeebb0ee4c8ac28363a9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bau_cua_ca_cop/gourd_icon.png"
-dest_files=["res://.godot/imported/gourd_icon.png-7b285b656aa4a15238f6ece87b2c977a.ctex"]
+source_file="res://assets/bau_cua_ca_cop/GameJam_Shrimp.png"
+dest_files=["res://.godot/imported/GameJam_Shrimp.png-75a35d68412aeebb0ee4c8ac28363a9e.ctex"]
 
 [params]
 

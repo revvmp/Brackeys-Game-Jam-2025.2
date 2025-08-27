@@ -1,31 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://drwxs4k2eesso"]
+[gd_scene load_steps=9 format=3 uid="uid://drwxs4k2eesso"]
 
 [ext_resource type="Script" uid="uid://cvp7ppaumjd7x" path="res://mini_games/bau_cua_cap_cop/objects/board.gd" id="1_1afds"]
-[ext_resource type="Texture2D" uid="uid://b14xhbtk0of44" path="res://assets/bau_cua_ca_cop/baucuacacopboard.png" id="1_gc4jt"]
+[ext_resource type="Texture2D" uid="uid://w8w1wsnliiqy" path="res://assets/bau_cua_ca_cop/GameJam_Deer.png" id="2_u6t2d"]
+[ext_resource type="Texture2D" uid="uid://8byn8fh6xtes" path="res://assets/bau_cua_ca_cop/GameJam_Gourd.png" id="3_gv840"]
 [ext_resource type="PackedScene" uid="uid://g2f63l1f37gc" path="res://mini_games/bau_cua_cap_cop/objects/BoardSlot.tscn" id="3_q3i0d"]
+[ext_resource type="Texture2D" uid="uid://d3fgcck372ljx" path="res://assets/bau_cua_ca_cop/GameJam_Chicken.png" id="4_jvxvh"]
+[ext_resource type="Texture2D" uid="uid://b01dclktk06h1" path="res://assets/bau_cua_ca_cop/GameJam_fish.png" id="5_ifggw"]
+[ext_resource type="Texture2D" uid="uid://swxx8a1jba53" path="res://assets/bau_cua_ca_cop/GameJam_Crab.png" id="6_vbscx"]
+[ext_resource type="Texture2D" uid="uid://cdiq38r4hnwvr" path="res://assets/bau_cua_ca_cop/GameJam_Shrimp.png" id="7_gv840"]
 
 [node name="Board" type="Node2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_1afds")
 
-[node name="BoardImage" type="Sprite2D" parent="."]
-scale = Vector2(0.441, 0.371994)
-texture = ExtResource("1_gc4jt")
+[node name="BoardImages" type="Node2D" parent="."]
+
+[node name="GameJamDeer" type="Sprite2D" parent="BoardImages"]
+position = Vector2(-266, -115)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_u6t2d")
+
+[node name="GameJamGourd" type="Sprite2D" parent="BoardImages"]
+position = Vector2(0, -116)
+scale = Vector2(0.0496667, 0.0493333)
+texture = ExtResource("3_gv840")
+
+[node name="GameJamChicken" type="Sprite2D" parent="BoardImages"]
+position = Vector2(264.12, -116.987)
+scale = Vector2(0.0493355, 0.0486756)
+texture = ExtResource("4_jvxvh")
+
+[node name="GameJamFish" type="Sprite2D" parent="BoardImages"]
+position = Vector2(-269, 85)
+scale = Vector2(0.0490066, 0.0480266)
+texture = ExtResource("5_ifggw")
+
+[node name="GameJamDeer5" type="Sprite2D" parent="BoardImages"]
+position = Vector2(-1.00043, 85)
+scale = Vector2(0.0486667, 0.0483333)
+texture = ExtResource("6_vbscx")
+
+[node name="GameJamDeer6" type="Sprite2D" parent="BoardImages"]
+position = Vector2(262.995, 85)
+scale = Vector2(0.0483291, 0.0486421)
+texture = ExtResource("7_gv840")
 
 [node name="DeerSlot" parent="." instance=ExtResource("3_q3i0d")]
-position = Vector2(-279, -96)
+position = Vector2(-263, -23)
 scale = Vector2(1.02713, 0.840237)
 
 [node name="GourdSlot" parent="." instance=ExtResource("3_q3i0d")]
-position = Vector2(0, -96)
+position = Vector2(0, -24)
 
 [node name="ChickenSlot" parent="." instance=ExtResource("3_q3i0d")]
-position = Vector2(286, -96)
+position = Vector2(270, -24)
 
 [node name="FishSlot" parent="." instance=ExtResource("3_q3i0d")]
-position = Vector2(-284, 141)
+position = Vector2(-268, 173)
 
 [node name="CrabSlot" parent="." instance=ExtResource("3_q3i0d")]
-position = Vector2(-1, 141)
+position = Vector2(-1, 173)
 
 [node name="ShrimpSlot" parent="." instance=ExtResource("3_q3i0d")]
-position = Vector2(283, 142)
+position = Vector2(267, 174)

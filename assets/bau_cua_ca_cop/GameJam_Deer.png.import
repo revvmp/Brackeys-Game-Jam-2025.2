@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1e81gte4ghe1"
-path="res://.godot/imported/fish_icon.png-dd176a7eef5d9781bb0fe5e83f61360d.ctex"
+uid="uid://w8w1wsnliiqy"
+path="res://.godot/imported/GameJam_Deer.png-2bfa64265602da184e07e1988847e350.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bau_cua_ca_cop/fish_icon.png"
-dest_files=["res://.godot/imported/fish_icon.png-dd176a7eef5d9781bb0fe5e83f61360d.ctex"]
+source_file="res://assets/bau_cua_ca_cop/GameJam_Deer.png"
+dest_files=["res://.godot/imported/GameJam_Deer.png-2bfa64265602da184e07e1988847e350.ctex"]
 
 [params]
 

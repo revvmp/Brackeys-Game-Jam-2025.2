@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtw5jmb27tqei"]
+[gd_scene load_steps=8 format=3 uid="uid://dtw5jmb27tqei"]
 
 [ext_resource type="PackedScene" uid="uid://drwxs4k2eesso" path="res://mini_games/bau_cua_cap_cop/objects/Board.tscn" id="1_3vh24"]
 [ext_resource type="Script" uid="uid://cmx84b41beco0" path="res://mini_games/bau_cua_cap_cop/bau_cua_ca_cop.gd" id="1_lg8dq"]
+[ext_resource type="Texture2D" uid="uid://dqf7x1ua0wccx" path="res://assets/bau_cua_ca_cop/game_jam_bau-cua-ca-cop_board.png" id="2_0dgeg"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="2_8v87c"]
 [ext_resource type="PackedScene" uid="uid://0s2bpo3yt4l5" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopDice.tscn" id="3_8mrat"]
 [ext_resource type="PackedScene" uid="uid://ciw5y7vn8jq1c" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopRollButton.tscn" id="4_eaobg"]
@@ -9,6 +10,11 @@
 
 [node name="BauCuaCaCop" type="Node2D"]
 script = ExtResource("1_lg8dq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0dgeg")
 
 [node name="GameTitle" type="Label" parent="."]
 offset_left = 7.0
@@ -19,7 +25,7 @@ text = "Bau Cua Ca Cop"
 uppercase = true
 
 [node name="Board" parent="." instance=ExtResource("1_3vh24")]
-position = Vector2(454, 434)
+position = Vector2(454, 403)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("2_8v87c")]
 position = Vector2(157, 128)
