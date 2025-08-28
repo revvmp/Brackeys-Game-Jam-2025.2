@@ -61,4 +61,5 @@ text = "Devil's Deal"
 horizontal_alignment = 1
 uppercase = true
 
+[connection signal="on_shop_pressed" from="MainMenuButtons/ShopButton" to="." method="_on_shop_button_on_shop_pressed"]
 [connection signal="help_pressed" from="MainMenuButtons/HelpButton" to="." method="_on_help_button_help_pressed"]

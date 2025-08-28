@@ -1,4 +1,6 @@
 extends "res://ui/button.gd"
 
+signal on_shop_pressed
+
 func on_mouse_pressed():
-	print("Open Shop")
+	on_shop_pressed.emit()

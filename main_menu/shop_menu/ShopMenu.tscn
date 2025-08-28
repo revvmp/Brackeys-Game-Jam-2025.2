@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cblkedsll8ajl"]
+
+[ext_resource type="Script" uid="uid://cgh2qrjb37ner" path="res://main_menu/shop_menu/shop_menu.gd" id="1_6enjs"]
+[ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="1_hwuxl"]
+[ext_resource type="PackedScene" uid="uid://b02jo0cs22hi0" path="res://main_menu/help_menu/ExitButton.tscn" id="2_0vna0"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="2_shhvs"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="3_shhvs"]
+
+[node name="ShopMenu" type="Node2D"]
+script = ExtResource("1_6enjs")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_hwuxl")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 4.0
+offset_right = 281.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("2_shhvs")
+theme_override_font_sizes/font_size = 128
+text = "SHOP"
+
+[node name="ExitButton" parent="." instance=ExtResource("2_0vna0")]
+position = Vector2(640, 672)
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("3_shhvs")]
+position = Vector2(479, 80.0001)
+scale = Vector2(0.4, 0.4)
+
+[node name="InventoryLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 130.0
+offset_right = 275.0
+offset_bottom = 238.0
+theme_override_fonts/font = ExtResource("2_shhvs")
+theme_override_font_sizes/font_size = 96
+text = "Inventory"
+
+[node name="ShopLabel" type="Label" parent="."]
+offset_left = 769.0
+offset_top = 138.0
+offset_right = 1028.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource("2_shhvs")
+theme_override_font_sizes/font_size = 96
+text = "Trophies"
+
+[connection signal="exit_pressed" from="ExitButton" to="." method="_on_exit_button_exit_pressed"]
