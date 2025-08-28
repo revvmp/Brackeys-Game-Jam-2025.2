@@ -47,6 +47,7 @@ func _ready() -> void:
 		return # Fresh Game, instantiate objects
 	load_game()
 	print("Successfully loaded previous game data")
+	print("MONEY: ", money)
 	print("TROPHIES: ", trophies)
 	print("SHOP: ", shop)
 
