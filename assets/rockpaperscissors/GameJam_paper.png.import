@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbqc8o434pgol"
-path="res://.godot/imported/rock.png-51154631f65fe134759d086940d062d1.ctex"
+uid="uid://bloxa5osslbsw"
+path="res://.godot/imported/GameJam_paper.png-bcd3a7ad09c3b709e8e90ac7a71cd766.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rockpaperscissors/rock.png"
-dest_files=["res://.godot/imported/rock.png-51154631f65fe134759d086940d062d1.ctex"]
+source_file="res://assets/rockpaperscissors/GameJam_paper.png"
+dest_files=["res://.godot/imported/GameJam_paper.png-bcd3a7ad09c3b709e8e90ac7a71cd766.ctex"]
 
 [params]
 

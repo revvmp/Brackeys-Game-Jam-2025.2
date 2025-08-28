@@ -19,9 +19,9 @@ texture = ExtResource("2_swftx")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 367.0
-offset_top = 47.0
+offset_top = 95.0
 offset_right = 928.0
-offset_bottom = 197.0
+offset_bottom = 245.0
 theme_override_font_sizes/font_size = 51
 text = "Rock Paper Scissors"
 horizontal_alignment = 1
@@ -29,20 +29,20 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Rock" parent="." instance=ExtResource("2_opgkj")]
-position = Vector2(213, 646)
+position = Vector2(282, 332)
 
 [node name="Paper" parent="." instance=ExtResource("3_8s7em")]
-position = Vector2(625, 644)
+position = Vector2(282, 456)
 
 [node name="Scissors" parent="." instance=ExtResource("4_swftx")]
-position = Vector2(1072, 657)
+position = Vector2(282, 580)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_1rmuh")]
-position = Vector2(236, 96)
+position = Vector2(229, 87)
 scale = Vector2(0.5, 0.5)
 
 [node name="RockPaperScissorsOptions" parent="." instance=ExtResource("5_opgkj")]
-position = Vector2(73, 51)
+position = Vector2(314, 46)
 
 [connection signal="rock_button" from="Rock" to="." method="_on_rock_rock_button"]
 [connection signal="paper_button" from="Paper" to="." method="_on_paper_paper_button"]

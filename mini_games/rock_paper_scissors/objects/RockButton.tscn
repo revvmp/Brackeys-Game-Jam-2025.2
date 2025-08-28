@@ -7,4 +7,6 @@
 script = ExtResource("2_qrysh")
 
 [node name="Label" parent="." index="1"]
+offset_left = -33.6667
+offset_right = 32.3333
 text = "ROCK"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://khyk74ofoafa"
-path="res://.godot/imported/scissors.png-314fe567eeb2f10ce14adaea4bb13a12.ctex"
+uid="uid://b6p0bkb07er2m"
+path="res://.godot/imported/GameJam_rock.png-785ea5c60d24a3eec276f7a3eb3e2a66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rockpaperscissors/scissors.png"
-dest_files=["res://.godot/imported/scissors.png-314fe567eeb2f10ce14adaea4bb13a12.ctex"]
+source_file="res://assets/rockpaperscissors/GameJam_rock.png"
+dest_files=["res://.godot/imported/GameJam_rock.png-785ea5c60d24a3eec276f7a3eb3e2a66.ctex"]
 
 [params]
 

@@ -1,7 +1,6 @@
 extends Node2D
 
 enum Choice {
-	QUESTION,
 	ROCK,
 	PAPER,
 	SCISSORS
@@ -18,7 +17,7 @@ func make_rps_choice():
 	
 	hand.stop()
 	
-	var npc_choice = randi_range(1, 3)
+	var npc_choice = randi_range(0, 2)
 	
 	hand.frame = npc_choice
 	

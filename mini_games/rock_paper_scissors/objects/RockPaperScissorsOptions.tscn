@@ -1,25 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnbe8o3eqqh8"]
+[gd_scene load_steps=6 format=3 uid="uid://cnbe8o3eqqh8"]
 
 [ext_resource type="Script" uid="uid://bhpml6mowgyid" path="res://mini_games/rock_paper_scissors/objects/rock_paper_scissors_options.gd" id="1_46nsh"]
-[ext_resource type="Texture2D" uid="uid://bbqc8o434pgol" path="res://assets/rockpaperscissors/rock.png" id="1_m3wq8"]
-[ext_resource type="Texture2D" uid="uid://fenojr62da71" path="res://assets/rockpaperscissors/paper.png" id="2_46nsh"]
-[ext_resource type="Texture2D" uid="uid://5grtail1pupd" path="res://assets/rockpaperscissors/outline-red-question-mark-symbol-icon-png-701751694963531s2ea0c2jvv.png" id="2_w8lu5"]
-[ext_resource type="Texture2D" uid="uid://khyk74ofoafa" path="res://assets/rockpaperscissors/scissors.png" id="3_w8lu5"]
+[ext_resource type="Texture2D" uid="uid://b6p0bkb07er2m" path="res://assets/rockpaperscissors/GameJam_rock.png" id="3_w8lu5"]
+[ext_resource type="Texture2D" uid="uid://bloxa5osslbsw" path="res://assets/rockpaperscissors/GameJam_paper.png" id="4_gspec"]
+[ext_resource type="Texture2D" uid="uid://bs2troli6cqxs" path="res://assets/rockpaperscissors/GameJam_scissors.png" id="5_fs11e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kiuxh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_w8lu5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_m3wq8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_46nsh")
-}, {
-"duration": 1.0,
 "texture": ExtResource("3_w8lu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gspec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fs11e")
 }],
 "loop": true,
 "name": &"idle",
@@ -30,7 +26,10 @@ animations = [{
 script = ExtResource("1_46nsh")
 
 [node name="Hand" type="AnimatedSprite2D" parent="."]
-position = Vector2(556, 327)
-scale = Vector2(0.389329, 0.330411)
+position = Vector2(556, 400)
+rotation = 4.71239
+scale = Vector2(0.18, 0.153)
 sprite_frames = SubResource("SpriteFrames_kiuxh")
 animation = &"idle"
+autoplay = "idle"
+flip_h = true
