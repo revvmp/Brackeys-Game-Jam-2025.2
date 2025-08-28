@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/dice/table.png" id="2_gdh0p"]
 [ext_resource type="PackedScene" uid="uid://bokxys77740c3" path="res://mini_games/snake_eyes/Dice.tscn" id="3_iwtdq"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_moon8"]
-[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_ja832"]
-[ext_resource type="PackedScene" uid="uid://cai1egad7kcgd" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
+[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="6_ja832"]
+[ext_resource type="PackedScene" uid="uid://c71oq4go8g007" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="9_12iu1"]
 
 [node name="DiceGame" type="Node2D"]
