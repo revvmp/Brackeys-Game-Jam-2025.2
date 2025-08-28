@@ -1,14 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq8sfknhn15np"]
+[gd_scene load_steps=8 format=3 uid="uid://dq8sfknhn15np"]
 
 [ext_resource type="Script" uid="uid://7u8eqom66q3x" path="res://mini_games/wheel_of_fortune/wheel_of_fortune.gd" id="1_fcvik"]
 [ext_resource type="PackedScene" uid="uid://dr525wp2cyeww" path="res://mini_games/wheel_of_fortune/objects/Wheel.tscn" id="1_ketdt"]
 [ext_resource type="PackedScene" uid="uid://d017xigr6b6a" path="res://mini_games/wheel_of_fortune/objects/Spin.tscn" id="2_1nyoe"]
+[ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_di5np"]
 [ext_resource type="PackedScene" uid="uid://blamgf6ryactj" path="res://mini_games/wheel_of_fortune/objects/MoneyAmount.tscn" id="3_1nyoe"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="4_i7lo4"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="4_i7lo4"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_ok0ah"]
 
 [node name="WheelOfFortune" type="Node2D"]
 script = ExtResource("1_fcvik")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_di5np")
 
 [node name="Wheel" parent="." instance=ExtResource("1_ketdt")]
 position = Vector2(106, 216)
@@ -30,8 +36,8 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(945, 488)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_ok0ah")]
-position = Vector2(205, 81.0001)
-scale = Vector2(0.445, 0.445)
+position = Vector2(188, 632)
+scale = Vector2(0.35, 0.35)
 
 [connection signal="spin_wheel" from="Button" to="." method="_on_button_spin_wheel"]
 [connection signal="spin_wheel" from="Button" to="Wheel" method="_on_button_spin_wheel"]
