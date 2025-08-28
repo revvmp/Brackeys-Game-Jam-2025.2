@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs1hfuyedd55o"]
+[gd_scene load_steps=5 format=3 uid="uid://bs1hfuyedd55o"]
 
 [ext_resource type="Script" uid="uid://cdf735130o107" path="res://main_menu/help_menu/help_menu.gd" id="1_bf6oc"]
 [ext_resource type="PackedScene" uid="uid://b02jo0cs22hi0" path="res://main_menu/help_menu/ExitButton.tscn" id="1_dwop5"]
+[ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_ko150"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="3_3m3gm"]
 
 [node name="HelpMenu" type="Node2D"]
 script = ExtResource("1_bf6oc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ko150")
 
 [node name="Information" type="Label" parent="."]
 anchors_preset = 8
@@ -19,6 +26,7 @@ offset_bottom = 85.3333
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("3_3m3gm")
 text = "PLACEHOLDER TEXT"
 horizontal_alignment = 1
 vertical_alignment = 1

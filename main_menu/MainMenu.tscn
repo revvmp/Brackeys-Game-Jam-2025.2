@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dba4ev785opbx"]
+[gd_scene load_steps=12 format=3 uid="uid://dba4ev785opbx"]
 
 [ext_resource type="PackedScene" uid="uid://8io03t55bn7u" path="res://main_menu/main_menu_nodes/PlayButton.tscn" id="1_pcyt4"]
 [ext_resource type="Script" uid="uid://f1jvnmrjuwdp" path="res://main_menu/main_menu.gd" id="1_tdf48"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="4_yt4ty"]
 [ext_resource type="Script" uid="uid://c0v5jwe8behry" path="res://main_menu/main_menu_nodes/shop_button.gd" id="6_cp0gc"]
 [ext_resource type="Script" uid="uid://buj86hkhq0ghj" path="res://main_menu/main_menu_nodes/help_button.gd" id="8_uku3a"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="11_1bac5"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_tdf48")
@@ -55,6 +56,7 @@ offset_bottom = -309.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(5, 5)
+theme_override_fonts/font = ExtResource("11_1bac5")
 text = "Devil's Deal"
 horizontal_alignment = 1
 uppercase = true
