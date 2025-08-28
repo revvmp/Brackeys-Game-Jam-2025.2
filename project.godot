@@ -13,7 +13,7 @@ config_version=5
 config/name="Devil's Deal"
 config/description="Brackey's Game Jam 2025.2 Submission for the theme: Risk it for the Biscuit.
 
-This game requires the players to play through multiple various gambling games to ultimately collect all the desserts. However, if you gamble too much you risk losing all your game's data."
+This game requires the players to play through multiple various luck/skill based mini games to ultimately collect all the desserts. However, if you gamble too much you risk losing all your game's data."
 config/version="1.0"
 run/main_scene="uid://dba4ev785opbx"
 config/features=PackedStringArray("4.4", "Mobile")
