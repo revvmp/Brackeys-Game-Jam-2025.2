@@ -28,7 +28,9 @@ var shop: Array = []
 const SAVE_FILE_NAME = "user://devilsdeal.save"
 
 func _ready() -> void:
-	wipe_game()
+	# Wipe the user's data if they hit $0
+	if money <= 0:
+		wipe_game()
 	if not FileAccess.file_exists(SAVE_FILE_NAME):
 		money = 100
 		trophies = []
@@ -44,9 +46,9 @@ func _ready() -> void:
 		save_global_data()
 		return # Fresh Game, instantiate objects
 	load_game()
-	print("Successfully loaded game data")
-	print(trophies)
-	print(shop)
+	print("Successfully loaded previous game data")
+	print("TROPHIES: ", trophies)
+	print("SHOP: ", shop)
 
 func set_money(new_money: int):
 	money = new_money

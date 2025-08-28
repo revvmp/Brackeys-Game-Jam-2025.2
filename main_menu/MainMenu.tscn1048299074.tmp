@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://dba4ev785opbx"]
+
+[ext_resource type="PackedScene" uid="uid://8io03t55bn7u" path="res://main_menu/main_menu_nodes/PlayButton.tscn" id="1_pcyt4"]
+[ext_resource type="Script" uid="uid://f1jvnmrjuwdp" path="res://main_menu/main_menu.gd" id="1_tdf48"]
+[ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_5xlp1"]
+[ext_resource type="PackedScene" uid="uid://nias6m4n0dsb" path="res://main_menu/main_menu_nodes/ShopButton.tscn" id="2_ff7fd"]
+[ext_resource type="Script" uid="uid://waks8mdos6f" path="res://data/Global.gd" id="2_s4tua"]
+[ext_resource type="Script" uid="uid://cehxtcafuvsgt" path="res://main_menu/main_menu_nodes/play_button.gd" id="3_k80ej"]
+[ext_resource type="PackedScene" uid="uid://bmsmeqkbwb6gg" path="res://main_menu/main_menu_nodes/HelpButton.tscn" id="3_yt4ty"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="4_yt4ty"]
+[ext_resource type="Script" uid="uid://c0v5jwe8behry" path="res://main_menu/main_menu_nodes/shop_button.gd" id="6_cp0gc"]
+[ext_resource type="Script" uid="uid://buj86hkhq0ghj" path="res://main_menu/main_menu_nodes/help_button.gd" id="8_uku3a"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="11_1bac5"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_tdf48")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_5xlp1")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("2_s4tua")
+
+[node name="MainMenuButtons" type="Node" parent="."]
+
+[node name="PlayButton" parent="MainMenuButtons" instance=ExtResource("1_pcyt4")]
+position = Vector2(640, 480)
+script = ExtResource("3_k80ej")
+
+[node name="ShopButton" parent="MainMenuButtons" instance=ExtResource("2_ff7fd")]
+position = Vector2(640, 580)
+script = ExtResource("6_cp0gc")
+
+[node name="HelpButton" parent="MainMenuButtons" instance=ExtResource("3_yt4ty")]
+position = Vector2(640, 680)
+script = ExtResource("8_uku3a")
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("4_yt4ty")]
+position = Vector2(648, 286)
+scale = Vector2(0.85, 0.85)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="GameTitle" type="Label" parent="Node"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -332.0
+offset_right = -211.0
+offset_bottom = -309.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+theme_override_fonts/font = ExtResource("11_1bac5")
+text = "Devil's Deal"
+horizontal_alignment = 1
+uppercase = true
+
+[connection signal="on_shop_pressed" from="MainMenuButtons/ShopButton" to="." method="_on_shop_button_on_shop_pressed"]
+[connection signal="help_pressed" from="MainMenuButtons/HelpButton" to="." method="_on_help_button_help_pressed"]
