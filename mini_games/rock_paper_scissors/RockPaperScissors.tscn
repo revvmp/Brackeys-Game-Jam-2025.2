@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://v3c67wawre31"]
+[gd_scene load_steps=10 format=3 uid="uid://v3c67wawre31"]
 
 [ext_resource type="Script" uid="uid://bj0nk1pnb3s5k" path="res://mini_games/rock_paper_scissors/rock_paper_scissors.gd" id="1_8s7em"]
 [ext_resource type="PackedScene" uid="uid://dr0eunixbfpe3" path="res://mini_games/rock_paper_scissors/objects/RockButton.tscn" id="2_opgkj"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_swftx"]
 [ext_resource type="PackedScene" uid="uid://dfarehbanyyki" path="res://mini_games/rock_paper_scissors/objects/PaperButton.tscn" id="3_8s7em"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="3_undff"]
 [ext_resource type="PackedScene" uid="uid://d4lcggg83wu2g" path="res://mini_games/rock_paper_scissors/objects/ScissorsButton.tscn" id="4_swftx"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_1rmuh"]
 [ext_resource type="PackedScene" uid="uid://cnbe8o3eqqh8" path="res://mini_games/rock_paper_scissors/objects/RockPaperScissorsOptions.tscn" id="5_opgkj"]
@@ -18,12 +19,13 @@ offset_bottom = 720.0
 mouse_filter = 2
 texture = ExtResource("2_swftx")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 367.0
-offset_top = 95.0
-offset_right = 928.0
-offset_bottom = 245.0
-theme_override_font_sizes/font_size = 51
+[node name="GameTitle" type="Label" parent="."]
+offset_left = 341.0
+offset_top = 100.0
+offset_right = 931.0
+offset_bottom = 250.0
+theme_override_fonts/font = ExtResource("3_undff")
+theme_override_font_sizes/font_size = 72
 text = "Rock Paper Scissors"
 horizontal_alignment = 1
 vertical_alignment = 1
