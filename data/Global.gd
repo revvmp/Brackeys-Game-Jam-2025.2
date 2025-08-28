@@ -28,28 +28,17 @@ var shop: Array = []
 const SAVE_FILE_NAME = "user://devilsdeal.save"
 
 func _ready() -> void:
-	# Wipe the user's data if they hit $0
-	if money <= 0:
-		wipe_game()
 	if not FileAccess.file_exists(SAVE_FILE_NAME):
-		money = 100
-		trophies = []
-		shop = [
-			Trophy.DONUT,
-			Trophy.COOKIE,
-			Trophy.CHEESECAKE,
-			Trophy.CINNAMON_ROLL,
-			Trophy.CAKE,
-			Trophy.BISCUITS,
-		]
-		print("INSTANTIED NEW SAVE - TROPHIES: ", trophies, " | SHOP: ", shop, " | Money: ", money)
-		save_global_data()
+		wipe_game()
 		return # Fresh Game, instantiate objects
 	load_game()
 	print("Successfully loaded previous game data")
 	print("MONEY: ", money)
 	print("TROPHIES: ", trophies)
 	print("SHOP: ", shop)
+	# Wipe the user's data if they hit $0
+	if money <= 0:
+		wipe_game()
 
 func set_money(new_money: int):
 	money = new_money
@@ -101,4 +90,16 @@ func load_game():
 
 func wipe_game():
 	DirAccess.remove_absolute(SAVE_FILE_NAME)
+	money = 100
+	trophies = []
+	shop = [
+		Trophy.DONUT,
+		Trophy.COOKIE,
+		Trophy.CHEESECAKE,
+		Trophy.CINNAMON_ROLL,
+		Trophy.CAKE,
+		Trophy.BISCUITS,
+	]
+	print("INSTANTIED NEW SAVE - TROPHIES: ", trophies, " | SHOP: ", shop, " | Money: ", money)
+	save_global_data()
 	
