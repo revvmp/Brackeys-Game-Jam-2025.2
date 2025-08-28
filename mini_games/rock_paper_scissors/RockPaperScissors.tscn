@@ -18,10 +18,10 @@ mouse_filter = 2
 texture = ExtResource("2_swftx")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 360.0
-offset_top = 45.0
-offset_right = 921.0
-offset_bottom = 195.0
+offset_left = 367.0
+offset_top = 47.0
+offset_right = 928.0
+offset_bottom = 197.0
 theme_override_font_sizes/font_size = 51
 text = "Rock Paper Scissors"
 horizontal_alignment = 1
@@ -42,7 +42,7 @@ position = Vector2(236, 96)
 scale = Vector2(0.5, 0.5)
 
 [node name="RockPaperScissorsOptions" parent="." instance=ExtResource("5_opgkj")]
-position = Vector2(51, 45)
+position = Vector2(73, 51)
 
 [connection signal="rock_button" from="Rock" to="." method="_on_rock_rock_button"]
 [connection signal="paper_button" from="Paper" to="." method="_on_paper_paper_button"]
