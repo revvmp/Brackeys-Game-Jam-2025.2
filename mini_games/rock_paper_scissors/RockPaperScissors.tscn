@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://v3c67wawre31"]
+[gd_scene load_steps=9 format=3 uid="uid://v3c67wawre31"]
 
 [ext_resource type="Script" uid="uid://bj0nk1pnb3s5k" path="res://mini_games/rock_paper_scissors/rock_paper_scissors.gd" id="1_8s7em"]
 [ext_resource type="PackedScene" uid="uid://dr0eunixbfpe3" path="res://mini_games/rock_paper_scissors/objects/RockButton.tscn" id="2_opgkj"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d4lcggg83wu2g" path="res://mini_games/rock_paper_scissors/objects/ScissorsButton.tscn" id="4_swftx"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_1rmuh"]
 [ext_resource type="PackedScene" uid="uid://cnbe8o3eqqh8" path="res://mini_games/rock_paper_scissors/objects/RockPaperScissorsOptions.tscn" id="5_opgkj"]
+[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="8_1rmuh"]
 
 [node name="RockPaperScissors" type="Node2D"]
 script = ExtResource("1_8s7em")
@@ -42,7 +43,10 @@ position = Vector2(229, 87)
 scale = Vector2(0.5, 0.5)
 
 [node name="RockPaperScissorsOptions" parent="." instance=ExtResource("5_opgkj")]
-position = Vector2(314, 46)
+position = Vector2(346, 46)
+
+[node name="FadingText" parent="." instance=ExtResource("8_1rmuh")]
+position = Vector2(506, 647)
 
 [connection signal="rock_button" from="Rock" to="." method="_on_rock_rock_button"]
 [connection signal="paper_button" from="Paper" to="." method="_on_paper_paper_button"]
