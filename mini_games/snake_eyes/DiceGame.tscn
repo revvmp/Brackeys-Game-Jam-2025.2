@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bokxys77740c3" path="res://mini_games/snake_eyes/Dice.tscn" id="3_iwtdq"]
 [ext_resource type="Texture2D" uid="uid://ci3dg0q23vak3" path="res://assets/dice/GameJam_Table_.png" id="4_nulbp"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_moon8"]
-[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_ja832"]
-[ext_resource type="PackedScene" uid="uid://cai1egad7kcgd" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
+[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="6_ja832"]
+[ext_resource type="PackedScene" uid="uid://c71oq4go8g007" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="9_12iu1"]
 [ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="9_wkgbo"]
 
