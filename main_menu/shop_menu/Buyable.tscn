@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c0cg1w16im5rf"]
+
+[node name="Buyable" type="Node2D"]
+
+[node name="DessertImageButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
