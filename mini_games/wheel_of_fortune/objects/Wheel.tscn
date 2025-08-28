@@ -103,9 +103,9 @@ position = Vector2(455, -182)
 scale = Vector2(0.133466, 0.133466)
 texture = ExtResource("3_altuo")
 
-[node name="Area2D" type="Area2D" parent="Arrow"]
+[node name="ArrowArea" type="Area2D" parent="Arrow"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/ArrowArea"]
 position = Vector2(1.90735e-06, -307.194)
 scale = Vector2(20, 2)
 shape = SubResource("SegmentShape2D_rg133")

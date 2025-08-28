@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dq8sfknhn15np"]
+[gd_scene load_steps=9 format=3 uid="uid://dq8sfknhn15np"]
 
 [ext_resource type="Script" uid="uid://7u8eqom66q3x" path="res://mini_games/wheel_of_fortune/wheel_of_fortune.gd" id="1_fcvik"]
 [ext_resource type="PackedScene" uid="uid://dr525wp2cyeww" path="res://mini_games/wheel_of_fortune/objects/Wheel.tscn" id="1_ketdt"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://blamgf6ryactj" path="res://mini_games/wheel_of_fortune/objects/MoneyAmount.tscn" id="3_1nyoe"]
 [ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="4_i7lo4"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_ok0ah"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="8_pgn0y"]
 
 [node name="WheelOfFortune" type="Node2D"]
 script = ExtResource("1_fcvik")
@@ -40,11 +41,13 @@ position = Vector2(188, 632)
 scale = Vector2(0.35, 0.35)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 930.0
-offset_top = 134.0
-offset_right = 1068.0
-offset_bottom = 156.333
+offset_left = 912.0
+offset_top = 165.0
+offset_right = 1069.0
+offset_bottom = 199.875
 scale = Vector2(2.21, 2.21)
+theme_override_fonts/font = ExtResource("8_pgn0y")
+theme_override_font_sizes/font_size = 31
 text = "Wheel of Fortune "
 
 [connection signal="spin_wheel" from="Button" to="." method="_on_button_spin_wheel"]

@@ -5,7 +5,7 @@ signal roll_dice
 
 
 func on_mouse_pressed():
-	if !rolling:
+	if !rolling and Global.money > 0:
 		emit_signal("roll_dice")
 		print("roll")
 		rolling = true

@@ -7,14 +7,13 @@ var value : int
 
 func _ready() -> void:
 	amount.max_value = Global.money
-	amount.get_line_edit().connect("text_submitted", _on_text_submitted) 
+	amount.get_line_edit().connect("text_changed", _on_text_changed) 
 
-func _on_text_submitted(new_text: String):
+func _on_text_changed(new_text: String):
 	amount.max_value = Global.money
 	if Global.money >= int(new_text) and int(new_text) > 0:
 		text.display_text("Betting " + new_text + "!!", Color.SKY_BLUE)
 		button.rolling = false
-		amount.get_line_edit().release_focus()
 		value = int(new_text)
 		print(new_text)
 	else:

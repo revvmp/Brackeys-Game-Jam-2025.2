@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cu53mr7jop5l5"]
+[gd_scene load_steps=10 format=3 uid="uid://cu53mr7jop5l5"]
 
 [ext_resource type="Script" uid="uid://rkctf10ti0g2" path="res://mini_games/snake_eyes/dice_game.gd" id="1_rsba8"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_nulbp"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_ja832"]
 [ext_resource type="PackedScene" uid="uid://cai1egad7kcgd" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="9_12iu1"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="9_wkgbo"]
 
 [node name="DiceGame" type="Node2D"]
 script = ExtResource("1_rsba8")
@@ -43,12 +44,13 @@ offset_right = 600.0
 offset_bottom = 339.0
 
 [node name="SnakeEyes" type="Label" parent="."]
-offset_left = 570.0
-offset_top = 172.0
-offset_right = 720.0
-offset_bottom = 211.083
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
+offset_left = 490.0
+offset_top = 121.0
+offset_right = 763.0
+offset_bottom = 210.0
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("9_wkgbo")
+theme_override_font_sizes/font_size = 79
 text = "Snake Eyes"
 
 [connection signal="roll_dice" from="Button" to="." method="_on_button_roll_dice"]
