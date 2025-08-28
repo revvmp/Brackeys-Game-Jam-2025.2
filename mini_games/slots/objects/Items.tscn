@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b8fary14ruxi0"]
 
-[ext_resource type="Script" uid="uid://c7rs81rjl7k0a" path="res://mini_games/slots/objects/dice.gd" id="1_41scq"]
+[ext_resource type="Script" uid="uid://c7rs81rjl7k0a" path="res://mini_games/slots/objects/items.gd" id="1_41scq"]
 [ext_resource type="Texture2D" uid="uid://7wih3oxtw4oh" path="res://assets/dice/dice-six-faces-one.png" id="2_agwef"]
 [ext_resource type="Texture2D" uid="uid://bbwcqg2y0400v" path="res://assets/dice/dice-six-faces-two.png" id="3_2fjh4"]
 [ext_resource type="Texture2D" uid="uid://i35rs6kj8ig6" path="res://assets/dice/dice-six-faces-three.png" id="4_n614j"]
@@ -59,24 +59,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Dice" type="Node2D"]
+[node name="Items" type="Node2D"]
 script = ExtResource("1_41scq")
 
-[node name="Dice" type="AnimatedSprite2D" parent="."]
+[node name="Item1" type="AnimatedSprite2D" parent="."]
 position = Vector2(137.512, 226.386)
-scale = Vector2(0.252, 0.252)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fwudy")
-animation = &"6"
+animation = &"1"
 
-[node name="Dice2" type="AnimatedSprite2D" parent="."]
+[node name="Item2" type="AnimatedSprite2D" parent="."]
 position = Vector2(348, 226)
-scale = Vector2(0.252, 0.252)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fwudy")
 animation = &"6"
-frame_progress = 0.0023937
+frame_progress = 0.800906
 
-[node name="Dice3" type="AnimatedSprite2D" parent="."]
+[node name="Item3" type="AnimatedSprite2D" parent="."]
 position = Vector2(555, 226)
-scale = Vector2(0.252, 0.252)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fwudy")
 animation = &"6"

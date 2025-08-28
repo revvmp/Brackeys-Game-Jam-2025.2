@@ -1,7 +1,6 @@
 extends "res://ui/button.gd"
 
-signal roll_dice
+signal spin_slots
 
-func on_mouse_pressed():
-	emit_signal("roll_dice")
-	print("roll")
+func on_mouse_pressed() -> void:
+	emit_signal("spin_slots")

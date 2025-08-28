@@ -1,44 +1,42 @@
 [gd_scene load_steps=6 format=3 uid="uid://34h78b1xnq8w"]
 
 [ext_resource type="Script" uid="uid://bepytmp8abntt" path="res://mini_games/slots/objects/slots.gd" id="1_15lyl"]
-[ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="2_rt478"]
+[ext_resource type="PackedScene" uid="uid://d0kj4rm7vj1m8" path="res://mini_games/slots/objects/Spin.tscn" id="2_15lyl"]
 [ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/dice/table.png" id="3_yyiqj"]
-[ext_resource type="PackedScene" uid="uid://b8fary14ruxi0" path="res://mini_games/slots/objects/Dice.tscn" id="4_41u8x"]
+[ext_resource type="PackedScene" uid="uid://b8fary14ruxi0" path="res://mini_games/slots/objects/Items.tscn" id="4_41u8x"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_2auvx"]
 
-[node name="DiceGame" type="Node2D"]
+[node name="Slots" type="Node2D"]
 script = ExtResource("1_15lyl")
 
-[node name="Button" parent="." instance=ExtResource("2_rt478")]
-position = Vector2(616.5, 512.345)
+[node name="Button" parent="." instance=ExtResource("2_15lyl")]
+position = Vector2(899, 635)
+scale = Vector2(9, 9)
 
-[node name="Table" type="Node2D" parent="."]
+[node name="Slot" type="Node2D" parent="."]
+position = Vector2(3, 4)
 
-[node name="Table" type="Sprite2D" parent="Table"]
+[node name="Slot1" type="Sprite2D" parent="Slot"]
 position = Vector2(397, 268)
 scale = Vector2(3.725, 6.44345)
 texture = ExtResource("3_yyiqj")
 
-[node name="Table2" type="Sprite2D" parent="Table"]
+[node name="Slot2" type="Sprite2D" parent="Slot"]
 position = Vector2(807, 268)
 scale = Vector2(3.725, 6.44345)
 texture = ExtResource("3_yyiqj")
 
-[node name="Table3" type="Sprite2D" parent="Table"]
+[node name="Slot3" type="Sprite2D" parent="Slot"]
 position = Vector2(603, 268)
 scale = Vector2(3.725, 6.44345)
 texture = ExtResource("3_yyiqj")
 
-[node name="Dice" parent="." instance=ExtResource("4_41u8x")]
+[node name="Items" parent="." instance=ExtResource("4_41u8x")]
 position = Vector2(278.5, 65.345)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_2auvx")]
 position = Vector2(245, 579)
 scale = Vector2(0.36, 0.36)
 
-[node name="SnakeEyes" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 22.3333
-
-[connection signal="roll_dice" from="Button" to="." method="_on_button_roll_dice"]
-[connection signal="spin_result" from="Dice" to="." method="_on_dice_spin_result"]
+[connection signal="spin_slots" from="Button" to="." method="_on_spin_cilcked"]
+[connection signal="spin_result" from="Items" to="." method="_on_items_spin_result"]

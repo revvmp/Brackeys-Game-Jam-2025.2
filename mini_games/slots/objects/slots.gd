@@ -1,20 +1,25 @@
 extends Node2D
 
-@onready var dice = $Dice
+@onready var slots = $Items
 @onready var button = $Button
 @onready var money = $MoneyDisplay
 
 #Add changable bet later
 const bet = 10
 
+func _on_spin_cilcked() -> void:
+	button.hide()
+	await slots.spin()
+	button.show()
 
-func _on_button_roll_dice() -> void:
-	dice.roll()
 
-
-func _on_dice_spin_result(results_list) -> void:	
+func _on_items_spin_result(results_list) -> void:
 	var results = {}
+	print(results_list)
 	
+	if len(results_list) != 3:
+		return
+
 	for i in range(3):
 		var num = results_list[i]
 		if str(num) in results:

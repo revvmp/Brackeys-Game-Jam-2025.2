@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cai1egad7kcgd"]
+[gd_scene load_steps=2 format=3 uid="uid://c71oq4go8g007"]
 
-[ext_resource type="Script" uid="uid://62mmk43gd5he" path="res://mini_games/snake_eyes/money_amount.gd" id="1_v40fi"]
+[ext_resource type="Script" path="res://mini_games/snake_eyes/money_amount.gd" id="1_v40fi"]
 
 [node name="MoneyAmount" type="Control"]
 layout_mode = 3
