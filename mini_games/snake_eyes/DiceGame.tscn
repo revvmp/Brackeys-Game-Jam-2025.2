@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://cu53mr7jop5l5"]
 
 [ext_resource type="Script" uid="uid://rkctf10ti0g2" path="res://mini_games/snake_eyes/dice_game.gd" id="1_rsba8"]
-[ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/dice/table.png" id="2_gdh0p"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_nulbp"]
 [ext_resource type="PackedScene" uid="uid://bokxys77740c3" path="res://mini_games/snake_eyes/Dice.tscn" id="3_iwtdq"]
+[ext_resource type="Texture2D" uid="uid://ci3dg0q23vak3" path="res://assets/dice/GameJam_Table_.png" id="4_nulbp"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_moon8"]
 [ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_ja832"]
 [ext_resource type="PackedScene" uid="uid://cai1egad7kcgd" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
@@ -18,35 +18,36 @@ offset_bottom = 720.0
 texture = ExtResource("2_nulbp")
 
 [node name="Button" parent="." instance=ExtResource("9_12iu1")]
-position = Vector2(616.5, 512.345)
+position = Vector2(640, 567)
 
 [node name="Table" type="Sprite2D" parent="."]
-position = Vector2(544.5, 261.345)
-scale = Vector2(15.47, 10.4469)
-texture = ExtResource("2_gdh0p")
+position = Vector2(640, 360)
+scale = Vector2(0.7395, 0.499385)
+texture = ExtResource("4_nulbp")
 
 [node name="Dice" parent="." instance=ExtResource("3_iwtdq")]
-position = Vector2(278.5, 65.345)
+position = Vector2(427, 324)
+scale = Vector2(0.135, 0.135)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_moon8")]
-position = Vector2(245, 579)
+position = Vector2(229, 106)
 scale = Vector2(0.35, 0.35)
 
 [node name="FadingText" parent="." instance=ExtResource("6_ja832")]
-position = Vector2(483, 569)
+position = Vector2(505, 634)
 
 [node name="MoneyAmount" parent="." instance=ExtResource("7_ft5tw")]
-offset_left = 592.0
-offset_top = 281.0
-offset_right = 592.0
-offset_bottom = 281.0
+offset_left = 600.0
+offset_top = 339.0
+offset_right = 600.0
+offset_bottom = 339.0
 
 [node name="SnakeEyes" type="Label" parent="."]
-offset_left = 557.0
-offset_top = 186.0
-offset_right = 707.0
-offset_bottom = 225.083
-theme_override_colors/font_color = Color(0.360784, 0.298039, 0.690196, 1)
+offset_left = 570.0
+offset_top = 172.0
+offset_right = 720.0
+offset_bottom = 211.083
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "Snake Eyes"
 

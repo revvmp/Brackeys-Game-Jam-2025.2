@@ -39,5 +39,13 @@ position = Vector2(945, 488)
 position = Vector2(188, 632)
 scale = Vector2(0.35, 0.35)
 
+[node name="Label" type="Label" parent="."]
+offset_left = 930.0
+offset_top = 134.0
+offset_right = 1068.0
+offset_bottom = 156.333
+scale = Vector2(2.21, 2.21)
+text = "Wheel of Fortune "
+
 [connection signal="spin_wheel" from="Button" to="." method="_on_button_spin_wheel"]
 [connection signal="spin_wheel" from="Button" to="Wheel" method="_on_button_spin_wheel"]
