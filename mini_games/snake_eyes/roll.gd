@@ -13,7 +13,9 @@ func on_mouse_pressed():
 
 func _on_dice_snake_eyes() -> void:
 	rolling = false
+	Global.save_global_data()
 
 
 func _on_dice_dice_game_lost() -> void:
 	rolling = false
+	Global.save_global_data()
