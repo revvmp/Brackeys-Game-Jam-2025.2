@@ -19,19 +19,43 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 341.0
-offset_top = 63.0
-offset_right = 495.0
-offset_bottom = 85.3333
+offset_left = 428.0
+offset_top = 10.0
+offset_right = 870.0
+offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
 theme_override_fonts/font = ExtResource("3_3m3gm")
-text = "PLACEHOLDER TEXT"
+theme_override_font_sizes/font_size = 128
+text = "Information"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Information2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 284.5
+offset_top = 168.0
+offset_right = 1013.5
+offset_bottom = 637.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_3m3gm")
+theme_override_font_sizes/font_size = 36
+text = "Devil's Deal is a game where you start off with a $100 and a dream...
+Your goal is to play various different gambling games in hopes you
+strike it large and obtain all the expensive desserts in the shop! However
+if you ever reach $0 your game completely starts over, that also means
+you lose all your prized dessert trophies! So you have to be careful about
+the amount of money you spend in all these games. GOOD LUCK!
+
+Developers: Brandon | Brian | Brand | Kyle
+Art By; Stephen"
+
 [node name="ExitButton" parent="." instance=ExtResource("1_dwop5")]
-position = Vector2(640, 640)
+position = Vector2(640, 672)
 
 [connection signal="exit_pressed" from="ExitButton" to="." method="_on_exit_button_exit_pressed"]

@@ -7,3 +7,5 @@ func _on_button_spin_wheel() -> void:
 	var tween = create_tween()
 	tween.tween_property(main_wheel, "rotation", rotation_amount, 5).set_trans(Tween.TRANS_QUAD) \
 	.set_ease(Tween.EASE_OUT)
+	await tween
+	
