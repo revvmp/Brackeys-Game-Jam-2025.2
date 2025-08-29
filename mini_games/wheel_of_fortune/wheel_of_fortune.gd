@@ -11,7 +11,7 @@ func _on_button_spin_wheel() -> void:
 
 
 func _on_wheel_win_money() -> void:
-	money.multiply_money(2)
+	money.add_money(amount.value * 2)
 	Global.save_global_data()
 	text.display_text("You doubled your money!", Color.SKY_BLUE)
 	

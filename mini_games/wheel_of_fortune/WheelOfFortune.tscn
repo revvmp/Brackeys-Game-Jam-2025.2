@@ -51,6 +51,8 @@ theme_override_font_sizes/font_size = 31
 text = "Wheel of Fortune "
 
 [connection signal="lose_money" from="Wheel" to="." method="_on_wheel_lose_money"]
+[connection signal="lose_money" from="Wheel" to="Button" method="_on_wheel_lose_money"]
 [connection signal="win_money" from="Wheel" to="." method="_on_wheel_win_money"]
+[connection signal="win_money" from="Wheel" to="Button" method="_on_wheel_win_money"]
 [connection signal="spin_wheel" from="Button" to="." method="_on_button_spin_wheel"]
 [connection signal="spin_wheel" from="Button" to="Wheel" method="_on_button_spin_wheel"]
