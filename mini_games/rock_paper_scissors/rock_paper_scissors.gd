@@ -5,7 +5,7 @@ extends Node2D
 @onready var scissors_button = $Scissors
 @onready var money = $MoneyDisplay
 @onready var opponent = $RockPaperScissorsOptions
-@onready var text = $"..FadingText"
+@onready var text = $FadingText
 
 var player_choice: int = -1
 var opponent_choice: int = -1
@@ -32,19 +32,24 @@ func _on_rock_paper_scissors_options_opponent_choice_made(choice: String) -> voi
 	print("Result: ", result)
 
 func get_winner(player_choice: int, opponent_choice: int) -> String:
+
 	if player_choice == opponent_choice:
+		text.display_text("It's a tie!!", Color.WHITE)
 		return "It's a tie!"
 		text.display_text("It's a tie!!", Color.WHITE)
 
 	elif (player_choice == opponent.Choice.ROCK and opponent_choice == opponent.Choice.SCISSORS) \
 		or (player_choice == opponent.Choice.PAPER and opponent_choice == opponent.Choice.ROCK) \
 		or (player_choice == opponent.Choice.SCISSORS and opponent_choice == opponent.Choice.PAPER):
-		return "Player wins!"
 		text.display_text("You win!", Color.SKY_BLUE)
+		return "Player wins!"
+
 		
 	else:
-		return "CPU wins!"
 		text.display_text("You lost!", Color.RED)
+		return "CPU wins!"
+
+		
 		
 func update_money(result: String) -> void:
 	if result == "Result: Player wins!":
