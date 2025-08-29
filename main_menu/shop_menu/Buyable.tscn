@@ -1,10 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0cg1w16im5rf"]
+[gd_scene load_steps=3 format=3 uid="uid://c0cg1w16im5rf"]
 
 [ext_resource type="Script" uid="uid://c843ytsiw3eds" path="res://main_menu/shop_menu/buyable.gd" id="1_i2mlu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2mlu"]
+size = Vector2(307, 65)
+
 [node name="Buyable" type="Node2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_i2mlu")
 
-[node name="DessertImageButton" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(153.5, 32.5)
+shape = SubResource("RectangleShape2D_i2mlu")
+
+[node name="TrophyImage" type="Sprite2D" parent="."]
+
+[node name="Description" type="Label" parent="."]
+offset_left = 56.0
+offset_right = 307.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 12
+text = "PLACEHOLDER DESCRIPTION TEXT"
+autowrap_mode = 3
+
+[node name="Price" type="Label" parent="."]
+offset_top = 48.0
+offset_right = 55.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 12
+text = "$0"
+horizontal_alignment = 1
