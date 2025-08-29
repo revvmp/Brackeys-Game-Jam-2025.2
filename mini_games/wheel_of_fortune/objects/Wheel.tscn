@@ -109,3 +109,12 @@ texture = ExtResource("3_altuo")
 position = Vector2(1.90735e-06, -307.194)
 scale = Vector2(20, 2)
 shape = SubResource("SegmentShape2D_rg133")
+
+[connection signal="area_entered" from="MainWheel/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="MainWheel/Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_entered" from="MainWheel/Area2D3" to="." method="_on_area_2d_3_area_entered"]
+[connection signal="area_entered" from="MainWheel/Area2D4" to="." method="_on_area_2d_4_area_entered"]
+[connection signal="area_entered" from="MainWheel/Area2D5" to="." method="_on_area_2d_5_area_entered"]
+[connection signal="area_entered" from="MainWheel/Area2D6" to="." method="_on_area_2d_6_area_entered"]
+[connection signal="area_entered" from="MainWheel/Area2D7" to="." method="_on_area_2d_7_area_entered"]
+[connection signal="area_entered" from="MainWheel/Area2D8" to="." method="_on_area_2d_8_area_entered"]
