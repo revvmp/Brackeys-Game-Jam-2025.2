@@ -60,7 +60,7 @@ const SHOP_ITEM_DESC = {
 const GAME_WIDTH = 1280
 const GAME_HEIGHT = 720
 const SAVE_FILE_NAME = "user://devilsdeal.save"
-const START_MONEY = 100000
+const START_MONEY = 100
 
 var money: int = START_MONEY
 var trophies: Array = []

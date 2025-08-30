@@ -47,19 +47,24 @@ texture = ExtResource("7_gv840")
 
 [node name="DeerSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(-263, -23)
-scale = Vector2(1.02713, 0.840237)
+slot_type = "DEER"
 
 [node name="GourdSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(0, -24)
+slot_type = "GOURD"
 
 [node name="ChickenSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(270, -24)
+slot_type = "CHICKEN"
 
 [node name="FishSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(-268, 173)
+slot_type = "FISH"
 
 [node name="CrabSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(-1, 173)
+slot_type = "CRAB"
 
 [node name="ShrimpSlot" parent="." instance=ExtResource("3_q3i0d")]
 position = Vector2(267, 174)
+slot_type = "SHRIMP"

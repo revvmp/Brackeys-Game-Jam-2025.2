@@ -26,10 +26,9 @@ animations = [{
 script = ExtResource("1_46nsh")
 
 [node name="Hand" type="AnimatedSprite2D" parent="."]
-position = Vector2(556, 400)
-rotation = 4.71239
+position = Vector2(552, 360)
+rotation = -1.5708
 scale = Vector2(0.18, 0.153)
 sprite_frames = SubResource("SpriteFrames_kiuxh")
 animation = &"idle"
-autoplay = "idle"
 flip_h = true

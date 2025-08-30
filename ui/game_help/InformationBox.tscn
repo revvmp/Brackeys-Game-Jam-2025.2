@@ -16,9 +16,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="InformationLabel" type="Label" parent="."]
 offset_left = -201.0
-offset_top = -64.0
+offset_top = -56.0
 offset_right = 204.0
-offset_bottom = 140.0
+offset_bottom = 148.0
 theme_override_font_sizes/font_size = 12
 text = "Information about how to play the game here"
 autowrap_mode = 3

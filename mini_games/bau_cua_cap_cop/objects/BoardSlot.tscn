@@ -14,3 +14,5 @@ placeholder_text = "0"
 alignment = 1
 virtual_keyboard_type = 2
 middle_mouse_paste_enabled = false
+
+[connection signal="text_changed" from="MoneyAmount" to="." method="_on_money_amount_text_changed"]
