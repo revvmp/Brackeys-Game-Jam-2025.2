@@ -7,6 +7,6 @@ var pressable = false
 @onready var fading_text = $"../FadingText"
 
 func on_mouse_pressed(): 
-		if pressable and Global.money > 0:
-			emit_signal("rock_button")
-			print("rock")
+	if pressable and Global.money > 0:
+		emit_signal("rock_button")
+		print("rock")
