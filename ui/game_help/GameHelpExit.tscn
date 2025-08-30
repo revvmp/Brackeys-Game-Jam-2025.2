@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://84lugwlnaiti"]
+[gd_scene load_steps=3 format=3 uid="uid://cnucgao0nseth"]
 
 [ext_resource type="PackedScene" uid="uid://c7rxu3e3caavw" path="res://ui/Button.tscn" id="1_swtf0"]
-[ext_resource type="Script" uid="uid://bj0huejewryk" path="res://ui/game_help/game_help_exit.gd" id="2_rm7n0"]
 
-[node name="Button" instance=ExtResource("1_swtf0")]
-script = ExtResource("2_rm7n0")
+[sub_resource type="GDScript" id="GDScript_swtf0"]
+script/source = "extends \"res://ui/button.gd\"
+
+func on_mouse_pressed():
+	get_parent().queue_free()
+"
+
+[node name="GameHelpExit" instance=ExtResource("1_swtf0")]
+script = SubResource("GDScript_swtf0")
 
 [node name="Label" parent="." index="1"]
 offset_top = -11.0

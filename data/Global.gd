@@ -57,6 +57,8 @@ const SHOP_ITEM_DESC = {
 	0: "DONUT\n\nAbout 190 calories of perfection, can't get better and simpler than this when it comes to desserts. Only for $1,000!", # Global.Trophy.DONUT 
 }
 
+const GAME_WIDTH = 1280
+const GAME_HEIGHT = 720
 const SAVE_FILE_NAME = "user://devilsdeal.save"
 const START_MONEY = 100000
 
