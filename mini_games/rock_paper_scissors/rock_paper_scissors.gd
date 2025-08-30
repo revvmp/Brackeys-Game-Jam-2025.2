@@ -11,8 +11,6 @@ extends Node2D
 var player_choice: int = -1
 var opponent_choice: int = -1
 
-
-
 func _on_rock_rock_button() -> void:
 	rock_button.pressable = true
 	money.subtract_money(amount.value)
@@ -56,7 +54,6 @@ func get_winner(player_choice: int, opponent_choice: int) -> String:
 		Global.save_global_data()
 		return "Player wins!"
 
-		
 	else:
 		text.display_text("You lost!", Color.RED)
 		Global.save_global_data()
