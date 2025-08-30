@@ -21,11 +21,12 @@ enum Price {
 	BISCUITS = 100_000,
 }
 
-var money: int = 100
+const SAVE_FILE_NAME = "user://devilsdeal.save"
+const START_MONEY = 100
+
+var money: int = START_MONEY
 var trophies: Array = []
 var shop: Array = []
-
-const SAVE_FILE_NAME = "user://devilsdeal.save"
 
 func _ready() -> void:
 	if not FileAccess.file_exists(SAVE_FILE_NAME):
@@ -90,7 +91,7 @@ func load_game():
 
 func wipe_game():
 	DirAccess.remove_absolute(SAVE_FILE_NAME)
-	money = 100
+	money = START_MONEY
 	trophies = []
 	shop = [
 		Trophy.DONUT,
@@ -102,4 +103,3 @@ func wipe_game():
 	]
 	print("INSTANTIED NEW SAVE - TROPHIES: ", trophies, " | SHOP: ", shop, " | Money: ", money)
 	save_global_data()
-	
