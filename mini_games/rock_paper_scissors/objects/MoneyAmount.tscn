@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c71oq4go8g007"]
+[gd_scene load_steps=2 format=3 uid="uid://gu6aoadxwiae"]
 
-[ext_resource type="Script" uid="uid://62mmk43gd5he" path="res://mini_games/snake_eyes/money_amount.gd" id="1_v40fi"]
+[ext_resource type="Script" uid="uid://bqewcu3sje8kk" path="res://mini_games/rock_paper_scissors/objects/money_amount.gd" id="1_ntwas"]
 
 [node name="MoneyAmount" type="Control"]
 layout_mode = 3
@@ -9,12 +9,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v40fi")
+script = ExtResource("1_ntwas")
 
 [node name="Amount" type="SpinBox" parent="."]
 layout_mode = 0
 offset_right = 86.5417
 offset_bottom = 31.0
-rounded = true
 allow_greater = true
 alignment = 1

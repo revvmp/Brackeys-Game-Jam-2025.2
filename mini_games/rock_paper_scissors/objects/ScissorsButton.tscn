@@ -10,3 +10,4 @@ script = ExtResource("2_k81sl")
 offset_left = -37.0
 offset_right = 37.0
 text = "SCISSORS"
+metadata/_edit_use_anchors_ = true
