@@ -11,9 +11,9 @@ func _on_button_roll_dice() -> void:
 		money.subtract_money(amount.value)
 
 func _on_dice_snake_eyes() -> void:
-	money.add_money(amount.value * 11)
+	money.add_money(amount.value * 7)
 	Global.save_global_data()
-	text.display_text("Snake Eyes! You 10x your money!", Color.SKY_BLUE)
+	text.display_text("You got a match and 6x your money!", Color.SKY_BLUE)
 
 func _on_dice_dice_game_lost() -> void:
 	Global.save_global_data()
