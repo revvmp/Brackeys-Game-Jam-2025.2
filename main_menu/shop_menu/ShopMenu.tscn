@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cblkedsll8ajl"]
+[gd_scene load_steps=7 format=3 uid="uid://cblkedsll8ajl"]
 
 [ext_resource type="Script" uid="uid://cgh2qrjb37ner" path="res://main_menu/shop_menu/shop_menu.gd" id="1_6enjs"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="1_hwuxl"]
 [ext_resource type="PackedScene" uid="uid://b02jo0cs22hi0" path="res://main_menu/help_menu/ExitButton.tscn" id="2_0vna0"]
 [ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="2_shhvs"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="3_shhvs"]
+[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="6_c3mgd"]
 
 [node name="ShopMenu" type="Node2D"]
 script = ExtResource("1_6enjs")
@@ -40,12 +41,28 @@ theme_override_font_sizes/font_size = 96
 text = "Inventory"
 
 [node name="ShopLabel" type="Label" parent="."]
-offset_left = 769.0
+offset_left = 625.0
 offset_top = 138.0
-offset_right = 1028.0
+offset_right = 884.0
 offset_bottom = 246.0
 theme_override_fonts/font = ExtResource("2_shhvs")
 theme_override_font_sizes/font_size = 96
 text = "Trophies"
+
+[node name="ShopItems" type="ScrollContainer" parent="."]
+offset_left = 629.0
+offset_top = 242.0
+offset_right = 1248.0
+offset_bottom = 624.0
+follow_focus = true
+draw_focus_border = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopItems"]
+layout_mode = 2
+
+[node name="FadingText" parent="." instance=ExtResource("6_c3mgd")]
+position = Vector2(949, 82)
 
 [connection signal="exit_pressed" from="ExitButton" to="." method="_on_exit_button_exit_pressed"]

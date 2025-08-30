@@ -103,4 +103,3 @@ func wipe_game():
 	]
 	print("INSTANTIED NEW SAVE - TROPHIES: ", trophies, " | SHOP: ", shop, " | Money: ", money)
 	save_global_data()
-	
