@@ -12,18 +12,33 @@ var player_choice: int = -1
 var opponent_choice: int = -1
 
 func _on_rock_rock_button() -> void:
+	paper_button.visible = false
+	scissors_button.visible = false
+	await get_tree().create_timer(1).timeout
+	paper_button.visible = true
+	scissors_button.visible = true
 	rock_button.pressable = true
 	money.subtract_money(amount.value)
 	player_choice = opponent.Choice.ROCK
 	opponent.make_rps_choice()
 
 func _on_paper_paper_button() -> void:
+	rock_button.visible = false
+	scissors_button.visible = false
+	await get_tree().create_timer(1).timeout
+	rock_button.visible = true
+	scissors_button.visible = true
 	paper_button.pressable = true
 	money.subtract_money(amount.value)
 	player_choice = opponent.Choice.PAPER
 	opponent.make_rps_choice()
 
 func _on_scissors_scissors_button() -> void:
+	rock_button.visible = false
+	paper_button.visible = false
+	await get_tree().create_timer(1).timeout
+	rock_button.visible = true
+	paper_button.visible = true
 	scissors_button.pressable = true
 	money.subtract_money(amount.value)
 	player_choice = opponent.Choice.SCISSORS
