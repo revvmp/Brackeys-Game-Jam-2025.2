@@ -63,7 +63,7 @@ offset_bottom = 439.0
 
 [node name="GameHelpButton" parent="." instance=ExtResource("11_g5uth")]
 position = Vector2(1237, 40)
-help_information = "Pick rock, paper, scissors to bet against the bot!"
+help_information = "Pick rock, paper, scissors to bet against the bot! You win double the amount you bet!"
 
 [connection signal="rock_button" from="Rock" to="." method="_on_rock_rock_button"]
 [connection signal="paper_button" from="Paper" to="." method="_on_paper_paper_button"]
