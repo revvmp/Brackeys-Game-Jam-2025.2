@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://clry3fbkxvtgf"]
+
+[ext_resource type="Script" uid="uid://c0x1qvi3j78wk" path="res://mini_games/plinko/plinko_game.gd" id="1_emtci"]
+[ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_i2y1p"]
+[ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="3_fjetj"]
+[ext_resource type="Texture2D" uid="uid://cdiq38r4hnwvr" path="res://assets/bau_cua_ca_cop/GameJam_Shrimp.png" id="4_s1co3"]
+[ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_xkept"]
+[ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="6_lkixa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkept"]
+radius = 34.0147
+
+[node name="PlinkoGame" type="Node2D"]
+script = ExtResource("1_emtci")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_i2y1p")
+
+[node name="GameTitle" type="Label" parent="."]
+offset_left = 15.0
+offset_right = 79.0
+offset_bottom = 27.0
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("3_fjetj")
+theme_override_font_sizes/font_size = 24
+text = "Plinko"
+uppercase = true
+
+[node name="PlinkoBall" type="RigidBody2D" parent="."]
+position = Vector2(646, 142)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlinkoBall"]
+scale = Vector2(0.0238334, 0.0238334)
+texture = ExtResource("4_s1co3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlinkoBall"]
+shape = SubResource("CircleShape2D_xkept")
+
+[node name="MoneyDisplay" parent="." instance=ExtResource("5_xkept")]
+position = Vector2(146, 149)
+scale = Vector2(0.3, 0.3)
+
+[node name="GameHelpButton" parent="." instance=ExtResource("6_lkixa")]
+position = Vector2(1248, 30)
+help_information = "After inputting how much money you'd like to bet. Press the drop button in order to drop the ball down into a slot that would reward you money!"
