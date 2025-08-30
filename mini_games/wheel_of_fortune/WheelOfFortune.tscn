@@ -26,9 +26,9 @@ position = Vector2(1082, 381)
 [node name="MoneyAmount" parent="." instance=ExtResource("3_1nyoe")]
 anchors_preset = 10
 anchor_bottom = 0.0
-offset_left = 1036.0
+offset_left = 982.0
 offset_top = 298.0
-offset_right = 1036.0
+offset_right = 982.0
 offset_bottom = 298.0
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true

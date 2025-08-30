@@ -38,9 +38,9 @@ scale = Vector2(0.35, 0.35)
 position = Vector2(505, 634)
 
 [node name="MoneyAmount" parent="." instance=ExtResource("7_ft5tw")]
-offset_left = 600.0
+offset_left = 540.0
 offset_top = 339.0
-offset_right = 600.0
+offset_right = 540.0
 offset_bottom = 339.0
 
 [node name="SnakeEyes" type="Label" parent="."]

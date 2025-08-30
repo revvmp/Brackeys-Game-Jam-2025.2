@@ -4,14 +4,14 @@ var value : int
 @onready var amount = $Amount
 @onready var button = $"../Button"
 @onready var text = $"../FadingText"
+var start = "123456789"
 
-func _ready() -> void:
-	amount.max_value = Global.money
-	amount.get_line_edit().connect("text_changed", _on_text_changed) 
 
-func _on_text_changed(new_text: String):
-	amount.max_value = Global.money
-	if Global.money >= int(new_text) and int(new_text) > 0 and new_text.is_valid_int():
+		
+
+
+func _on_amount_text_changed(new_text: String) -> void:
+	if new_text.is_valid_int() and new_text[0] in start and Global.money >= int(new_text) and int(new_text) > 0:
 		text.display_text("Betting " + new_text + "!!", Color.SKY_BLUE)
 		button.rolling = false
 		value = int(new_text)
@@ -19,3 +19,4 @@ func _on_text_changed(new_text: String):
 	else:
 		text.display_text("Invalid Amount!", Color.RED)
 		button.rolling = true
+		

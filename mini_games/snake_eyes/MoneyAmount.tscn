@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c71oq4go8g007"]
+[gd_scene load_steps=2 format=3 uid="uid://cai1egad7kcgd"]
 
 [ext_resource type="Script" uid="uid://62mmk43gd5he" path="res://mini_games/snake_eyes/money_amount.gd" id="1_v40fi"]
 
@@ -11,10 +11,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v40fi")
 
-[node name="Amount" type="SpinBox" parent="."]
-layout_mode = 0
-offset_right = 86.5417
+[node name="Amount" type="LineEdit" parent="."]
+offset_right = 198.0
 offset_bottom = 31.0
-rounded = true
-allow_greater = true
+placeholder_text = "0"
 alignment = 1
+
+[connection signal="text_changed" from="Amount" to="." method="_on_amount_text_changed"]

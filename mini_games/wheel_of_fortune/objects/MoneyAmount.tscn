@@ -11,10 +11,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wr08e")
 
-[node name="Amount" type="SpinBox" parent="."]
+[node name="Amount" type="LineEdit" parent="."]
 layout_mode = 0
-offset_right = 86.5417
+offset_right = 198.0
 offset_bottom = 31.0
-rounded = true
-allow_greater = true
+placeholder_text = "0"
 alignment = 1
+
+[connection signal="text_changed" from="Amount" to="." method="_on_amount_text_changed"]
