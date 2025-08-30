@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d017xigr6b6a" path="res://mini_games/wheel_of_fortune/objects/Spin.tscn" id="2_1nyoe"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_di5np"]
 [ext_resource type="PackedScene" uid="uid://blamgf6ryactj" path="res://mini_games/wheel_of_fortune/objects/MoneyAmount.tscn" id="3_1nyoe"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="4_i7lo4"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="4_i7lo4"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_ok0ah"]
 [ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="8_pgn0y"]
 
