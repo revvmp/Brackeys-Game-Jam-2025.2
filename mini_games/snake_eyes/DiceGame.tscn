@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cu53mr7jop5l5"]
+[gd_scene load_steps=11 format=3 uid="uid://cu53mr7jop5l5"]
 
 [ext_resource type="Script" uid="uid://rkctf10ti0g2" path="res://mini_games/snake_eyes/dice_game.gd" id="1_rsba8"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_nulbp"]
@@ -7,8 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_moon8"]
 [ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_ja832"]
 [ext_resource type="PackedScene" uid="uid://cai1egad7kcgd" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="6_ja832"]
-[ext_resource type="PackedScene" uid="uid://c71oq4go8g007" path="res://mini_games/snake_eyes/MoneyAmount.tscn" id="7_ft5tw"]
+[ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="9_6mrg0"]
 [ext_resource type="PackedScene" uid="uid://53yhdre5wemc" path="res://mini_games/snake_eyes/Roll.tscn" id="9_12iu1"]
 [ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="9_wkgbo"]
 
@@ -44,6 +43,9 @@ offset_left = 540.0
 offset_top = 339.0
 offset_right = 540.0
 offset_bottom = 339.0
+
+[node name="GameHelpButton" parent="." instance=ExtResource("9_6mrg0")]
+position = Vector2(1250, 32)
 
 [node name="SnakeEyes" type="Label" parent="."]
 offset_left = 490.0
