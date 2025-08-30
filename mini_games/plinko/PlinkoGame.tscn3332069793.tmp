@@ -30,7 +30,7 @@ text = "Plinko"
 uppercase = true
 
 [node name="PlinkoBall" type="RigidBody2D" parent="."]
-position = Vector2(280, 161)
+position = Vector2(646, 161)
 freeze = true
 script = ExtResource("4_teh2r")
 
