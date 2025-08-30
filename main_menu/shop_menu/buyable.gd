@@ -54,8 +54,9 @@ const SHOP_ITEM_PRICE = {
 }
 
 var trophy_type: Global.Trophy
+var price: int
 
-signal item_bought(trophy_type: Global.Trophy)
+signal item_bought(buyable: Node)
 
 @onready var trophy_image = $HBoxContainer/VBoxContainer/TrophyImage
 @onready var description_label = $HBoxContainer/Description
@@ -81,6 +82,9 @@ func set_trohy_info(trophy: Global.Trophy):
 	
 	description_label.text = SHOP_ITEM_DESC[trophy]
 	price_label.text = "$" + format_number_with_commas(SHOP_ITEM_PRICE[trophy])
+	
+	price = SHOP_ITEM_PRICE[trophy]
+	trophy_type = trophy
 
 func _on_trophy_image_pressed() -> void:
-	item_bought.emit(trophy_type)
+	item_bought.emit(self)

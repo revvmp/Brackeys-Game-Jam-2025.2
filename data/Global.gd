@@ -22,7 +22,7 @@ enum Price {
 }
 
 const SAVE_FILE_NAME = "user://devilsdeal.save"
-const START_MONEY = 100
+const START_MONEY = 100000
 
 var money: int = START_MONEY
 var trophies: Array = []
