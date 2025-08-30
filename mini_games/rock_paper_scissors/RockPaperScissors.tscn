@@ -46,16 +46,16 @@ position = Vector2(229, 87)
 scale = Vector2(0.5, 0.5)
 
 [node name="RockPaperScissorsOptions" parent="." instance=ExtResource("5_opgkj")]
-position = Vector2(346, 46)
+position = Vector2(386, 46)
 
 [node name="FadingText" parent="." instance=ExtResource("8_1rmuh")]
 position = Vector2(506, 647)
 
 [node name="MoneyAmount" parent="." instance=ExtResource("10_0gx62")]
-offset_left = 584.0
-offset_top = 407.0
-offset_right = 584.0
-offset_bottom = 407.0
+offset_left = 552.0
+offset_top = 439.0
+offset_right = 552.0
+offset_bottom = 439.0
 
 [connection signal="rock_button" from="Rock" to="." method="_on_rock_rock_button"]
 [connection signal="paper_button" from="Paper" to="." method="_on_paper_paper_button"]

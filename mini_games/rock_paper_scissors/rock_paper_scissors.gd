@@ -50,7 +50,7 @@ func get_winner(player_choice: int, opponent_choice: int) -> String:
 		or (player_choice == opponent.Choice.PAPER and opponent_choice == opponent.Choice.ROCK) \
 		or (player_choice == opponent.Choice.SCISSORS and opponent_choice == opponent.Choice.PAPER):
 		text.display_text("You win!", Color.SKY_BLUE)
-		money.add_money(amount.value * 5)
+		money.add_money(amount.value * 2)
 		Global.save_global_data()
 		return "Player wins!"
 
