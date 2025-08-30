@@ -18,7 +18,7 @@ func _on_rock_rock_button() -> void:
 	scissors_button.visible = false
 	rock_button.pressable = false
 	
-
+	opponent.hand.frame = 0
 
 	var tween = create_tween()
 	for i in range(3):
@@ -39,6 +39,8 @@ func _on_paper_paper_button() -> void:
 	scissors_button.visible = false
 	paper_button.pressable = false
 
+	opponent.hand.frame = 0
+
 	var tween = create_tween()
 	for i in range(3):
 		tween.tween_property(rotate, "rotation_degrees", 45.0, 0.2)
@@ -57,6 +59,8 @@ func _on_scissors_scissors_button() -> void:
 	rock_button.visible = false
 	paper_button.visible = false
 	scissors_button.pressable = false
+	
+	opponent.hand.frame = 0
 	
 	var tween = create_tween()
 	for i in range(3):
