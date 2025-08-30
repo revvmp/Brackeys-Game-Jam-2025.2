@@ -43,6 +43,7 @@ scale = Vector2(0.35, 0.35)
 
 [node name="GameHelpButton" parent="." instance=ExtResource("8_dwgln")]
 position = Vector2(1250, 32)
+help_information = "Choose how much money you want to put on the line. Hit that SPIN button and the wheel will decide your fate. The wheel will slow down, but where will it land? A big prize? Or will your luck run out?"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 912.0
