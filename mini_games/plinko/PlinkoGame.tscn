@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://clry3fbkxvtgf"]
+[gd_scene load_steps=10 format=3 uid="uid://clry3fbkxvtgf"]
 
 [ext_resource type="Script" uid="uid://c0x1qvi3j78wk" path="res://mini_games/plinko/plinko_game.gd" id="1_emtci"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_i2y1p"]
@@ -10,6 +10,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkept"]
 radius = 34.0147
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_teh2r"]
+size = Vector2(30, 593)
 
 [node name="PlinkoGame" type="Node2D"]
 script = ExtResource("1_emtci")
@@ -48,3 +51,31 @@ scale = Vector2(0.3, 0.3)
 [node name="GameHelpButton" parent="." instance=ExtResource("6_lkixa")]
 position = Vector2(1248, 30)
 help_information = "After inputting how much money you'd like to bet. Press the drop button in order to drop the ball down into a slot that would reward you money!"
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(180, 222)
+
+[node name="ColorRect" type="ColorRect" parent="LeftWall"]
+offset_left = -1.0
+offset_top = -97.0
+offset_right = 29.0
+offset_bottom = 497.0
+color = Color(0.38048, 0.413438, 0.51154, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(14, 200.5)
+shape = SubResource("RectangleShape2D_teh2r")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(1100, 222)
+
+[node name="ColorRect" type="ColorRect" parent="RightWall"]
+offset_left = -1.0
+offset_top = -97.0
+offset_right = 29.0
+offset_bottom = 497.0
+color = Color(0.38048, 0.413438, 0.51154, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(14, 199.5)
+shape = SubResource("RectangleShape2D_teh2r")
