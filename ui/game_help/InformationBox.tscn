@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://baw0jnli1lhp7"]
+
+[ext_resource type="PackedScene" uid="uid://84lugwlnaiti" path="res://ui/game_help/GameHelpExit.tscn" id="1_6nr8g"]
+
+[node name="InformationBox" type="Node2D"]
+position = Vector2(0, -53)
+scale = Vector2(2, 2)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0.313726)
+offset_left = -208.0
+offset_top = -93.0
+offset_right = 211.0
+offset_bottom = 147.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -201.0
+offset_top = -86.0
+offset_right = 204.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 16
+text = "PLACEHOLDER"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitButton" parent="." instance=ExtResource("1_6nr8g")]
+position = Vector2(0, 132)
+scale = Vector2(1, 1)
