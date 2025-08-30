@@ -10,3 +10,7 @@ func unfreeze():
 	if my_tween and my_tween.is_running():
 		my_tween.kill()
 	self.set("freeze", false)
+
+
+func _on_drop_button_pressed() -> void:
+	unfreeze()
