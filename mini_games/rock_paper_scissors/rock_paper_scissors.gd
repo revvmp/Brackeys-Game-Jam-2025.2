@@ -14,6 +14,7 @@ var opponent_choice: int = -1
 func _on_rock_rock_button() -> void:
 	paper_button.visible = false
 	scissors_button.visible = false
+	rock_button.pressable = false
 	await get_tree().create_timer(1).timeout
 	paper_button.visible = true
 	scissors_button.visible = true
@@ -25,6 +26,7 @@ func _on_rock_rock_button() -> void:
 func _on_paper_paper_button() -> void:
 	rock_button.visible = false
 	scissors_button.visible = false
+	paper_button.pressable = false
 	await get_tree().create_timer(1).timeout
 	rock_button.visible = true
 	scissors_button.visible = true
@@ -36,6 +38,7 @@ func _on_paper_paper_button() -> void:
 func _on_scissors_scissors_button() -> void:
 	rock_button.visible = false
 	paper_button.visible = false
+	scissors_button.pressable = false
 	await get_tree().create_timer(1).timeout
 	rock_button.visible = true
 	paper_button.visible = true
