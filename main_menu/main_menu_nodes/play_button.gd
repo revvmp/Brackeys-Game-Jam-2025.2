@@ -1,4 +1,6 @@
 extends "res://ui/button.gd"
 
+signal on_play_pressed
+
 func on_mouse_pressed():
-	print("Start a random game")
+	on_play_pressed.emit()
