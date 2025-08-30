@@ -5,6 +5,7 @@ const MINIGAMES = [
 	"res://mini_games/rock_paper_scissors/RockPaperScissors.tscn",
 	"res://mini_games/snake_eyes/DiceGame.tscn",
 	"res://mini_games/wheel_of_fortune/WheelOfFortune.tscn",
+	"res://mini_games/plinko/PlinkoGame.tscn",
 ]
 
 func _on_help_button_help_pressed() -> void:
