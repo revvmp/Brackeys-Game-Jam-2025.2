@@ -50,7 +50,7 @@ scale = Vector2(0.3, 0.3)
 
 [node name="GameHelpButton" parent="." instance=ExtResource("6_lkixa")]
 position = Vector2(1248, 30)
-help_information = "After inputting how much money you'd like to bet. Press the drop button in order to drop the ball down into a slot that would reward you money!"
+help_information = "Input how much money you'd like to bet in the input box to the right. Press the drop button in order to drop the ball down into a slot that would reward you money!"
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 position = Vector2(180, 222)
@@ -79,3 +79,21 @@ color = Color(0.38048, 0.413438, 0.51154, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
 position = Vector2(14, 199.5)
 shape = SubResource("RectangleShape2D_teh2r")
+
+[node name="MoneyInput" type="LineEdit" parent="."]
+offset_left = 1133.0
+offset_top = 125.0
+offset_right = 1275.0
+offset_bottom = 164.0
+placeholder_text = "$0"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="DropButton" type="Button" parent="."]
+offset_left = 1134.0
+offset_top = 169.0
+offset_right = 1274.0
+offset_bottom = 205.0
+text = "DROP"
+
+[connection signal="pressed" from="DropButton" to="PlinkoBall" method="_on_drop_button_pressed"]
