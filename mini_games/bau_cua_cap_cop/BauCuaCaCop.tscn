@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtw5jmb27tqei"]
+[gd_scene load_steps=10 format=3 uid="uid://dtw5jmb27tqei"]
 
 [ext_resource type="PackedScene" uid="uid://drwxs4k2eesso" path="res://mini_games/bau_cua_cap_cop/objects/Board.tscn" id="1_3vh24"]
 [ext_resource type="Script" uid="uid://cmx84b41beco0" path="res://mini_games/bau_cua_cap_cop/bau_cua_ca_cop.gd" id="1_lg8dq"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://0s2bpo3yt4l5" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopDice.tscn" id="3_8mrat"]
 [ext_resource type="PackedScene" uid="uid://ciw5y7vn8jq1c" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopRollButton.tscn" id="4_eaobg"]
 [ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_xydmx"]
+[ext_resource type="PackedScene" uid="uid://c2sbjtrlpu7gj" path="res://mini_games/bau_cua_cap_cop/objects/all_fading_text.tscn" id="8_bnwcr"]
+[ext_resource type="Script" uid="uid://3y7an42qkmw3" path="res://mini_games/bau_cua_cap_cop/objects/all_fading_text.gd" id="9_gelfl"]
 
 [node name="BauCuaCaCop" type="Node2D"]
 script = ExtResource("1_lg8dq")
@@ -39,6 +41,9 @@ position = Vector2(1085, 231)
 
 [node name="FadingText" parent="." instance=ExtResource("6_xydmx")]
 position = Vector2(952, 519)
+
+[node name="AllFadingText" parent="." instance=ExtResource("8_bnwcr")]
+script = ExtResource("9_gelfl")
 
 [connection signal="dice_roll_result" from="BauCuaCaCopDice" to="." method="_on_bau_cua_ca_cop_dice_dice_roll_result"]
 [connection signal="dice_roll_result" from="BauCuaCaCopDice" to="Board" method="_on_bau_cua_ca_cop_dice_dice_roll_result"]
