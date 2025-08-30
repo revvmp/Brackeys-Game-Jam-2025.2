@@ -6,19 +6,44 @@ extends Node2D
 @onready var money = $MoneyDisplay
 @onready var opponent = $RockPaperScissorsOptions
 @onready var text = $FadingText
+@onready var amount = $MoneyAmount
 
 var player_choice: int = -1
 var opponent_choice: int = -1
 
 func _on_rock_rock_button() -> void:
+	paper_button.visible = false
+	scissors_button.visible = false
+	rock_button.pressable = false
+	await get_tree().create_timer(1).timeout
+	paper_button.visible = true
+	scissors_button.visible = true
+	rock_button.pressable = true
+	money.subtract_money(amount.value)
 	player_choice = opponent.Choice.ROCK
 	opponent.make_rps_choice()
 
 func _on_paper_paper_button() -> void:
+	rock_button.visible = false
+	scissors_button.visible = false
+	paper_button.pressable = false
+	await get_tree().create_timer(1).timeout
+	rock_button.visible = true
+	scissors_button.visible = true
+	paper_button.pressable = true
+	money.subtract_money(amount.value)
 	player_choice = opponent.Choice.PAPER
 	opponent.make_rps_choice()
 
 func _on_scissors_scissors_button() -> void:
+	rock_button.visible = false
+	paper_button.visible = false
+	scissors_button.pressable = false
+	await get_tree().create_timer(1).timeout
+	rock_button.visible = true
+	paper_button.visible = true
+	scissors_button.pressable = true
+	money.subtract_money(amount.value)
 	player_choice = opponent.Choice.SCISSORS
 	opponent.make_rps_choice()
 
@@ -34,24 +59,20 @@ func _on_rock_paper_scissors_options_opponent_choice_made(choice: String) -> voi
 func get_winner(player_choice: int, opponent_choice: int) -> String:
 
 	if player_choice == opponent_choice:
-		text.display_text("It's a tie!!", Color.WHITE)
+		text.display_text("It's a tie!!", Color.WHITE) 
+		money.add_money(amount.value)
+		Global.save_global_data()
 		return "It's a tie!"
 
 	elif (player_choice == opponent.Choice.ROCK and opponent_choice == opponent.Choice.SCISSORS) \
 		or (player_choice == opponent.Choice.PAPER and opponent_choice == opponent.Choice.ROCK) \
 		or (player_choice == opponent.Choice.SCISSORS and opponent_choice == opponent.Choice.PAPER):
 		text.display_text("You win!", Color.SKY_BLUE)
+		money.add_money(amount.value * 2)
+		Global.save_global_data()
 		return "Player wins!"
 
-		
 	else:
 		text.display_text("You lost!", Color.RED)
+		Global.save_global_data()
 		return "CPU wins!"
-
-func update_money(result: String) -> void:
-	if result == "Result: Player wins!":
-		money.add_money(10)
-		text.display_text("You win!", Color.SKY_BLUE)
-	elif result == "Result: CPU wins!":
-		money.subtract_money(5)
-		text.display_text("You lost!", Color.RED)
