@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _on_text_changed(new_text: String):
 	amount.max_value = Global.money
-	if Global.money >= int(new_text) and int(new_text) > 0:
+	if Global.money >= int(new_text) and int(new_text) > 0 and new_text.is_valid_int():
 		text.display_text("Betting " + new_text + "!!", Color.SKY_BLUE)
 		button.spinning = false
 		value = int(new_text)
