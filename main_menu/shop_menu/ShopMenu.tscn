@@ -76,6 +76,6 @@ vertical_scroll_mode = 2
 layout_mode = 2
 
 [node name="FadingText" parent="." instance=ExtResource("6_c3mgd")]
-position = Vector2(875, 185)
+position = Vector2(875, 169)
 
 [connection signal="exit_pressed" from="ExitButton" to="." method="_on_exit_button_exit_pressed"]
