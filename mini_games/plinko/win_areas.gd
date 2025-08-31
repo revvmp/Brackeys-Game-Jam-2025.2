@@ -44,3 +44,4 @@ func _on_ball_fall(winning_area: Node2D, ball: RigidBody2D):
 		ball.fading_text.display_text("You lost $" + str(ball.bet_amount - total_amount), Color.RED)
 	
 	ball.money_display.add_money(total_amount)
+	TransitionScene.transition_to_main_menu()
