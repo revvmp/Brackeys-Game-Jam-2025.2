@@ -1,6 +1,6 @@
 extends Control
 
-var value : int
+var value: int
 @onready var amount = $Amount
 @onready var button = $"../Button"
 @onready var text = $"../FadingText"
@@ -16,3 +16,6 @@ func _on_amount_text_changed(new_text: String) -> void:
 		text.display_text("Invalid Amount!", Color.RED)
 		button.rolling = true
 		
+		
+func _on_button_roll_dice() -> void:
+	amount.editable = false

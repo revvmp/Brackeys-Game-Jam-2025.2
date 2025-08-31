@@ -15,5 +15,7 @@ func _on_amount_text_changed(new_text: String) -> void:
 	else:
 		text.display_text("Invalid Amount!", Color.RED)
 		button.spinning = true
-		
-		
+
+
+func _on_button_spin_wheel() -> void:
+	amount.editable = false

@@ -11,9 +11,11 @@ func _on_button_spin_wheel() -> void:
 
 
 func _on_wheel_win_money() -> void:
+	amount.get_child(0).editable = true
 	money.add_money(amount.value * 2)
 	text.display_text("You doubled your money!", Color.SKY_BLUE)
 	
 	
 func _on_wheel_lose_money() -> void:
+	amount.get_child(0).editable = true
 	text.display_text("You lost.", Color.RED)

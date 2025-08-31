@@ -3,8 +3,10 @@ extends "res://ui/button.gd"
 var spinning = true
 signal spin_wheel
 
+@onready var amount = $"../MoneyAmount"
+
 func on_mouse_pressed():
-	if !spinning:
+	if !spinning and Global.money > 0 and amount.value <= Global.money :
 		emit_signal("spin_wheel")
 		spinning = true
 
