@@ -12,7 +12,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_3metf")
+"texture": ExtResource("2_obr6h")
 }],
 "loop": true,
 "name": &"1",
@@ -28,7 +28,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_2wasn")
+"texture": ExtResource("3_3metf")
 }],
 "loop": true,
 "name": &"3",
@@ -36,7 +36,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_5bnmh")
+"texture": ExtResource("5_2wasn")
 }],
 "loop": true,
 "name": &"4",
@@ -44,7 +44,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_0o0hy")
+"texture": ExtResource("6_5bnmh")
 }],
 "loop": true,
 "name": &"5",
@@ -52,7 +52,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_obr6h")
+"texture": ExtResource("7_0o0hy")
 }],
 "loop": true,
 "name": &"6",
@@ -66,16 +66,16 @@ script = ExtResource("1_41scq")
 position = Vector2(192, 228)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_fwudy")
-animation = &"6"
+animation = &"1"
 
 [node name="Item2" type="AnimatedSprite2D" parent="."]
 position = Vector2(334, 228)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_fwudy")
-animation = &"6"
+animation = &"1"
 
 [node name="Item3" type="AnimatedSprite2D" parent="."]
 position = Vector2(473, 227)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_fwudy")
-animation = &"6"
+animation = &"1"

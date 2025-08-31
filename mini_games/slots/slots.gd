@@ -21,6 +21,23 @@ func _on_spin_cilcked() -> void:
 
 func _on_items_spin_result(results_list, bet) -> void:
 	var results = {}
+	var multi_map = {
+		1: 1,
+		2: 1,
+		3: 1,
+		4: 1.5,
+		5: 2,
+		6: 3
+	}
+	
+	"""
+	1: Cherry
+	2: Grape
+	3: Orange
+	4: 7
+	5: Bar
+	6: Diamond
+	"""
 	
 	if len(results_list) != 3:
 		return
@@ -41,7 +58,13 @@ func _on_items_spin_result(results_list, bet) -> void:
 	
 	for key in keys:
 		var value = results[key]
-		var multi = 0.5 * int(key)
+		print(keys)
+
+		var multi = multi_map[int(key)]
+		
+		if not multi:
+			multi = 1
+			
 		if value == 2:
 			added_money = true
 			money_amount = 2 * bet * multi
@@ -52,11 +75,18 @@ func _on_items_spin_result(results_list, bet) -> void:
 			money_amount = 20 * bet * multi
 			message = "+ $" + str(int(money_amount))
 			money.add_money(money_amount)
+			
 
 	if not added_money:
-		money_amount = -bet
-		message = "- $" + str(bet)
-		money.subtract_money(bet)
+		if 1 in keys and 2 in keys and 3 in keys:
+			#All fruits
+			money_amount = 5 * bet
+			message = "+ $" + str(int(money_amount))
+			money.add_money(money_amount)
+		else:
+			money_amount = -bet
+			message = "- $" + str(bet)
+			money.subtract_money(bet)
 		
 	if money_amount > 0:
 		text.display_text(message, Color.GREEN)
