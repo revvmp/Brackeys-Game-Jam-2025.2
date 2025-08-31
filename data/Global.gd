@@ -50,9 +50,9 @@ const SHOP_ITEM_IMAGES_PRESSED = {
 
 const SHOP_ITEM_DESC = {
 	5: "BISCUIT\n\nA delicious warm poptart.. I mean biscuit, you've risked your entire life savings multiple times and you finally managed to get this innocent looking pastry to prove it.", # Global.Trophy.BISCUITS
-	4: "CAKE\n\nThe undispuated sweet treat of everyone's birthday. In your case, the 2nd to last dessert to buy right before completing this game!", # Global.Trophy.CAKE
-	3: "CHEESECAKE\n\nOriginally created as an \"energy-boosting\" food, now one of the most popular dessert options, and the birth of the New York Stlye cheesecake after Cream Cheese was invented.", # Global.Trophy.CHEESECAKE
-	2: "CINNAMON ROLL\n\nEvolved from sweet rolls back in the in ancient times and now is a dessert staple. Typicaly seasoned with cinnamon and vanilla glaze in modern times.", # Global.Trophy.COOKIE
+	4: "CAKE\n\nThe undisputed sweet treat of everyone's birthday. In your case, the 2nd to last dessert to buy right before completing this game!", # Global.Trophy.CAKE
+	3: "CHEESECAKE\n\nOriginally created as an \"energy-boosting\" food, now one of the most popular dessert options, and the birth of the New York Style cheesecake after Cream Cheese was invented.", # Global.Trophy.CHEESECAKE
+	2: "CINNAMON ROLL\n\nEvolved from sweet rolls back in the in ancient times and now is a dessert staple. Typically seasoned with cinnamon and vanilla glaze in modern times.", # Global.Trophy.COOKIE
 	1: "COOKIE\n\nYou can have cookies in a billion different ways, personally our favorite is oatmeal raisins. Just in the United States alone, 2 billion cookies are purchased each YEAR!", # Global.Trophy.COOKIE
 	0: "DONUT\n\nAbout 190 calories of perfection, can't get better and simpler than this when it comes to desserts. Only for $1,000!", # Global.Trophy.DONUT 
 }

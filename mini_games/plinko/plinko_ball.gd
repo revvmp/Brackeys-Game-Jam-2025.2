@@ -3,9 +3,12 @@ extends RigidBody2D
 @onready var money_input = $"../MoneyInput"
 @onready var fading_text = $"../FadingText"
 @onready var money_display = $"../MoneyDisplay"
+@onready var soft_lock_timer = $SoftLockTimer
 
 var my_tween = create_tween().set_loops()
 var bet_amount: int = 0
+
+var last_position: Vector2
 
 func is_numeric(text: String) -> bool:
 	# Attempt to convert to float (handles both integers and decimals)
@@ -23,7 +26,24 @@ func is_numeric(text: String) -> bool:
 func _ready() -> void:
 	my_tween.tween_property(self, "position", Vector2(1000, self.position.y), 2.0)
 	my_tween.tween_property(self, "position", Vector2(280, self.position.y), 2.0)
+	
+	soft_lock_timer.connect("timeout", _on_reset_timer_timeout)
 
+func _physics_process(delta: float) -> void:
+	if global_position.distance_to(last_position) > 0.01:
+		# If it's moving, stop and reset the timer.
+		soft_lock_timer.stop()
+		# Update the last position.
+		last_position = global_position
+	else:
+		if not soft_lock_timer.is_stopped():
+			soft_lock_timer.start()
+	
+func _on_reset_timer_timeout():
+	print("SOFT LOCKED DETECTED")
+	TransitionScene.transition()
+	await TransitionScene.on_transition_finished
+	get_tree().change_scene_to_file("res://mini_games/plinko/PlinkoGame.tscn")
 
 func unfreeze():
 	if my_tween and my_tween.is_running():

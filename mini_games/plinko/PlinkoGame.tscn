@@ -621,6 +621,10 @@ texture = ExtResource("5_teh2r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlinkoBall"]
 shape = SubResource("CircleShape2D_xkept")
 
+[node name="SoftLockTimer" type="Timer" parent="PlinkoBall"]
+wait_time = 2.0
+one_shot = true
+
 [node name="FadingText" parent="." instance=ExtResource("11_jq2tj")]
 position = Vector2(1072, 219)
 scale = Vector2(0.75, 0.75)
