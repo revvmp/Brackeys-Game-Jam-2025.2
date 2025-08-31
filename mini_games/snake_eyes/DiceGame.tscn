@@ -32,7 +32,7 @@ position = Vector2(427, 324)
 scale = Vector2(0.135, 0.135)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_moon8")]
-position = Vector2(229, 106)
+position = Vector2(192, 82)
 scale = Vector2(0.35, 0.35)
 
 [node name="FadingText" parent="." instance=ExtResource("6_ja832")]
