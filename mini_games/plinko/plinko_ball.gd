@@ -54,9 +54,14 @@ func _on_drop_button_pressed() -> void:
 	if not is_numeric(input) or not input:
 		fading_text.display_text("Invalid money amount!", Color.RED)
 		return
+		
+	if input.begins_with("0"):
+		fading_text.display_text("Invalid money amount!", Color.RED)
+		return
+		
 	var bet = int(input)
 	
-	if bet > Global.money:
+	if bet > Global.money or bet < 0:
 		fading_text.display_text("You do not have enough!", Color.RED)
 		return
 		
