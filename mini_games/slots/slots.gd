@@ -3,6 +3,7 @@ extends Node2D
 @onready var slots = $Items
 @onready var button = $Button
 @onready var money = $MoneyDisplay
+@onready var text = $FadingText
 
 func _on_spin_cilcked() -> void:
 	button.hide()
@@ -25,21 +26,30 @@ func _on_items_spin_result(results_list, bet) -> void:
 
 	var keys = results.keys()
 	var added_money = false
+	var message = ''
+	
+	var money_amount = 0
 	
 	for key in keys:
 		var value = results[key]
 		var multi = 0.5 * int(key)
 		if value == 2:
 			added_money = true
-			var money_amount = 2 * bet * multi
-			print("+ $" + str(money_amount))
+			money_amount = 2 * bet * multi
+			message = "+ $" + str(int(money_amount))
 			money.add_money(money_amount)
 		elif value == 3:
 			added_money = true
-			var money_amount = 20 * bet * multi
-			print("+ $" + str(money_amount))
+			money_amount = 20 * bet * multi
+			message = "+ $" + str(int(money_amount))
 			money.add_money(money_amount)
 
 	if not added_money:
-		print("- $" + str(bet))
+		money_amount = -bet
+		message = "- $" + str(bet)
 		money.subtract_money(bet)
+		
+	if money_amount > 0:
+		text.display_text(message, Color.GREEN)
+	else:
+		text.display_text(message, Color.RED)
