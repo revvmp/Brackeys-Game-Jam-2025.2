@@ -8,14 +8,22 @@ extends Node2D
 
 func _on_button_spin_wheel() -> void:
 	money.subtract_money(amount.value)
-
-
-func _on_wheel_win_money() -> void:
-	amount.get_child(0).editable = true
-	money.add_money(amount.value * 2)
-	text.display_text("You doubled your money!", Color.SKY_BLUE)
 	
 	
 func _on_wheel_lose_money() -> void:
 	amount.get_child(0).editable = true
 	text.display_text("You lost.", Color.RED)
+
+
+func _on_wheel_win_3x() -> void:
+	amount.get_child(0).editable = true
+	money.add_money(amount.value * 4)
+	text.display_text("You 3x your money!", Color.SKY_BLUE)
+	
+
+
+func _on_wheel_win_5x() -> void:
+	amount.get_child(0).editable = true
+	money.add_money(amount.value * 6)
+	text.display_text("You 5x your money!!", Color.SKY_BLUE)
+	

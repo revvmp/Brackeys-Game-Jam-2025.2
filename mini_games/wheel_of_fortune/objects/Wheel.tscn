@@ -1,12 +1,12 @@
 [gd_scene load_steps=7 format=3 uid="uid://dr525wp2cyeww"]
 
-[ext_resource type="Texture2D" uid="uid://darsui2oge1ca" path="res://assets/wheel_of_fortune/spin_wheel_background.png" id="1_gdjed"]
 [ext_resource type="Script" uid="uid://b4uny85w73tsq" path="res://mini_games/wheel_of_fortune/objects/wheel.gd" id="1_rg133"]
-[ext_resource type="Texture2D" uid="uid://0mw8kcqbdnvf" path="res://assets/wheel_of_fortune/wheel.png" id="2_altuo"]
-[ext_resource type="Texture2D" uid="uid://duc12avgok7g" path="res://assets/wheel_of_fortune/arrow.png" id="3_altuo"]
+[ext_resource type="Texture2D" uid="uid://cqbqmwcd0d1co" path="res://assets/wheel_of_fortune/GameJam_wheelside.png" id="2_rg133"]
+[ext_resource type="Texture2D" uid="uid://bpqol48pj0fc4" path="res://assets/wheel_of_fortune/GameJam_wheel.png" id="3_s8ymj"]
+[ext_resource type="Texture2D" uid="uid://cnny7b7lux5c7" path="res://assets/wheel_of_fortune/GameJam_arrow.png" id="4_rg133"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rg133"]
-radius = 42.1673
+radius = 43.3523
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rg133"]
 a = Vector2(-0.374619, -67.4329)
@@ -15,99 +15,187 @@ b = Vector2(0, 412.09)
 [node name="Wheel" type="Node2D"]
 script = ExtResource("1_rg133")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(462, 121.335)
-scale = Vector2(0.733333, 0.726667)
-texture = ExtResource("1_gdjed")
-
 [node name="MainWheel" type="Sprite2D" parent="."]
-position = Vector2(455, 127)
-scale = Vector2(0.987097, 0.980645)
-texture = ExtResource("2_altuo")
+position = Vector2(466, 116)
+scale = Vector2(0.746215, 0.741338)
+texture = ExtResource("3_s8ymj")
 
 [node name="Area2D" type="Area2D" parent="MainWheel"]
 position = Vector2(-470.065, -124.75)
 scale = Vector2(1.01307, 1.01974)
 
 [node name="Purple" type="CollisionShape2D" parent="MainWheel/Area2D"]
-position = Vector2(358, -132.665)
+position = Vector2(51.2848, -831.404)
 rotation = 2.72097
-scale = Vector2(2.69, 0.715)
+scale = Vector2(10.235, 1.38)
 shape = SubResource("CircleShape2D_rg133")
+
+[node name="Label" type="Label" parent="MainWheel/Area2D"]
+offset_left = 3.6637
+offset_top = -479.539
+offset_right = 43.2387
+offset_bottom = -457.206
+rotation = -0.516617
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0, 1, 0.411765, 1)
+text = "5x "
+horizontal_alignment = 1
 
 [node name="Area2D2" type="Area2D" parent="MainWheel"]
 
 [node name="Brownish" type="CollisionShape2D" parent="MainWheel/Area2D2"]
-position = Vector2(107.386, -259.013)
+position = Vector2(415.43, -973.915)
 rotation = -2.72202
-scale = Vector2(2.72811, 0.728332)
+scale = Vector2(10.363, 1.703)
 skew = -0.00485814
 shape = SubResource("CircleShape2D_rg133")
+
+[node name="Label" type="Label" parent="MainWheel/Area2D2"]
+offset_left = 171.532
+offset_top = -739.204
+offset_right = 211.107
+offset_bottom = -716.871
+rotation = 0.431096
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0.627451, 0, 0, 1)
+text = "0x "
+horizontal_alignment = 1
 
 [node name="Area2D3" type="Area2D" parent="MainWheel"]
 
 [node name="Green" type="CollisionShape2D" parent="MainWheel/Area2D3"]
-position = Vector2(261.372, -109.112)
+position = Vector2(1003.73, -374.998)
 rotation = 1.16825
-scale = Vector2(2.74032, 0.725088)
+scale = Vector2(10.35, 2.34)
 skew = -0.00474906
 shape = SubResource("CircleShape2D_rg133")
+
+[node name="Label" type="Label" parent="MainWheel/Area2D3"]
+offset_left = 637.886
+offset_top = -415.465
+offset_right = 677.461
+offset_bottom = -393.132
+rotation = 1.10654
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0.627451, 0, 0, 1)
+text = "0x"
+horizontal_alignment = 1
 
 [node name="Area2D4" type="Area2D" parent="MainWheel"]
 
 [node name="Red" type="CollisionShape2D" parent="MainWheel/Area2D4"]
-position = Vector2(259.346, 106.053)
+position = Vector2(1014.45, 457.282)
 rotation = -1.17172
-scale = Vector2(2.74036, 0.725076)
+scale = Vector2(10.42, 1.625)
 skew = 0.00471723
 shape = SubResource("CircleShape2D_rg133")
+
+[node name="Label" type="Label" parent="MainWheel/Area2D4"]
+offset_left = 786.636
+offset_top = 206.384
+offset_right = 826.211
+offset_bottom = 228.717
+rotation = -4.02822
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0.627451, 0, 0, 1)
+text = "0x "
+horizontal_alignment = 1
 
 [node name="Area2D5" type="Area2D" parent="MainWheel"]
 
 [node name="Pink" type="CollisionShape2D" parent="MainWheel/Area2D5"]
-position = Vector2(105.359, 256.974)
+position = Vector2(400.689, 1029.22)
 rotation = 2.71852
-scale = Vector2(2.72816, 0.72832)
+scale = Vector2(10.238, 1.718)
 skew = 0.00488865
 shape = SubResource("CircleShape2D_rg133")
+
+[node name="Label" type="Label" parent="MainWheel/Area2D5"]
+offset_left = 446.252
+offset_top = 670.41
+offset_right = 485.827
+offset_bottom = 692.743
+rotation = -3.6233
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0.627451, 0, 0, 1)
+text = "0x "
+horizontal_alignment = 1
 
 [node name="Area2D6" type="Area2D" parent="MainWheel"]
 
 [node name="Yellowish" type="CollisionShape2D" parent="MainWheel/Area2D6"]
-position = Vector2(-107.386, 260.033)
+position = Vector2(-418.11, 1046.76)
 rotation = 0.405543
-scale = Vector2(2.72793, 0.72838)
+scale = Vector2(10.273, 1.778)
 skew = -0.0047332
 shape = SubResource("CircleShape2D_rg133")
+
+[node name="Label" type="Label" parent="MainWheel/Area2D6"]
+offset_left = -179.573
+offset_top = 836.326
+offset_right = -139.998
+offset_bottom = 858.659
+rotation = -2.67734
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "3x "
+horizontal_alignment = 1
 
 [node name="Area2D7" type="Area2D" parent="MainWheel"]
 
 [node name="LightGreen" type="CollisionShape2D" parent="MainWheel/Area2D7"]
-position = Vector2(-260.359, 105.033)
-rotation = -2.03069
-scale = Vector2(2.73953, 0.725298)
+position = Vector2(-984.971, 439.746)
+rotation = -1.97571
+scale = Vector2(10.225, 1.805)
 skew = -0.00523734
 shape = SubResource("CircleShape2D_rg133")
+
+[node name="Label" type="Label" parent="MainWheel/Area2D7"]
+offset_left = -684.789
+offset_top = 511.238
+offset_right = -645.214
+offset_bottom = 533.571
+rotation = -2.00189
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0.627451, 0, 0, 1)
+text = "0x"
+horizontal_alignment = 1
 
 [node name="Area2D8" type="Area2D" parent="MainWheel"]
 
 [node name="Coral" type="CollisionShape2D" parent="MainWheel/Area2D8"]
-position = Vector2(-260.359, -106.053)
+position = Vector2(-1009.09, -370.951)
 rotation = 2.00115
-scale = Vector2(2.73995, 0.725187)
+scale = Vector2(10.33, 2.045)
 skew = 0.00499392
 shape = SubResource("CircleShape2D_rg133")
 
+[node name="Label" type="Label" parent="MainWheel/Area2D8"]
+offset_left = -861.682
+offset_top = -147.032
+offset_right = -822.107
+offset_bottom = -124.698
+rotation = -1.05592
+scale = Vector2(9.08, 9.08)
+theme_override_colors/font_color = Color(0.627451, 0, 0, 1)
+text = "0x "
+horizontal_alignment = 1
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(462, 85)
+scale = Vector2(0.733333, 0.726667)
+texture = ExtResource("2_rg133")
+
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(455, -182)
-scale = Vector2(0.133466, 0.133466)
-texture = ExtResource("3_altuo")
+position = Vector2(466, -717)
+scale = Vector2(0.239733, 0.239733)
+texture = ExtResource("4_rg133")
 
 [node name="ArrowArea" type="Area2D" parent="Arrow"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/ArrowArea"]
 position = Vector2(1.90735e-06, -307.194)
-scale = Vector2(20, 2)
+scale = Vector2(30, 2.425)
 shape = SubResource("SegmentShape2D_rg133")
 
 [connection signal="area_entered" from="MainWheel/Area2D" to="." method="_on_area_2d_area_entered"]
