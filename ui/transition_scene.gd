@@ -2,8 +2,6 @@ extends CanvasLayer
 
 signal on_transition_finished
 
-var main_menu_scene = preload("res://main_menu/MainMenu.tscn")
-
 @onready var color_rect = $ColorRect
 @onready var animation_player = $AnimationPlayer
 
@@ -14,7 +12,7 @@ func _ready():
 	)
 
 func _on_animation_finished(anim_name):
-	if anim_name == "fade_to_black":
+	if anim_name == "fade_to_black" or anim_name == "fade_to_black_extend":
 		on_transition_finished.emit()
 		animation_player.play("fade_to_normal")
 	elif anim_name == "fade_to_normal":
@@ -26,5 +24,7 @@ func transition():
 
 func transition_to_main_menu():
 	color_rect.visible = true
-	animation_player.play("fade_to_black")
+	animation_player.play("fade_to_black_extend")
+	get_tree().change_scene_to_file("res://main_menu/MainMenu.tscn")
+	await on_transition_finished
 	
