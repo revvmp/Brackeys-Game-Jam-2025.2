@@ -14,7 +14,9 @@ signal win_3x
 signal win_5x
 signal lose_money
 
-
+func _ready() -> void:
+	randomize()
+	
 func _on_button_spin_wheel() -> void:
 	main_wheel.rotation = 0
 	var rotation_amount = randf_range(TAU*10, TAU*20)
