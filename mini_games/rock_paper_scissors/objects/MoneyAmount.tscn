@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_ntwas")
 
 [node name="Amount" type="LineEdit" parent="."]
+layout_mode = 0
 offset_right = 198.0
 offset_bottom = 31.0
 placeholder_text = "0"

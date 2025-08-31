@@ -18,7 +18,7 @@ func _ready() -> void:
 	randomize()
 	
 func roll():
-	for i in range (25):
+	for i in range (22):
 		await get_tree().create_timer(time).timeout
 		animation_num1 = randi_range(1, 6)
 		animation_num2 = randi_range(1, 6)
