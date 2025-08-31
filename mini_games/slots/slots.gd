@@ -4,16 +4,12 @@ extends Node2D
 @onready var button = $Button
 @onready var money = $MoneyDisplay
 
-#Add changable bet later
-const bet = 10
-
 func _on_spin_cilcked() -> void:
 	button.hide()
 	await slots.spin()
 	button.show()
 
-
-func _on_items_spin_result(results_list) -> void:
+func _on_items_spin_result(results_list, bet) -> void:
 	var results = {}
 	
 	if len(results_list) != 3:
@@ -28,9 +24,7 @@ func _on_items_spin_result(results_list) -> void:
 			
 
 	var keys = results.keys()
-	
 	var added_money = false
-	
 	
 	for key in keys:
 		var value = results[key]
@@ -47,4 +41,5 @@ func _on_items_spin_result(results_list) -> void:
 			money.add_money(money_amount)
 
 	if not added_money:
-		money.subtract_money(10)
+		print("- $" + str(bet))
+		money.subtract_money(bet)

@@ -17,6 +17,7 @@ signal spin_result
 @onready var item1 = $Item1
 @onready var item2 = $Item2
 @onready var item3 = $Item3
+@onready var amount = $"../MoneyAmount"
 
 
 func spin_slot(item, delay):
@@ -38,10 +39,11 @@ func spin_slot(item, delay):
 
 
 func spin():
+	var bet = amount.value
 	await spin_slot(item1, 0)
 	await spin_slot(item2, 0)
 	await spin_slot(item3, 0)
 	var results_list = nums
-	emit_signal("spin_result", results_list)
+	emit_signal("spin_result", results_list, bet)
 	nums = []
 	return
