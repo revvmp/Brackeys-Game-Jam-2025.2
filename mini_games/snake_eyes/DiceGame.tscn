@@ -56,7 +56,7 @@ offset_bottom = 210.0
 scale = Vector2(1.2, 1.2)
 theme_override_fonts/font = ExtResource("9_wkgbo")
 theme_override_font_sizes/font_size = 79
-text = "Double"
+text = "Doubles"
 horizontal_alignment = 1
 
 [connection signal="roll_dice" from="Button" to="." method="_on_button_roll_dice"]

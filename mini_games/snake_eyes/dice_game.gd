@@ -14,7 +14,9 @@ func _on_dice_snake_eyes() -> void:
 	amount.get_child(0).editable = true
 	money.add_money(amount.value * 7)
 	text.display_text("You got a match and 6x your money!", Color.SKY_BLUE)
+	TransitionScene.transition_to_main_menu()
 
 func _on_dice_dice_game_lost() -> void:
 	amount.get_child(0).editable = true
 	text.display_text("Game Lost.", Color.RED)
+	TransitionScene.transition_to_main_menu()
