@@ -25,6 +25,6 @@ func transition():
 func transition_to_main_menu():
 	color_rect.visible = true
 	animation_player.play("fade_to_black_extend")
-	get_tree().change_scene_to_file("res://main_menu/MainMenu.tscn")
 	await on_transition_finished
+	get_tree().change_scene_to_file("res://main_menu/MainMenu.tscn")
 	
