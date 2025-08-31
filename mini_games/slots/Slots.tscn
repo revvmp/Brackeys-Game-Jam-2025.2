@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://34h78b1xnq8w"]
+[gd_scene load_steps=12 format=3 uid="uid://cndjhf47ihj08"]
 
 [ext_resource type="Script" uid="uid://bepytmp8abntt" path="res://mini_games/slots/slots.gd" id="1_15lyl"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_2uloe"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dly4207dg7kba" path="res://assets/slots/slot_machine.png" id="5_hq3ax"]
 [ext_resource type="PackedScene" uid="uid://bkl8bnnsgfjfq" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="7_xqe80"]
 [ext_resource type="Script" uid="uid://20d8cn5c1p26" path="res://mini_games/slots/objects/money_amount.gd" id="8_j2e7w"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="9_lsvx8"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="9_lsvx8"]
 
 [node name="Slots" type="Node2D"]
 script = ExtResource("1_15lyl")
