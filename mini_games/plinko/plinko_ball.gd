@@ -5,6 +5,7 @@ extends RigidBody2D
 @onready var money_display = $"../MoneyDisplay"
 
 var my_tween = create_tween().set_loops()
+var bet_amount: int = 0
 
 func is_numeric(text: String) -> bool:
 	# Attempt to convert to float (handles both integers and decimals)
@@ -39,13 +40,14 @@ func _on_drop_button_pressed() -> void:
 	if not is_numeric(input) or not input:
 		fading_text.display_text("Invalid money amount!", Color.RED)
 		return
-	var bet_amount = int(input)
+	var bet = int(input)
 	
-	if bet_amount > Global.money:
+	if bet > Global.money:
 		fading_text.display_text("You do not have enough!", Color.RED)
 		return
 		
 	# Drop ball
 	fading_text.display_text("Betting $" + input, Color.DARK_CYAN)
-	money_display.subtract_money(bet_amount)
+	money_display.subtract_money(bet)
+	bet_amount = bet
 	unfreeze()
