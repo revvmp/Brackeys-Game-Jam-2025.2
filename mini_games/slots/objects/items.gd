@@ -5,7 +5,7 @@ var nums = []
 var item_count = 6
 var items = range(item_count + 1).slice(1)
 
-var base_spins = 25
+var base_spins = 20
 
 var animation_num1 = 1
 var animation_num2 = 1
@@ -19,13 +19,6 @@ signal spin_result
 @onready var item3 = $Item3
 
 
-"""
-		if i > 25:
-			time = 0.4
-		elif i > 15:
-			time = 0.1
-"""
-
 func spin_slot(item, delay):
 	await get_tree().create_timer(delay).timeout
 	var time = default_time
@@ -34,6 +27,8 @@ func spin_slot(item, delay):
 		await get_tree().create_timer(time).timeout
 		var animation_num = items[i % len(items)]
 		item.play(str(animation_num))
+		if i > spins - 8:
+			time += 0.01
 
 	var rand_num = randi_range(1, 6)
 	item.play(str(rand_num))
@@ -43,11 +38,9 @@ func spin_slot(item, delay):
 
 
 func spin():
-	print(items)
-
-	spin_slot(item1, 0)
-	spin_slot(item2, 0.5)
-	await spin_slot(item3, 1)
+	await spin_slot(item1, 0)
+	await spin_slot(item2, 0)
+	await spin_slot(item3, 0)
 	var results_list = nums
 	emit_signal("spin_result", results_list)
 	nums = []

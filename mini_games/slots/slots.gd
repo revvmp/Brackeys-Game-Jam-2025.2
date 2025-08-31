@@ -15,7 +15,6 @@ func _on_spin_cilcked() -> void:
 
 func _on_items_spin_result(results_list) -> void:
 	var results = {}
-	print(results_list)
 	
 	if len(results_list) != 3:
 		return
@@ -27,19 +26,25 @@ func _on_items_spin_result(results_list) -> void:
 		else:
 			results[str(num)] = 1
 			
-	var values = results.values()
+
+	var keys = results.keys()
 	
 	var added_money = false
 	
-	for val in values:
-		if val == 2:
+	
+	for key in keys:
+		var value = results[key]
+		var multi = 0.5 * int(key)
+		if value == 2:
 			added_money = true
-			money.add_money(2 * bet)
-		elif val == 3:
+			var money_amount = 2 * bet * multi
+			print("+ $" + str(money_amount))
+			money.add_money(money_amount)
+		elif value == 3:
 			added_money = true
-			money.add_money(30 * bet)
+			var money_amount = 20 * bet * multi
+			print("+ $" + str(money_amount))
+			money.add_money(money_amount)
 
 	if not added_money:
 		money.subtract_money(10)
-			
-	print(values)
