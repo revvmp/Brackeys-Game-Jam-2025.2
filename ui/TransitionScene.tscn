@@ -88,3 +88,6 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_ju4m0")
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0

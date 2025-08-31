@@ -4,6 +4,7 @@ signal on_transition_finished
 
 @onready var color_rect = $ColorRect
 @onready var animation_player = $AnimationPlayer
+@onready var timer = $Timer
 
 func _ready():
 	color_rect.visible = false
@@ -23,6 +24,8 @@ func transition():
 	animation_player.play("fade_to_black")
 
 func transition_to_main_menu():
+	timer.start()
+	await timer.timeout
 	color_rect.visible = true
 	animation_player.play("fade_to_black_extend")
 	await on_transition_finished
