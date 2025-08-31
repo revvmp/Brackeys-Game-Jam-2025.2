@@ -45,7 +45,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_3m3gm")
 theme_override_font_sizes/font_size = 36
-text = "Devil's Deal is a game where you start off with a $100 and a dream...
+text = "Devil's Deal is a game where you start off with $100 and a dream...
 Your goal is to play various different mini-games in hopes you strike it
 large and obtain all the expensive desserts in the shop! However------
 if you ever reach $0 your game completely starts over, that also means
