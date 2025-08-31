@@ -19,3 +19,6 @@ offset_right = 40.0
 offset_bottom = -7.66667
 text = "<NUM>x"
 horizontal_alignment = 1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
