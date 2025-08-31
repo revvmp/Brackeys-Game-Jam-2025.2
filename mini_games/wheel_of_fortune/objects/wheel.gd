@@ -10,6 +10,7 @@ extends Node2D
 @onready var light_green = $MainWheel/Area2D7
 @onready var coral = $MainWheel/Area2D8
 @onready var arrow = $Arrow/ArrowArea
+signal win_2x
 signal win_3x
 signal win_5x
 signal lose_money
@@ -29,10 +30,10 @@ func _on_button_spin_wheel() -> void:
 	
 	if arrow.overlaps_area(purple):
 		emit_signal("win_5x")
-	
-	if arrow.overlaps_area(yellowish):
+	elif arrow.overlaps_area(yellowish):
 		emit_signal("win_3x")
-		
-	if arrow.overlaps_area(brownish) or arrow.overlaps_area(red) or arrow.overlaps_area(light_green) \
+	elif arrow.overlaps_area(red):
+		emit_signal("win_2x")	
+	elif arrow.overlaps_area(brownish) or arrow.overlaps_area(light_green) \
 	 or arrow.overlaps_area(green) or arrow.overlaps_area(pink) or arrow.overlaps_area(coral):
 		emit_signal("lose_money")

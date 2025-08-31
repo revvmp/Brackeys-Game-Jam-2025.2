@@ -97,8 +97,8 @@ offset_right = 826.211
 offset_bottom = 228.717
 rotation = -4.02822
 scale = Vector2(9.08, 9.08)
-theme_override_colors/font_color = Color(0.627451, 0, 0, 1)
-text = "0x "
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "2x "
 horizontal_alignment = 1
 
 [node name="Area2D5" type="Area2D" parent="MainWheel"]
