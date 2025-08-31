@@ -16,6 +16,9 @@ func format_number_with_commas(number: int) -> String:
 			
 	return formatted_string
 
+func update_visual_money():
+	label.text = format_number_with_commas(Global.money)
+
 func update_money(new_money: int):
 	Global.money = new_money
 	label.text = format_number_with_commas(new_money)
@@ -34,4 +37,4 @@ func divide_money(amount: int):
 	update_money(Global.money / amount)
 
 func _ready():
-	label.text = format_number_with_commas(Global.money)
+	update_visual_money()
