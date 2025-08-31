@@ -81,11 +81,11 @@ func _on_items_spin_result(results_list, bet) -> void:
 		if 1 in keys and 2 in keys and 3 in keys:
 			#All fruits
 			money_amount = 5 * bet
-			message = "+ $" + str(int(money_amount))
+			message = "+$" + str(int(money_amount))
 			money.add_money(money_amount)
 		else:
 			money_amount = -bet
-			message = "- $" + str(bet)
+			message = "-$" + str(bet)
 			money.subtract_money(bet)
 		
 	if money_amount > 0:
