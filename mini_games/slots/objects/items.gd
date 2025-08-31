@@ -31,18 +31,25 @@ func spin_slot(item, delay):
 		if i > spins - 8:
 			time += 0.01
 
-	var rand_num = randi_range(1, 6)
-	item.play(str(rand_num))
 	time = default_time
-	nums.append(rand_num)
 	return
 
 
 func spin():
 	var bet = amount.value
-	await spin_slot(item1, 0)
-	await spin_slot(item2, 0)
-	await spin_slot(item3, 0)
+	spin_slot(item1, 0)
+	spin_slot(item2, 0.5)
+	await spin_slot(item3, 1)
+	
+	nums.append(int(item1.animation))
+	await get_tree().create_timer(0.1).timeout
+	
+	nums.append(int(item2.animation))
+	await get_tree().create_timer(0.1).timeout
+	
+	nums.append(int(item3.animation))
+	await get_tree().create_timer(0.1).timeout
+	
 	var results_list = nums
 	emit_signal("spin_result", results_list, bet)
 	nums = []
