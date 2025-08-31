@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://vkhuhc7mo5au"]
+
+[ext_resource type="Script" uid="uid://r8b8aogjrexn" path="res://mini_games/plinko/objects/win_area.gd" id="1_qkfwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1op3y"]
+size = Vector2(86.5, 15)
+
+[node name="WinArea" type="Area2D"]
+script = ExtResource("1_qkfwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="WinningAmount" type="Label" parent="."]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "<NUM>x"
+horizontal_alignment = 1
