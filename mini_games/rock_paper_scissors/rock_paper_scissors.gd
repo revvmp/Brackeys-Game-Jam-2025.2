@@ -77,7 +77,8 @@ func _on_scissors_scissors_button() -> void:
 	opponent.make_rps_choice()
 
 func _on_rock_paper_scissors_options_opponent_choice_made(choice: String) -> void:
-	opponent_choice = opponent.Choice[choice]  
+	opponent_choice = opponent.Choice[choice] 
+	amount.get_child(0).editable = true
 
 	var result = get_winner(player_choice, opponent_choice)
 	
@@ -86,8 +87,14 @@ func _on_rock_paper_scissors_options_opponent_choice_made(choice: String) -> voi
 	print("Result: ", result)
 	
 	if result == "WIN":
+		rock_button.pressable = false
+		paper_button.pressable = false
+		scissors_button.pressable = false
 		TransitionScene.transition_to_main_menu()
 	elif result == "LOSE":
+		rock_button.pressable = false
+		paper_button.pressable = false
+		scissors_button.pressable = false
 		TransitionScene.transition_to_main_menu()
 
 func get_winner(player_choice: int, opponent_choice: int) -> String:

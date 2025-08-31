@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://d4lcggg83wu2g" path="res://mini_games/rock_paper_scissors/objects/ScissorsButton.tscn" id="4_swftx"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_1rmuh"]
 [ext_resource type="PackedScene" uid="uid://cnbe8o3eqqh8" path="res://mini_games/rock_paper_scissors/objects/RockPaperScissorsOptions.tscn" id="5_opgkj"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="8_1rmuh"]
-[ext_resource type="PackedScene" uid="uid://gu6aoadxwiae" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="10_0gx62"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="8_1rmuh"]
+[ext_resource type="PackedScene" uid="uid://bkl8bnnsgfjfq" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="10_0gx62"]
 [ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="11_g5uth"]
 
 [node name="RockPaperScissors" type="Node2D"]
@@ -56,9 +56,9 @@ position = Vector2(-727, -380)
 position = Vector2(450, 599)
 
 [node name="MoneyAmount" parent="." instance=ExtResource("10_0gx62")]
-offset_left = 594.0
+offset_left = 540.0
 offset_top = 439.0
-offset_right = 594.0
+offset_right = 540.0
 offset_bottom = 439.0
 
 [node name="GameHelpButton" parent="." instance=ExtResource("11_g5uth")]
@@ -66,6 +66,9 @@ position = Vector2(1237, 40)
 help_information = "Pick rock, paper, scissors to bet against the bot! You win double the amount you bet!"
 
 [connection signal="rock_button" from="Rock" to="." method="_on_rock_rock_button"]
+[connection signal="rock_button" from="Rock" to="MoneyAmount" method="_on_rock_rock_button"]
 [connection signal="paper_button" from="Paper" to="." method="_on_paper_paper_button"]
+[connection signal="paper_button" from="Paper" to="MoneyAmount" method="_on_paper_paper_button"]
 [connection signal="scissors_button" from="Scissors" to="." method="_on_scissors_scissors_button"]
+[connection signal="scissors_button" from="Scissors" to="MoneyAmount" method="_on_scissors_scissors_button"]
 [connection signal="opponent_choice_made" from="Rotate/RockPaperScissorsOptions" to="." method="_on_rock_paper_scissors_options_opponent_choice_made"]

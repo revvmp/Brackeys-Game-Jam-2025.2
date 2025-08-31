@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://gu6aoadxwiae"]
+[gd_scene load_steps=2 format=3 uid="uid://bkl8bnnsgfjfq"]
 
 [ext_resource type="Script" uid="uid://bqewcu3sje8kk" path="res://mini_games/rock_paper_scissors/objects/money_amount.gd" id="1_ntwas"]
 
@@ -11,9 +11,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ntwas")
 
-[node name="Amount" type="SpinBox" parent="."]
-layout_mode = 0
-offset_right = 86.5417
+[node name="Amount" type="LineEdit" parent="."]
+offset_right = 198.0
 offset_bottom = 31.0
-allow_greater = true
+placeholder_text = "0"
 alignment = 1
+
+[connection signal="text_changed" from="Amount" to="." method="_on_amount_text_changed"]
