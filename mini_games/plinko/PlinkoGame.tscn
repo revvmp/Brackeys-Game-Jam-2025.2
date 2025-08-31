@@ -1,18 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://clry3fbkxvtgf"]
+[gd_scene load_steps=13 format=3 uid="uid://clry3fbkxvtgf"]
 
 [ext_resource type="Script" uid="uid://c0x1qvi3j78wk" path="res://mini_games/plinko/plinko_game.gd" id="1_emtci"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_i2y1p"]
 [ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="3_fjetj"]
-[ext_resource type="Texture2D" uid="uid://cdiq38r4hnwvr" path="res://assets/bau_cua_ca_cop/GameJam_Shrimp.png" id="4_s1co3"]
 [ext_resource type="Script" uid="uid://bfypp50gc86ay" path="res://mini_games/plinko/plinko_ball.gd" id="4_teh2r"]
+[ext_resource type="Texture2D" uid="uid://bnuiagqptbugw" path="res://assets/GameJam_devil.png" id="5_teh2r"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_xkept"]
 [ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="6_lkixa"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_xkept"]
-radius = 34.0147
+[ext_resource type="Texture2D" uid="uid://iuwjx1guqpb2" path="res://assets/plinko/white_circle.png" id="8_1op3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_teh2r"]
 size = Vector2(30, 593)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_teh2r"]
+radius = 34.0147
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1op3y"]
+size = Vector2(86.5, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkept"]
+radius = 34.0147
 
 [node name="PlinkoGame" type="Node2D"]
 script = ExtResource("1_emtci")
@@ -32,18 +39,6 @@ theme_override_font_sizes/font_size = 24
 text = "Plinko"
 uppercase = true
 
-[node name="PlinkoBall" type="RigidBody2D" parent="."]
-position = Vector2(280, 161)
-freeze = true
-script = ExtResource("4_teh2r")
-
-[node name="Sprite2D" type="Sprite2D" parent="PlinkoBall"]
-scale = Vector2(0.0238334, 0.0238334)
-texture = ExtResource("4_s1co3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlinkoBall"]
-shape = SubResource("CircleShape2D_xkept")
-
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_xkept")]
 position = Vector2(420, 61)
 scale = Vector2(0.3, 0.3)
@@ -52,36 +47,8 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(1248, 30)
 help_information = "Input how much money you'd like to bet in the input box to the right. Press the drop button in order to drop the ball down into a slot that would reward you money!"
 
-[node name="LeftWall" type="StaticBody2D" parent="."]
-position = Vector2(180, 222)
-
-[node name="ColorRect" type="ColorRect" parent="LeftWall"]
-offset_left = -1.0
-offset_top = -97.0
-offset_right = 29.0
-offset_bottom = 497.0
-color = Color(0.38048, 0.413438, 0.51154, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
-position = Vector2(14, 200.5)
-shape = SubResource("RectangleShape2D_teh2r")
-
-[node name="RightWall" type="StaticBody2D" parent="."]
-position = Vector2(1100, 222)
-
-[node name="ColorRect" type="ColorRect" parent="RightWall"]
-offset_left = -1.0
-offset_top = -97.0
-offset_right = 29.0
-offset_bottom = 497.0
-color = Color(0.38048, 0.413438, 0.51154, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
-position = Vector2(14, 199.5)
-shape = SubResource("RectangleShape2D_teh2r")
-
 [node name="MoneyInput" type="LineEdit" parent="."]
-offset_left = 1133.0
+offset_left = 1070.0
 offset_top = 125.0
 offset_right = 1275.0
 offset_bottom = 164.0
@@ -90,10 +57,651 @@ alignment = 1
 virtual_keyboard_type = 2
 
 [node name="DropButton" type="Button" parent="."]
-offset_left = 1134.0
+offset_left = 1070.0
 offset_top = 169.0
 offset_right = 1274.0
 offset_bottom = 205.0
 text = "DROP"
+
+[node name="MapObjects" type="Node2D" parent="."]
+
+[node name="LeftWall" type="StaticBody2D" parent="MapObjects"]
+position = Vector2(216, 222)
+
+[node name="ColorRect" type="ColorRect" parent="MapObjects/LeftWall"]
+offset_left = -1.0
+offset_top = -97.0
+offset_right = 29.0
+offset_bottom = 497.0
+color = Color(0.38048, 0.413438, 0.51154, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/LeftWall"]
+position = Vector2(14, 200.5)
+shape = SubResource("RectangleShape2D_teh2r")
+
+[node name="RightWall" type="StaticBody2D" parent="MapObjects"]
+position = Vector2(1036, 222)
+
+[node name="ColorRect" type="ColorRect" parent="MapObjects/RightWall"]
+offset_left = -1.0
+offset_top = -97.0
+offset_right = 29.0
+offset_bottom = 497.0
+color = Color(0.38048, 0.413438, 0.51154, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/RightWall"]
+position = Vector2(14, 199.5)
+shape = SubResource("RectangleShape2D_teh2r")
+
+[node name="Pegs" type="Node2D" parent="MapObjects"]
+
+[node name="Peg2" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(336, 240)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg2"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg2"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg3" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(448, 240)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg3"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg3"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg4" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(560, 240)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg4"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg4"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg5" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(672, 240)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg5"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg5"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg6" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(784, 240)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg6"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg6"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg7" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(896, 240)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg7"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg7"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg8" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(1008, 240)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg8"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg8"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg9" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(278, 344)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg9"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg9"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg10" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(390, 344)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg10"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg10"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg11" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(502, 344)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg11"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg11"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg12" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(614, 344)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg12"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg12"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg13" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(726, 344)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg13"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg13"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg14" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(838, 344)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg14"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg14"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg15" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(950, 344)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg15"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg15"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg16" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(336, 448)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg16"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg16"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg17" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(448, 448)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg17"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg17"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg18" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(560, 448)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg18"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg18"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg19" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(672, 448)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg19"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg19"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg20" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(784, 448)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg20"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg20"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg21" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(896, 448)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg21"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg21"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg22" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(1008, 448)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg22"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg22"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg23" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(278, 552)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg23"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg23"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg24" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(390, 552)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg24"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg24"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg25" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(502, 552)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg25"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg25"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg26" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(614, 552)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg26"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg26"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg27" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(726, 552)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg27"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg27"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg28" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(838, 552)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg28"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg28"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg29" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(950, 552)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg29"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg29"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg30" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(334, 656)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg30"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg30"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg31" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(446, 656)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg31"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg31"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg32" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(558, 656)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg32"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg32"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg33" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(670, 656)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg33"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg33"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg34" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(782, 656)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg34"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg34"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg35" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(894, 656)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg35"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg35"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="Peg36" type="StaticBody2D" parent="MapObjects/Pegs"]
+position = Vector2(1006, 656)
+scale = Vector2(0.5, 0.5)
+disable_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MapObjects/Pegs/Peg36"]
+modulate = Color(0.380392, 0.411765, 0.509804, 1)
+position = Vector2(-1.49012e-08, -3.8147e-06)
+scale = Vector2(0.114167, 0.114167)
+texture = ExtResource("8_1op3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapObjects/Pegs/Peg36"]
+shape = SubResource("CircleShape2D_teh2r")
+
+[node name="WinAreas" type="Node2D" parent="."]
+
+[node name="WinArea" type="Area2D" parent="WinAreas"]
+position = Vector2(292, 727)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea"]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="Label" type="Label" parent="WinAreas/WinArea"]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "x<NUM>"
+horizontal_alignment = 1
+
+[node name="WinArea2" type="Area2D" parent="WinAreas"]
+position = Vector2(395, 727)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea2"]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="Label" type="Label" parent="WinAreas/WinArea2"]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "x<NUM>"
+horizontal_alignment = 1
+
+[node name="WinArea3" type="Area2D" parent="WinAreas"]
+position = Vector2(505, 727)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea3"]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="Label" type="Label" parent="WinAreas/WinArea3"]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "x<NUM>"
+horizontal_alignment = 1
+
+[node name="WinArea4" type="Area2D" parent="WinAreas"]
+position = Vector2(618, 727)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea4"]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="Label" type="Label" parent="WinAreas/WinArea4"]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "x<NUM>"
+horizontal_alignment = 1
+
+[node name="WinArea5" type="Area2D" parent="WinAreas"]
+position = Vector2(731, 727)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea5"]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="Label" type="Label" parent="WinAreas/WinArea5"]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "x<NUM>"
+horizontal_alignment = 1
+
+[node name="WinArea6" type="Area2D" parent="WinAreas"]
+position = Vector2(843, 727)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea6"]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="Label" type="Label" parent="WinAreas/WinArea6"]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "x<NUM>"
+horizontal_alignment = 1
+
+[node name="WinArea7" type="Area2D" parent="WinAreas"]
+position = Vector2(954, 727)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea7"]
+position = Vector2(-3.25, 0)
+shape = SubResource("RectangleShape2D_1op3y")
+
+[node name="Label" type="Label" parent="WinAreas/WinArea7"]
+offset_left = -47.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -7.66667
+text = "x<NUM>"
+horizontal_alignment = 1
+
+[node name="PlinkoBall" type="RigidBody2D" parent="."]
+position = Vector2(280, 161)
+freeze = true
+script = ExtResource("4_teh2r")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlinkoBall"]
+scale = Vector2(0.0238334, 0.0238334)
+texture = ExtResource("5_teh2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlinkoBall"]
+shape = SubResource("CircleShape2D_xkept")
 
 [connection signal="pressed" from="DropButton" to="PlinkoBall" method="_on_drop_button_pressed"]

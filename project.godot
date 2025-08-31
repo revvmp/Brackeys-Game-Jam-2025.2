@@ -17,7 +17,7 @@ This game requires the players to play through multiple various luck/skill based
 config/version="1.0"
 run/main_scene="uid://dba4ev785opbx"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="uid://brfi8ahs5lipo"
+config/icon="uid://bnuiagqptbugw"
 
 [autoload]
 
