@@ -12,8 +12,16 @@ func on_mouse_pressed():
 
 
 func _on_wheel_lose_money() -> void:
-	spinning = false
+	spinning = true
 
 
-func _on_wheel_win_money() -> void:
-	spinning = false
+func _on_wheel_win_2x() -> void:
+	spinning = true
+
+
+func _on_wheel_win_3x() -> void:
+	spinning = true
+
+
+func _on_wheel_win_5x() -> void:
+	spinning = true
