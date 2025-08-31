@@ -47,7 +47,7 @@ position = Vector2(205, 87)
 scale = Vector2(0.35, 0.35)
 
 [node name="Rotate" type="Node2D" parent="."]
-position = Vector2(1114, 454)
+position = Vector2(1138, 454)
 
 [node name="RockPaperScissorsOptions" parent="Rotate" instance=ExtResource("5_opgkj")]
 position = Vector2(-727, -380)
