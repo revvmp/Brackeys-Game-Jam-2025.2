@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://di25tta4n4qeo" path="res://assets/slots/slot_machine_spinning.png" id="5_6snwr"]
 [ext_resource type="Texture2D" uid="uid://dly4207dg7kba" path="res://assets/slots/slot_machine.png" id="5_hq3ax"]
 [ext_resource type="PackedScene" uid="uid://bkl8bnnsgfjfq" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="7_xqe80"]
-[ext_resource type="Script" uid="uid://20d8cn5c1p26" path="res://mini_games/slots/objects/money_amount.gd" id="8_j2e7w"]
+[ext_resource type="Script" path="res://mini_games/slots/objects/money_amount.gd" id="8_j2e7w"]
 [ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="9_lsvx8"]
 
 [node name="Slots" type="Node2D"]
@@ -22,7 +22,7 @@ texture = ExtResource("2_2uloe")
 
 [node name="GameHelpButton" parent="." instance=ExtResource("2_tkw2m")]
 position = Vector2(1237, 40)
-help_information = "Spin the slots and get 2 or 3 of one item to win money"
+help_information = "Spin the slots and get 2 or 3 of one item to win money."
 
 [node name="Slot" type="Node2D" parent="."]
 position = Vector2(1, 75)
@@ -47,14 +47,14 @@ position = Vector2(188, 67)
 scale = Vector2(0.36, 0.36)
 
 [node name="MoneyAmount" parent="." instance=ExtResource("7_xqe80")]
-offset_left = 585.0
+offset_left = 525.0
 offset_top = 92.0
-offset_right = 585.0
+offset_right = 525.0
 offset_bottom = 92.0
 script = ExtResource("8_j2e7w")
 
 [node name="FadingText" parent="." instance=ExtResource("9_lsvx8")]
-position = Vector2(665, 613)
+position = Vector2(20, 255)
 
 [connection signal="spin_result" from="Items" to="." method="_on_items_spin_result"]
 [connection signal="spin_slots" from="Button" to="." method="_on_spin_cilcked"]
