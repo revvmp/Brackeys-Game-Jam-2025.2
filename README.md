@@ -18,4 +18,10 @@ The ultimate prize being a physical biscuit users can buy for $1,000,000 in the 
 <img width="1286" height="723" alt="image" src="https://github.com/user-attachments/assets/d8bbe846-6078-4f86-96e3-87c1c9601d9a" />
 
 # Gallery Games (Minigames)
-TBD...
+<img width="1267" height="712" alt="image" src="https://github.com/user-attachments/assets/4f797c90-850b-42ae-bb5b-a580f4430efb" />
+
+<img width="1274" height="713" alt="image" src="https://github.com/user-attachments/assets/76be2dd0-3f4c-450e-99eb-f6789a0857e6" />
+
+<img width="1269" height="713" alt="image" src="https://github.com/user-attachments/assets/cda02f40-9b41-4b95-ad3e-f2325f76ed5a" />
+
+More...
