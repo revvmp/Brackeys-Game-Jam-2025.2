@@ -84,21 +84,23 @@ func _on_rock_paper_scissors_options_opponent_choice_made(choice: String) -> voi
 	print("Player chose: ", opponent.Choice.keys()[player_choice])
 	print("CPU chose: ", opponent.Choice.keys()[opponent_choice])
 	print("Result: ", result)
+	
+	if result == "WIN":
+		TransitionScene.transition_to_main_menu()
+	elif result == "LOSE":
+		TransitionScene.transition_to_main_menu()
 
 func get_winner(player_choice: int, opponent_choice: int) -> String:
-
 	if player_choice == opponent_choice:
 		text.display_text("It's a tie!!", Color.WHITE) 
 		money.add_money(amount.value)
 		return "It's a tie!"
-
 	elif (player_choice == opponent.Choice.ROCK and opponent_choice == opponent.Choice.SCISSORS) \
 		or (player_choice == opponent.Choice.PAPER and opponent_choice == opponent.Choice.ROCK) \
 		or (player_choice == opponent.Choice.SCISSORS and opponent_choice == opponent.Choice.PAPER):
 		text.display_text("You win!", Color.SKY_BLUE)
 		money.add_money(amount.value * 2)
-		return "Player wins!"
-
+		return "WIN"
 	else:
 		text.display_text("You lost!", Color.RED)
-		return "CPU wins!"
+		return "LOSE"
