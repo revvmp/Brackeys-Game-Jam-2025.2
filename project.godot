@@ -22,6 +22,7 @@ config/icon="uid://bnuiagqptbugw"
 [autoload]
 
 Global="*res://data/Global.gd"
+TransitionScene="*res://ui/TransitionScene.tscn"
 
 [display]
 

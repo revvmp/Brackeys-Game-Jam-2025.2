@@ -16,4 +16,6 @@ func _on_shop_button_on_shop_pressed() -> void:
 
 func _on_play_button_on_play_pressed() -> void:
 	var rand_int = randi_range(0, MINIGAMES.size()-1)
-	print("LOAD ", MINIGAMES[rand_int])
+	TransitionScene.transition()
+	await TransitionScene.on_transition_finished
+	get_tree().change_scene_to_file(MINIGAMES[rand_int])

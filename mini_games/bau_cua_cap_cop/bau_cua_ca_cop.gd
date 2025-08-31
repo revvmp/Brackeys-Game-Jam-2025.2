@@ -31,5 +31,5 @@ func _on_bau_cua_ca_cop_dice_dice_roll_result(dice_one_type: String,
 	if dice_three_type in bets:
 		money.add_money(button.amounts[dice_three_type] * 2)
 		amount_won += button.amounts[dice_three_type] * 2
-	text.display_text("You bet " + str(button.total) + " and won " + str(amount_won), Color.GREEN)
+	text.display_text("You bet $" + str(button.total) + " and won $" + str(amount_won), Color.GREEN)
 		
