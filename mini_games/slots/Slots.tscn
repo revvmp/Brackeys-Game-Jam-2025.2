@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://cndjhf47ihj08"]
+[gd_scene load_steps=12 format=3 uid="uid://34h78b1xnq8w"]
 
-[ext_resource type="Script" path="res://mini_games/slots/objects/slots.gd" id="1_15lyl"]
+[ext_resource type="Script" uid="uid://bepytmp8abntt" path="res://mini_games/slots/slots.gd" id="1_15lyl"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_2uloe"]
 [ext_resource type="PackedScene" uid="uid://d0kj4rm7vj1m8" path="res://mini_games/slots/objects/Spin.tscn" id="2_15lyl"]
 [ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="2_tkw2m"]
-[ext_resource type="Texture2D" uid="uid://dhqg8g8nq121l" path="res://assets/dice/table.png" id="3_yyiqj"]
 [ext_resource type="PackedScene" uid="uid://b8fary14ruxi0" path="res://mini_games/slots/objects/Items.tscn" id="4_41u8x"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_2auvx"]
-[ext_resource type="PackedScene" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="7_xqe80"]
-[ext_resource type="Script" path="res://mini_games/slots/objects/money_amount.gd" id="8_j2e7w"]
-[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="9_lsvx8"]
+[ext_resource type="Texture2D" uid="uid://di25tta4n4qeo" path="res://assets/slots/slot_machine_spinning.png" id="5_6snwr"]
+[ext_resource type="Texture2D" uid="uid://dly4207dg7kba" path="res://assets/slots/slot_machine.png" id="5_hq3ax"]
+[ext_resource type="PackedScene" uid="uid://bkl8bnnsgfjfq" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="7_xqe80"]
+[ext_resource type="Script" uid="uid://20d8cn5c1p26" path="res://mini_games/slots/objects/money_amount.gd" id="8_j2e7w"]
+[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="9_lsvx8"]
 
 [node name="Slots" type="Node2D"]
 script = ExtResource("1_15lyl")
@@ -23,44 +24,37 @@ texture = ExtResource("2_2uloe")
 position = Vector2(1237, 40)
 help_information = "Spin the slots and get 2 or 3 of one item to win money"
 
-[node name="Button" parent="." instance=ExtResource("2_15lyl")]
-visible = false
-position = Vector2(1004, 601)
-
 [node name="Slot" type="Node2D" parent="."]
-position = Vector2(3, 4)
+position = Vector2(1, 75)
 
-[node name="Slot1" type="Sprite2D" parent="Slot"]
-position = Vector2(397, 268)
-scale = Vector2(3.725, 6.44345)
-texture = ExtResource("3_yyiqj")
+[node name="SlotMachine" type="Sprite2D" parent="Slot"]
+position = Vector2(620, 286)
+texture = ExtResource("5_hq3ax")
 
-[node name="Slot2" type="Sprite2D" parent="Slot"]
-position = Vector2(807, 268)
-scale = Vector2(3.725, 6.44345)
-texture = ExtResource("3_yyiqj")
-
-[node name="Slot3" type="Sprite2D" parent="Slot"]
-position = Vector2(603, 268)
-scale = Vector2(3.725, 6.44345)
-texture = ExtResource("3_yyiqj")
+[node name="SlotMachine2" type="Sprite2D" parent="Slot"]
+visible = false
+position = Vector2(620, 286)
+texture = ExtResource("5_6snwr")
 
 [node name="Items" parent="." instance=ExtResource("4_41u8x")]
-position = Vector2(278.5, 65.345)
+position = Vector2(291, 126)
+
+[node name="Button" parent="." instance=ExtResource("2_15lyl")]
+position = Vector2(1104, 571)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_2auvx")]
-position = Vector2(245, 579)
+position = Vector2(188, 67)
 scale = Vector2(0.36, 0.36)
 
 [node name="MoneyAmount" parent="." instance=ExtResource("7_xqe80")]
-offset_left = 586.0
-offset_top = 437.0
-offset_right = 586.0
-offset_bottom = 437.0
+offset_left = 585.0
+offset_top = 92.0
+offset_right = 585.0
+offset_bottom = 92.0
 script = ExtResource("8_j2e7w")
 
 [node name="FadingText" parent="." instance=ExtResource("9_lsvx8")]
-position = Vector2(450, 599)
+position = Vector2(665, 613)
 
-[connection signal="spin_slots" from="Button" to="." method="_on_spin_cilcked"]
 [connection signal="spin_result" from="Items" to="." method="_on_items_spin_result"]
+[connection signal="spin_slots" from="Button" to="." method="_on_spin_cilcked"]

@@ -8,6 +8,7 @@ const MINIGAMES = [
 	"res://mini_games/snake_eyes/DiceGame.tscn",
 	"res://mini_games/wheel_of_fortune/WheelOfFortune.tscn",
 	"res://mini_games/plinko/PlinkoGame.tscn",
+	"res://mini_games/slots/Slots.tscn",
 ]
 
 func _ready():

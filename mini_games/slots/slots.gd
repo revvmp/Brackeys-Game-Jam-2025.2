@@ -1,14 +1,23 @@
 extends Node2D
 
 @onready var slots = $Items
-@onready var button = $Button
 @onready var money = $MoneyDisplay
 @onready var text = $FadingText
+@onready var sm = $Slot/SlotMachine
+@onready var sm2 = $Slot/SlotMachine2
+@onready var amount = $MoneyAmount/Amount
+@onready var button = $Button
 
 func _on_spin_cilcked() -> void:
+	amount.editable = false
+	sm2.show()
+	sm.hide()
 	button.hide()
 	await slots.spin()
-	button.show()
+	sm2.hide()
+	sm.show()
+	await get_tree().create_timer(0.6).timeout
+	TransitionScene.transition_to_main_menu()
 
 func _on_items_spin_result(results_list, bet) -> void:
 	var results = {}
