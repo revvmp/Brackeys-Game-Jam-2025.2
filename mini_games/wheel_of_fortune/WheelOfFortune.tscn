@@ -19,7 +19,8 @@ offset_bottom = 40.0
 texture = ExtResource("2_di5np")
 
 [node name="Wheel" parent="." instance=ExtResource("1_ketdt")]
-position = Vector2(106, 216)
+position = Vector2(402, 287)
+scale = Vector2(0.325, 0.325)
 
 [node name="Button" parent="." instance=ExtResource("2_1nyoe")]
 position = Vector2(1082, 381)
@@ -38,7 +39,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(945, 488)
 
 [node name="MoneyDisplay" parent="." instance=ExtResource("5_ok0ah")]
-position = Vector2(175, 651)
+position = Vector2(165, 667)
 scale = Vector2(0.35, 0.35)
 
 [node name="GameHelpButton" parent="." instance=ExtResource("8_dwgln")]
@@ -57,8 +58,8 @@ text = "Wheel of Fortune "
 
 [connection signal="lose_money" from="Wheel" to="." method="_on_wheel_lose_money"]
 [connection signal="lose_money" from="Wheel" to="Button" method="_on_wheel_lose_money"]
-[connection signal="win_money" from="Wheel" to="." method="_on_wheel_win_money"]
-[connection signal="win_money" from="Wheel" to="Button" method="_on_wheel_win_money"]
+[connection signal="win_3x" from="Wheel" to="." method="_on_wheel_win_3x"]
+[connection signal="win_5x" from="Wheel" to="." method="_on_wheel_win_5x"]
 [connection signal="spin_wheel" from="Button" to="." method="_on_button_spin_wheel"]
 [connection signal="spin_wheel" from="Button" to="Wheel" method="_on_button_spin_wheel"]
 [connection signal="spin_wheel" from="Button" to="MoneyAmount" method="_on_button_spin_wheel"]
