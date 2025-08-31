@@ -11,6 +11,7 @@ const MINIGAMES = [
 ]
 
 func _ready():
+	randomize()
 	if Global.money <= 0:
 		Global.wipe_game()
 		money_display.update_visual_money()
