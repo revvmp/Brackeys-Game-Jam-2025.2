@@ -6,20 +6,20 @@
 [node name="AllFadingText" type="Node2D"]
 script = ExtResource("1_xgt6s")
 
-[node name="FadingText" parent="." instance=ExtResource("1_5ckcc")]
+[node name="DEER" parent="." instance=ExtResource("1_5ckcc")]
 position = Vector2(266, 99)
 
-[node name="FadingText2" parent="." instance=ExtResource("1_5ckcc")]
+[node name="GOURD" parent="." instance=ExtResource("1_5ckcc")]
 position = Vector2(532, 99)
 
-[node name="FadingText3" parent="." instance=ExtResource("1_5ckcc")]
+[node name="CHICKEN" parent="." instance=ExtResource("1_5ckcc")]
 position = Vector2(798, 99)
 
-[node name="FadingText4" parent="." instance=ExtResource("1_5ckcc")]
+[node name="FISH" parent="." instance=ExtResource("1_5ckcc")]
 position = Vector2(266, 299)
 
-[node name="FadingText5" parent="." instance=ExtResource("1_5ckcc")]
+[node name="CRAB" parent="." instance=ExtResource("1_5ckcc")]
 position = Vector2(532, 299)
 
-[node name="FadingText6" parent="." instance=ExtResource("1_5ckcc")]
+[node name="SHRIMP" parent="." instance=ExtResource("1_5ckcc")]
 position = Vector2(798, 299)

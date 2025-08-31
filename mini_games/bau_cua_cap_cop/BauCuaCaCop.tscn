@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://0s2bpo3yt4l5" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopDice.tscn" id="3_8mrat"]
 [ext_resource type="FontFile" uid="uid://din15pxnxo804" path="res://fonts/Diary Book.otf" id="3_awjvp"]
 [ext_resource type="PackedScene" uid="uid://ciw5y7vn8jq1c" path="res://mini_games/bau_cua_cap_cop/objects/BauCuaCaCopRollButton.tscn" id="4_eaobg"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="6_xydmx"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="6_xydmx"]
 [ext_resource type="PackedScene" uid="uid://c2sbjtrlpu7gj" path="res://mini_games/bau_cua_cap_cop/objects/all_fading_text.tscn" id="8_bnwcr"]
 [ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="9_gelfl"]
 
@@ -46,6 +46,7 @@ position = Vector2(1085, 231)
 position = Vector2(952, 519)
 
 [node name="AllFadingText" parent="." instance=ExtResource("8_bnwcr")]
+position = Vector2(-103, 237)
 
 [node name="GameHelpButton" parent="." instance=ExtResource("9_gelfl")]
 position = Vector2(1249, 29)
