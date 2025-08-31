@@ -10,17 +10,11 @@ var bet_amount: int = 0
 
 var last_position: Vector2
 
-func is_numeric(text: String) -> bool:
-	# Attempt to convert to float (handles both integers and decimals)
-	var num_val = text.to_float()
-
-	# Check if the conversion resulted in a valid number (not NaN or infinity)
-	# is_nan() and is_inf() are useful here
-	if not is_nan(num_val) and not is_inf(num_val):
-		return true
-	if text.strip_edges().is_empty():
-		return false
-	return false
+func is_numeric(input_string: String):
+	var regex = RegEx.new()
+	# Pattern to match a string containing only digits, optionally with a leading sign and a single decimal point
+	regex.compile("^-?\\d+(\\.\\d+)?$") 
+	return regex.search(input_string) != null
 
 
 func _ready() -> void:
@@ -60,9 +54,14 @@ func _on_drop_button_pressed() -> void:
 	if not is_numeric(input) or not input:
 		fading_text.display_text("Invalid money amount!", Color.RED)
 		return
+		
+	if input.begins_with("0"):
+		fading_text.display_text("Invalid money amount!", Color.RED)
+		return
+		
 	var bet = int(input)
 	
-	if bet > Global.money:
+	if bet > Global.money or bet < 0:
 		fading_text.display_text("You do not have enough!", Color.RED)
 		return
 		
