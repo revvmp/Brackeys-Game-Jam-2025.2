@@ -90,7 +90,6 @@ func get_winner(player_choice: int, opponent_choice: int) -> String:
 	if player_choice == opponent_choice:
 		text.display_text("It's a tie!!", Color.WHITE) 
 		money.add_money(amount.value)
-		Global.save_global_data()
 		return "It's a tie!"
 
 	elif (player_choice == opponent.Choice.ROCK and opponent_choice == opponent.Choice.SCISSORS) \
@@ -98,10 +97,8 @@ func get_winner(player_choice: int, opponent_choice: int) -> String:
 		or (player_choice == opponent.Choice.SCISSORS and opponent_choice == opponent.Choice.PAPER):
 		text.display_text("You win!", Color.SKY_BLUE)
 		money.add_money(amount.value * 2)
-		Global.save_global_data()
 		return "Player wins!"
 
 	else:
 		text.display_text("You lost!", Color.RED)
-		Global.save_global_data()
 		return "CPU wins!"

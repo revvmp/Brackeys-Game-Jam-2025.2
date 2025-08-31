@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://clry3fbkxvtgf"]
+[gd_scene load_steps=15 format=3 uid="uid://clry3fbkxvtgf"]
 
 [ext_resource type="Script" uid="uid://c0x1qvi3j78wk" path="res://mini_games/plinko/plinko_game.gd" id="1_emtci"]
 [ext_resource type="Texture2D" uid="uid://7fgljtmdtla0" path="res://assets/GameJam_Background2.png" id="2_i2y1p"]
@@ -7,16 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://bnuiagqptbugw" path="res://assets/GameJam_devil.png" id="5_teh2r"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_xkept"]
 [ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="6_lkixa"]
+[ext_resource type="Script" uid="uid://8kn3veduf6mo" path="res://mini_games/plinko/win_areas.gd" id="7_1p26t"]
 [ext_resource type="Texture2D" uid="uid://iuwjx1guqpb2" path="res://assets/plinko/white_circle.png" id="8_1op3y"]
+[ext_resource type="PackedScene" uid="uid://vkhuhc7mo5au" path="res://mini_games/plinko/objects/win_area.tscn" id="8_52sei"]
+[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="11_jq2tj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_teh2r"]
 size = Vector2(30, 593)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_teh2r"]
 radius = 34.0147
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1op3y"]
-size = Vector2(86.5, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkept"]
 radius = 34.0147
@@ -586,111 +586,28 @@ texture = ExtResource("8_1op3y")
 shape = SubResource("CircleShape2D_teh2r")
 
 [node name="WinAreas" type="Node2D" parent="."]
+script = ExtResource("7_1p26t")
 
-[node name="WinArea" type="Area2D" parent="WinAreas"]
+[node name="WinArea" parent="WinAreas" instance=ExtResource("8_52sei")]
 position = Vector2(292, 727)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea"]
-position = Vector2(-3.25, 0)
-shape = SubResource("RectangleShape2D_1op3y")
-
-[node name="Label" type="Label" parent="WinAreas/WinArea"]
-offset_left = -47.0
-offset_top = -30.0
-offset_right = 40.0
-offset_bottom = -7.66667
-text = "x<NUM>"
-horizontal_alignment = 1
-
-[node name="WinArea2" type="Area2D" parent="WinAreas"]
+[node name="WinArea8" parent="WinAreas" instance=ExtResource("8_52sei")]
 position = Vector2(395, 727)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea2"]
-position = Vector2(-3.25, 0)
-shape = SubResource("RectangleShape2D_1op3y")
-
-[node name="Label" type="Label" parent="WinAreas/WinArea2"]
-offset_left = -47.0
-offset_top = -30.0
-offset_right = 40.0
-offset_bottom = -7.66667
-text = "x<NUM>"
-horizontal_alignment = 1
-
-[node name="WinArea3" type="Area2D" parent="WinAreas"]
+[node name="WinArea9" parent="WinAreas" instance=ExtResource("8_52sei")]
 position = Vector2(505, 727)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea3"]
-position = Vector2(-3.25, 0)
-shape = SubResource("RectangleShape2D_1op3y")
-
-[node name="Label" type="Label" parent="WinAreas/WinArea3"]
-offset_left = -47.0
-offset_top = -30.0
-offset_right = 40.0
-offset_bottom = -7.66667
-text = "x<NUM>"
-horizontal_alignment = 1
-
-[node name="WinArea4" type="Area2D" parent="WinAreas"]
+[node name="WinArea10" parent="WinAreas" instance=ExtResource("8_52sei")]
 position = Vector2(618, 727)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea4"]
-position = Vector2(-3.25, 0)
-shape = SubResource("RectangleShape2D_1op3y")
-
-[node name="Label" type="Label" parent="WinAreas/WinArea4"]
-offset_left = -47.0
-offset_top = -30.0
-offset_right = 40.0
-offset_bottom = -7.66667
-text = "x<NUM>"
-horizontal_alignment = 1
-
-[node name="WinArea5" type="Area2D" parent="WinAreas"]
+[node name="WinArea11" parent="WinAreas" instance=ExtResource("8_52sei")]
 position = Vector2(731, 727)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea5"]
-position = Vector2(-3.25, 0)
-shape = SubResource("RectangleShape2D_1op3y")
-
-[node name="Label" type="Label" parent="WinAreas/WinArea5"]
-offset_left = -47.0
-offset_top = -30.0
-offset_right = 40.0
-offset_bottom = -7.66667
-text = "x<NUM>"
-horizontal_alignment = 1
-
-[node name="WinArea6" type="Area2D" parent="WinAreas"]
+[node name="WinArea12" parent="WinAreas" instance=ExtResource("8_52sei")]
 position = Vector2(843, 727)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea6"]
-position = Vector2(-3.25, 0)
-shape = SubResource("RectangleShape2D_1op3y")
-
-[node name="Label" type="Label" parent="WinAreas/WinArea6"]
-offset_left = -47.0
-offset_top = -30.0
-offset_right = 40.0
-offset_bottom = -7.66667
-text = "x<NUM>"
-horizontal_alignment = 1
-
-[node name="WinArea7" type="Area2D" parent="WinAreas"]
+[node name="WinArea13" parent="WinAreas" instance=ExtResource("8_52sei")]
 position = Vector2(954, 727)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinAreas/WinArea7"]
-position = Vector2(-3.25, 0)
-shape = SubResource("RectangleShape2D_1op3y")
-
-[node name="Label" type="Label" parent="WinAreas/WinArea7"]
-offset_left = -47.0
-offset_top = -30.0
-offset_right = 40.0
-offset_bottom = -7.66667
-text = "x<NUM>"
-horizontal_alignment = 1
 
 [node name="PlinkoBall" type="RigidBody2D" parent="."]
 position = Vector2(280, 161)
@@ -703,5 +620,9 @@ texture = ExtResource("5_teh2r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlinkoBall"]
 shape = SubResource("CircleShape2D_xkept")
+
+[node name="FadingText" parent="." instance=ExtResource("11_jq2tj")]
+position = Vector2(1072, 219)
+scale = Vector2(0.75, 0.75)
 
 [connection signal="pressed" from="DropButton" to="PlinkoBall" method="_on_drop_button_pressed"]

@@ -12,9 +12,7 @@ func _on_button_roll_dice() -> void:
 
 func _on_dice_snake_eyes() -> void:
 	money.add_money(amount.value * 7)
-	Global.save_global_data()
 	text.display_text("You got a match and 6x your money!", Color.SKY_BLUE)
 
 func _on_dice_dice_game_lost() -> void:
-	Global.save_global_data()
 	text.display_text("Game Lost.", Color.RED)
