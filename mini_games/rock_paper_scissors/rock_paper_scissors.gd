@@ -105,7 +105,7 @@ func get_winner(player_choice: int, opponent_choice: int) -> String:
 	elif (player_choice == opponent.Choice.ROCK and opponent_choice == opponent.Choice.SCISSORS) \
 		or (player_choice == opponent.Choice.PAPER and opponent_choice == opponent.Choice.ROCK) \
 		or (player_choice == opponent.Choice.SCISSORS and opponent_choice == opponent.Choice.PAPER):
-		text.display_text("You win!", Color.SKY_BLUE)
+		text.display_text("You win!", Color.GREEN)
 		money.add_money(amount.value * 2)
 		return "WIN"
 	else:
