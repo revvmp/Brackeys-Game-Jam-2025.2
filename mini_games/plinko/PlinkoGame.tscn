@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://8kn3veduf6mo" path="res://mini_games/plinko/win_areas.gd" id="7_1p26t"]
 [ext_resource type="Texture2D" uid="uid://iuwjx1guqpb2" path="res://assets/plinko/white_circle.png" id="8_1op3y"]
 [ext_resource type="PackedScene" uid="uid://vkhuhc7mo5au" path="res://mini_games/plinko/objects/win_area.tscn" id="8_52sei"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="11_jq2tj"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="11_jq2tj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_teh2r"]
 size = Vector2(30, 593)
