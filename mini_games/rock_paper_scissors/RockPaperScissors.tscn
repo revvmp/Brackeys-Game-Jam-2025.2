@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://d4lcggg83wu2g" path="res://mini_games/rock_paper_scissors/objects/ScissorsButton.tscn" id="4_swftx"]
 [ext_resource type="PackedScene" uid="uid://cdkt2fgsqb1ef" path="res://main_menu/main_menu_nodes/MoneyDisplay.tscn" id="5_1rmuh"]
 [ext_resource type="PackedScene" uid="uid://cnbe8o3eqqh8" path="res://mini_games/rock_paper_scissors/objects/RockPaperScissorsOptions.tscn" id="5_opgkj"]
-[ext_resource type="PackedScene" uid="uid://4k7jspicg8w0" path="res://ui/FadingText.tscn" id="8_1rmuh"]
-[ext_resource type="PackedScene" uid="uid://gu6aoadxwiae" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="10_0gx62"]
+[ext_resource type="PackedScene" uid="uid://c5xaqqcqhl4a1" path="res://ui/FadingText.tscn" id="8_1rmuh"]
+[ext_resource type="PackedScene" uid="uid://bkl8bnnsgfjfq" path="res://mini_games/rock_paper_scissors/objects/MoneyAmount.tscn" id="10_0gx62"]
 [ext_resource type="PackedScene" uid="uid://dyl3j3i2yhcx2" path="res://ui/game_help/GameHelpButton.tscn" id="11_g5uth"]
 
 [node name="RockPaperScissors" type="Node2D"]
